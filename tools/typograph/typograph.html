@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TypoGraph - page404.info</title>
+  <meta name="description" content="Проверка типографики.">
+  <link rel="icon" type="image/png" href="favicon-typograph.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center mt-5 text-primary">TypoGraph</h1>
+  </header>
+  <main>
+    <div class="container mt-4">
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p>
+            (–)&nbsp;<span style="color: green;"><b>&amp;ndash;</b></span>&emsp;
+            (—)&nbsp;<span style="color: green;"><b>&amp;mdash;</b></span>&emsp;
+            (&quot;)&nbsp;<span style="color: green;"><b>&amp;quot;</b></span>&emsp;
+            (&apos;)&nbsp;<span style="color: green;"><b>&amp;apos;</b></span>&emsp;
+            (&lt;)&nbsp;<span style="color: green;"><b>&amp;lt;</b></span>&emsp;
+            (&gt;)&nbsp;<span style="color: green;"><b>&amp;gt;</b></span>&emsp;
+            (&laquo;)&nbsp;<span style="color: green;"><b>&amp;laquo;</b></span>&emsp;
+            (&raquo;)&nbsp;<span style="color: green;"><b>&amp;raquo;</b></span>&emsp;
+            (&rsquo;)&nbsp;<span style="color: green;"><b>&amp;rsquo;</b></span>&emsp;
+            (non&ndash;breaking&nbsp;space)&nbsp;<span style="color: green;"><b>&amp;nbsp;</b></span>&emsp;
+          </p>
+        </div>
+
+        <div class="col">
+          <p class=""><b>Result: </b><span id="count" class="fs-5" style="background: yellow;">0</span> warning
+          </p>
+        </div>
+        <div class="col">
+          <p class="text-end"><a href="https://www.artlebedev.ru/typograf/" target="_blank"
+              rel="noopener noreferrer">artlebedev</a></p>
+        </div>
+
+        <div class="col-12 border border-2">
+          <div id="resultText"> </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12 mb-4">
+          <div class="form-floating">
+            <textarea id="inputText" class="form-control" placeholder="Leave a comment here"
+              style="height: 300px; resize:none;"></textarea>
+            <label for="inputText">Input text</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-5 mt-4 ">
+        <div class="col">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button id="btn" type="button" class="btn btn-secondary btn-lg">Check</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container border-top border-3 mt-5">
+      <div class="row">
+        <div class="col text-center">
+          <p class="mt-3 mb-0"><a href="../tools-main.html">More tools</a></p>
+          <p class="mt-0 mb-3">
+            &copy; Valeriy Novikov, 2022
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script>
+    let button = document.getElementById("btn");
+    button.addEventListener("click", function () {
+      checkText();
+    });
+
+    function checkText() {
+      let count = 0;
+      let userInput = document.getElementById("inputText").value;
+      let parser = new DOMParser();
+      let htmlDoc = parser.parseFromString(userInput, "text/html");
+
+      let userInputText = htmlDoc.querySelector("body").innerText;
+
+      const userInputTextArray = userInputText.split(" ");
+
+      let resultArray = new Array();
+
+      for (let i = 0; i < userInputTextArray.length; i++) {
+        if (userInputTextArray[i] === "" || userInputTextArray[i] === " ") {
+          break;
+        } else if (
+          userInputTextArray[i] === "-" ||
+          userInputTextArray[i].includes("-") ||
+          userInputTextArray[i].includes('"') ||
+          userInputTextArray[i].includes("'") ||
+          userInputTextArray[i].includes("“") ||
+          userInputTextArray[i].includes("”") ||
+          userInputTextArray[i].length < 3 ||
+          (userInputTextArray[i].length === 4 &&
+            !Number.isNaN(parseFloat(userInputTextArray[i])))
+        ) {
+          resultArray.push(
+            "<span style='background:yellow'> " + userInputTextArray[i] + " </span>"
+          );
+          count++;
+        } else {
+          resultArray.push(userInputTextArray[i] + " ");
+        }
+      }
+
+      document.getElementById("resultText").innerHTML = resultArray.join("");
+      document.getElementById("count").innerHTML = count;
+    }
+  </script>
+</body>
+
+</html>
+
+<!--
+  TEST
+  Qwerty - asdfghj. Sdhvbguy-kubhik "jyhgkij" ikugiuu 'ljiuh' at hfcvgukj a hjkjbj poi 2022 fcxgvhj.
+-->

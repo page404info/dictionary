@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>LogStat - page404.info</title>
+  <meta name="description" content="Сбор метрик из файлов логирования.">
+  <link rel="icon" type="image/png" href="favicon-logstat.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center mt-5 text-primary">LogStat</h1>
+  </header>
+
+  <main>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6 col-12 mt-0">
+          <p class="mb-0"><b>Customer search:</b></p>
+          <ul>
+            <li>copy this code to stat-customer.sh</li>
+            <li>put stat-customer.sh to server</li>
+            <li>run: bash stat-customer.sh $searchWord $date $pathToLogPackage</li>
+            <li>open stat-customer.csv</li>
+          </ul>
+
+          <code>
+            #!/bin/bash<br>
+            WORD=$1; #search word: error<br>
+            LIST=$2; #date: *, *2022*, *2022-02*<br>
+            LOGPATH=$3; #/pathToLogPackage<br>
+            HEADER="$LOGPATH;'searchWord-$WORD'";<br><br>
+
+            cd $LOGPATH;<br>
+            SAVE="stat-customer.csv";<br>
+            echo $HEADER >> ~/$SAVE<br><br>
+            
+            for FILE in $LIST;<br>
+            do<br>
+            SUBSTR=$(echo $FILE | cut -d "." -f2);<br>
+            echo -n $SUBSTR; echo -n ";";<br>
+            
+            zgrep -a -i "$WORD" $FILE | wc -l;<br>
+            
+            done >> ~/$SAVE<br>
+            echo $SAVE<br>
+            ##
+          </code>
+          <hr class="d-md-none d-block">
+        </div>
+
+        <div class="col-md-6 col-12 mt-md-0 mt-4">
+          <p class="mb-0"><b>Stat search:</b></p>
+          <ul>
+            <li>copy this code to stat.sh</li>
+            <li>change value for $WORD (if need)</li>
+            <li>set pathToLogPackage for $PATHS & put stat.sh to server</li>
+            <li>run: bash stat.sh $date & open stat-*.csv</li>
+          </ul>
+
+          <code>
+            #!/bin/bash<br>
+            LIST=$1; #date: *, *2022*, *2022-02*<br>
+            WORD="unexpected api";<br>
+            PATHS=(<br>
+            /pathToLogPackage1<br>
+            /pathToLogPackage...<br>
+            /pathToLogPackageN<br>
+            );<br>
+            echo "CHECK PACKAGES = ${#PATHS[*]}";<br>
+            i=1;<br><br>
+
+            for item in ${PATHS[*]}<br>
+            do<br>
+            cd $item<br>
+            SAVE="stat-$i.csv";<br>
+            HEADER="$item;LINES;INFO;WARN;ERROR;$WORD;ERR-PERCENT;$WORD-PERCENT";<br>
+            echo $HEADER >> ~/$SAVE<br><br>
+
+            for FILE in $LIST;<br>
+            do<br>
+            SUBSTR=$(echo $FILE | cut -d "." -f2);<br>
+            echo -n $SUBSTR; echo -n ";";<br><br>
+
+            #filter file.gz<br>
+            if [ "$(echo $FILE | grep -io 'gz')" = "gz" ];<br>
+            then zcat $FILE | wc -l | tr -d "\n"; echo -n ";";<br>
+            else cat $FILE | wc -l | tr -d "\n"; echo -n ";";<br>
+            fi<br><br>
+
+            #count stat<br>
+            INF=$(zgrep -a -i INFO $FILE | wc -l);<br>
+            echo $INF | tr -d "\n"; echo -n ";";<br>
+
+            zgrep -a -i WARN $FILE | wc -l | tr -d "\n"; echo -n ";";<br>
+
+            ERR=$(zgrep -a -i ERROR $FILE | wc -l);<br>
+            echo $ERR | tr -d "\n"; echo -n ";";<br>
+
+            UNEXP=$(zgrep -a -i "$WORD" $FILE | wc -l);<br>
+            echo $UNEXP | tr -d "\n"; echo -n ";";<br><br>
+
+            #count error percent<br>
+            if [ $INF -ne 0 ];<br>
+            then DIVERR=$(($ERR * 100 / $INF));<br>
+            elif [ $ERR -eq 0 ];<br>
+            then DIVERR=0;<br>
+            else DIVERR=100;<br>
+            fi<br>
+            echo $DIVERR | tr -d "\n"; echo -n ";";<br><br>
+
+            #count word percent<br>
+            if [ $ERR -ne 0 ];<br>
+            then DIVWORD=$(($UNEXP * 100 / $ERR));<br>
+            elif [ $UNEXP -eq 0 ];<br>
+            then DIVWORD=0;<br>
+            else DIVWORD=100;<br>
+            fi<br>
+            echo $DIVWORD;<br>
+            done >> ~/$SAVE<br><br>
+
+            echo $SAVE<br>
+            ((i++));<br>
+            done<br>
+            ##
+          </code>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container border-top border-3 mt-5">
+      <div class="row">
+        <div class="col text-center">
+          <p class="mt-3 mb-0"><a href="../tools-main.html">More tools</a></p>
+          <p class="mt-0 mb-3">
+            &copy; Valeriy Novikov, 2022
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

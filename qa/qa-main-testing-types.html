@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Классификация видов тестирования - page404.info</title>
+  <meta name="description" content="Классификация по целям тестирования, уровням и хронологии выполнения.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div class="main-bg">
+    <header class="customer-bg ps-1 border-bottom border-3">
+      <div class="container">
+        <div class="row align-items-center pt-2 pb-2">
+          <div class="col-3">
+            <a href="../index.html">main page</a>
+          </div>
+          <div class="col text-end">
+            <nav>
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="javascript:void(0)">QA</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="customer-bg-body">
+      <div class="container pt-4 pb-3">
+        <div class="row">
+          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
+            <nav>
+              <div class="row">
+            
+                <div class="col">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-level-2-running.html">Выполнение</a>
+                      <ul class="nav nav-pills flex-column">
+                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-2-running-test.html">тестирование</a>
+                        </li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-2-running-report.html">отчетность</a>
+                        </li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-2-running-retro.html">ретроспектива</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-level-1-planning.html">Планирование</a>
+                      <ul class="nav nav-pills flex-column">
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-analysis.html">тест-анализ</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-1-planning-plan.html">тест-план</a>
+                        </li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-design.html">тест-дизайн</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-chitlists.html">чит-листы</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+            
+                <div class="col">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0)">Виды тестирования</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-testing-tasks.html">Принципы тестирования</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-quality-characteristics.html">Характеристики качества</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-quality.html">Качество продукта</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main.html">Тестирование - Качество</a>
+                    </li>
+                    <li>
+                      <hr>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-security.html"><b>Защищенность</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-load.html"><b>Производительность</b></a>
+                    </li>
+                  </ul>
+                </div>
+            
+              </div>
+            </nav>
+          </div>
+          <div class="col">
+            <h1 class="fs-3">Виды тестирования</h1>
+
+            <div class="accordion mt-3" id="accordionPanelsStayOpenExample">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Классификация видов тестирования
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong><em>по целям тестирования</em></strong>
+                        <ul>
+                          <li>функциональное:
+                            <ul>
+                              <li>тестирование функциональности;</li>
+                              <li>тестирование защищенности и безопасности;</li>
+                              <li>тестирование данных.</li>
+                            </ul>
+                          </li>
+                          <li class="mt-2">нефункциональное:
+                            <ul>
+                              <li>тестирование требований;</li>
+                              <li>тестирование прототипа;</li>
+                              <li>тестирование пользовательского интерфейса (верстки);</li>
+                              <li>тестирование производительности и нагрузки:
+                                <ul>
+                                  <li>нагрузочное тестирование;</li>
+                                  <li>объемное тестирование;</li>
+                                  <li>тестирование стабильности и надежности;</li>
+                                  <li>стрессовое тестирование;</li>
+                                  <li>тестирование на отказ и восстановление.</li>
+                                </ul>
+                              </li>
+                              <li>тестирование удобства использования;</li>
+                              <li>тестирование доступности;</li>
+                              <li>тестирование интернационализации / локализации;</li>
+                              <li>тестирование совместимости:
+                                <ul>
+                                  <li>кроссбраузерное тестирование;</li>
+                                  <li>кроссплатформенное тестирование;</li>
+                                  <li>тестирование адаптивности.</li>
+                                </ul>
+                              </li>
+                              <li>тестирование установки и лицензирования.</li>
+                            </ul>
+                          </li>
+                          <li class="mt-2">связанное с изменениями:
+                            <ul>
+                              <li>дымовое;</li>
+                              <li>дефект валидация;</li>
+                              <li>тестирование новой функциональности;</li>
+                              <li>регрессионное.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по уровням тестирования</em></strong>
+                        <ul>
+                          <li>операционное;</li>
+                          <li>приемочное / минимальное приемочное (позитивное);</li>
+                          <li>системное;</li>
+                          <li>интеграционное;</li>
+                          <li>модульное.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по хронологии выполнения</em></strong>
+                        <ul>
+                          <li>дымовое (проверка пригодности системы к тестированию);</li>
+                          <li>основное (проверка функциональных/нефункциональных требований);</li>
+                          <li>повторное (проверка исправления дефектов);</li>
+                          <li>регрессионное (проверка того, что новая фича не повлияла на работу других компонент);</li>
+                          <li>тестирование сборки;</li>
+                          <li>санитарное тестирование.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по способу разработки сценария</em></strong>
+                        <ul>
+                          <li>на основе требований;</li>
+                          <li>по вариантам использования;</li>
+                          <li>на основе модели.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по позитивности сценария</em></strong>
+                        <ul>
+                          <li>позитивное;</li>
+                          <li>негативное.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по исполнению кода</em></strong>
+                        <ul>
+                          <li>статическое (статический анализ кода, рецензирование);</li>
+                          <li>динамическое.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по степени автоматизации</em></strong>
+                        <ul>
+                          <li>ручное;</li>
+                          <li>автоматизированное;</li>
+                          <li>полуавтоматизированное.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по знанию системы</em></strong>
+                        <ul>
+                          <li>черный ящик;</li>
+                          <li>белый ящик;</li>
+                          <li>серый ящик.</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по формальности проведения</em></strong>
+                        <ul>
+                          <li>по тест-кейсам, чек-листам;</li>
+                          <li>исследовательское;</li>
+                          <li>специализированное (свободное).</li>
+                        </ul>
+                      </li>
+
+                      <li class="mt-4"><strong><em>по исполнителям тестирования</em></strong>
+                        <ul>
+                          <li>альфа-тестирование (внутреннее - сотрудники компании);</li>
+                          <li>бета-тестирование (внешнее - добровольцы, центры сертификации).</li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    функциональное тестирование (работа приложения)
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+                    <p><strong>Тестирование функциональности</strong><br>
+                      проверяет правильность работы системы (правильность расчетов, поведения) по проведенному анализу
+                      спецификации, функциональности компонента или системы.
+                    </p>
+
+                    <p><strong>Тестирование защищенности</strong><br>
+                      проверяет фактическую реакцию защитных механизмов, встроенных в систему, на проникновение.
+                    </p>
+
+                    <p><strong>Тестирование безопасности</strong><br>
+                      проверяет способность программного продукта при использовании оговоренным образом оставаться в
+                      рамках приемлемого риска причинения вреда здоровью, бизнесу, программам, собственности или
+                      окружающей среде.
+                    </p>
+
+                    <p class="pb-0"><strong>Тестирование данных</strong><br>
+                      проверяется качество данных на соответствие следующим характеристикам:
+                    </p>
+                    <ul class="mb-0">
+                      <li><em>полнота</em> - в записях нет пропусков, обязательные поля заполненны;</li>
+                      <li><em>уникальность</em> - среди данных отсутствуют дубликаты;</li>
+                      <li><em>достоверность</em> - поля содержат то, что и должны содержать: имя, адрес, номер телефона;
+                      </li>
+                      <li><em>точность</em> - длина значения, количество знаков после запятой. Данные должны быть близки
+                        к их среднему значению;</li>
+                      <li><em>согласованность</em> - поля содержат значения, независимо от способа их измерения;</li>
+                      <li><em>актуальность</em> - данные должны своевременно обновляться.</li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    нефункциональное тестирование (свойства приложения)
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingThree">
+                  <div class="accordion-body">
+                    <p><strong><em>Тестирование требований</em></strong><br>
+                      проверка требований на соответствие характеристикам <a
+                        href="qa-main-quality-characteristics.html" target="_blank">качества продукта</a> и
+                      характеристикам <a href="../main/level-1-requirements-characteristics.html" target="_blank">качества
+                        требований.</a>
+                    </p>
+                    <p><strong><em>Тестирование прототипа</em></strong><br>
+                      метод выявления структурных, логических ошибок и ошибок проектирования на ранней стадии развития
+                      продукта до начала фактической разработки.
+                    </p>
+                    <p class="pb-0"><strong><em>Тестирование пользовательского интерфейса</em></strong> (верстки)<br>
+                      выполняется путем взаимодействия с системой через интерфейс пользователя (графический, командная
+                      строка):
+                    </p>
+                    <ul>
+                      <li>верстка, цвета, графика, оформление;</li>
+                      <li>содержание выводимой информации;</li>
+                      <li>поведение курсора и горячие клавиши;</li>
+                      <li>отображение различного количества данных (нет данных, минимальное и максимальное их
+                        количество);</li>
+                      <li>отображение при отключеном css, js.</li>
+                    </ul>
+
+                    <p class="pb-0"><strong><em>Тестирование производительности и нагрузки</em></strong><br>
+                      процесс тестирования с целью определения производительности программного продукта:
+                    </p>
+                    <ul>
+                      <li><em>нагрузочное тестирование</em> – вид тестирования производительности, проводимый с целью
+                        оценки поведения компонента или системы при возрастающей нагрузке, например, количестве
+                        параллельных пользователей и/или операций, а также определения какую нагрузку может выдержать
+                        компонент или система;</li>
+                      <li><em>объемное тестирование</em> – позволяет получить оценку производительности приложения при
+                        увеличении
+                        объемов данных;</li>
+                      <li><em>тестирование стабильности и надежности</em> – позволяет проверять работоспособность
+                        приложения при длительном (многочасовом) тестировании со средним уровнем нагрузки;</li>
+                      <li><em>стрессовое тестирование</em> – вид тестирования производительности, оценивающий систему
+                        или компонент на граничных значениях рабочих нагрузок или за их пределами, или же в состоянии
+                        ограниченных ресурсов, таких как память или доступ к серверу;
+                      </li>
+                      <li><em>тестирование на отказ и восстановление</em> – тестирование при помощи эмуляции отказов
+                        системы или реально вызываемых отказов в управляемом окружении.</li>
+                    </ul>
+
+                    <p><strong><em>Тестирование удобства использования</em></strong><br>
+                      тестирование с целью определения степени понятности, легкости в изучении и использовании,
+                      привлекательности программного продукта для пользователя при условии использования в заданных
+                      условиях эксплуатации (навигация, логичность, информативность сообщений).
+                    </p>
+                    <p><strong><em>Тестирование доступности</em></strong><br>
+                      тестирование, которое определяет степень легкости, с которой пользователи с ограниченными
+                      способностями могут использовать систему или ее компоненты.
+                    </p>
+                    <p><strong><em>Тестирование интернационализации</em></strong><br>
+                      тестирование способности продукта работать в локализованных средах (способность изменять
+                      элементы интерфейса в зависимости от длины и направления текста, менять сортировки/форматы под
+                      различные локали и т.д.).<br>
+                      Интернационализация – это процесс, упрощающий дальнейшую адаптацию продукта к языковым и
+                      культурным особенностям региона, отличного от того, в котором разрабатывался продукт. Это
+                      адаптация продукта для потенциального использования практически в любом месте. Интернационализация
+                      проводится на начальных этапах разработки, в то время как локализация — для каждого целевого
+                      языка.
+                    </p>
+                    <p><strong><em>Тестирование локализации</em></strong><br>
+                      тестирование, проводимое с целью проверки качества перевода продукта с одного языка на другой.
+                    </p>
+
+                    <p class="pb-0"><strong><em>Тестирование совместимости</em></strong><br>
+                      проверка работоспособности приложения в различных средах (браузеры, операционные системы, их типы, версии и
+                      разрядность):
+                    </p>
+                    <ul>
+                      <li>кроссбраузерное тестирование (виды браузеров и их версии);</li>
+                      <li>кроссплатформенное тестирование (типы операционных систем, их версии и разрядность);</li>
+                      <li>адаптивность (размер окна браузера и разрешение экрана).</li>
+                    </ul>
+
+                    <p class="pb-0"><strong><em>Тестирование установки и лицензирования</em></strong><br>
+                      процесс тестирования устанавливаемости программного продукта:
+                    </p>
+                    <ul>
+                      <li>формальный тест программы установки приложения (проверка пользовательского интерфейса,
+                        навигации, удобства пользования, соответствия общепринятым стандартам оформления);</li>
+                      <li>функциональный тест программы установки;</li>
+                      <li>тестирование механизма лицензирования и функций защиты от пиратства;</li>
+                      <li>проверка стабильности приложения после установки.</li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour">
+                    тестирование связанное с изменениями
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingFour">
+                  <div class="accordion-body">
+                    <p><strong><em>Дымовое тестирование</em></strong> (Smoke)<br>
+                      тестирование системы для определения корректной работы базовых функций программы в целом, без
+                      углубления
+                      в детали. При проведении теста определяется пригодность сборки для дальнейшего тестирования.
+                      <br>
+                      Цель - как можно быстрее убедиться в работе основного функционала и обозначить наиболее критичные
+                      баги.
+                      В случае отсутствия дефектов тестирование объявляется пройденным и программа передается для
+                      проведения
+                      полного цикла тестирования.
+                    </p>
+                    <p><strong><em>Дефект валидация</em></strong><br>
+                      проверка результата исправления дефектов.
+                      <br>Включает в себя проверку на воспроизводимость дефектов, которые были исправлены в новой сборке
+                      продукта, а также проверку того, что исправление не повлияло на ранее работавшую функциональность.
+                    </p>
+                    <p class="pb-0"><strong><em>Тестирование новой функциональности</em></strong><br>
+                      определение качества поставленной на тестирование новой функциональности, которая ранее не
+                      тестировалась. Данный тип тестирования включает в себя:
+                    </p>
+                    <ul>
+                      <li>проведение полного теста (АТ) непосредственно новой функциональности;</li>
+                      <li>тестирование новой функциональности на соответствие документации;</li>
+                      <li>проверка всевозможных взаимодействий ранее реализованной функциональности с новыми модулями и
+                        функциями.</li>
+                    </ul>
+
+                    <p class="pb-0"><strong><em>Регрессионное тестирование</em></strong><br>
+                      проводится с целью оценки влияния новой функциональности на действующую систему (показывает, что
+                      после внесения изменений старая функциональность работает как и прежде).
+                    </p>
+                    <p class="pt-1 pb-0">
+                      Включает в себя проверку стабильности ранее реализованной функциональности после внесения
+                      изменений:
+                    </p>
+                    <ul class="mb-0">
+                      <li>добавление новой функциональности;</li>
+                      <li>исправление дефектов;</li>
+                      <li>оптимизация кода;</li>
+                      <li>разворачивание приложения на новом окружении.</li>
+                    </ul>
+                    <p class="pt-1 pb-0">
+                      Проводится на уровне Smoke, MAT или AT и применяется в случаях:
+                    </p>
+                    <ul class="mb-0">
+                      <li>плохая архитектура приложения;</li>
+                      <li>нет юнит-тестов;</li>
+                      <li>нет или слабая аналитика по влиянию изменения требований на другие модули программы;</li>
+                      <li>высокая связанность модулей;</li>
+                      <li>высокая связанность кода;</li>
+                      <li>нет интеграционных автоматических тестов, которые запускаются при сборке или 1 раз в день;
+                      </li>
+                      <li>нет ежедневных сборок и постоянного отслеживания вновь появившихся проблем;</li>
+                      <li>тестировщики не общаются с разработчиками и не обсуждают риски;</li>
+                      <li>тестировщики плохо представляют архитектуру продукта и внутренние взаимосвязи.</li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFive">
+                    по уровням тестирования
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingFive">
+                  <div class="accordion-body">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <span><strong><em>Операционное</em></strong> (эксплуатационное)</span>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p class="pb-0">В среде эксплуатации, соглано бизнес-модели, проводятся проверки в следующих
+                              случаях:</p>
+                            <ul class="mb-0">
+                              <li>при возникновении ошибок в одной из компонент системы;</li>
+                              <li>при возникновении ошибок сети;</li>
+                              <li>при откате и восстановлении системы.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <span><strong><em>Приемочное</em></strong> (по необходимости)</span>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p><strong>ЧТО система должна делать:</strong> бизнес-процессы + нефункциональные
+                              требования.</p>
+                            <p>Объем и структура тестирования зависит от того кто принимает и на каком этапе разработки.
+                            </p>
+                            <p>Система проверяется на соответствие требованиям заказчика (пользователя) или приемочным
+                              критериям. На основании полученных результатов, заказчик выносит решение о принятии
+                              системы в эксплуатацию или необходимости ее доработки.</p>
+                            <p class="pb-2">
+                              Различают следующие виды приемочного тестирования:
+                            </p>
+                            <ul class="mb-0">
+                              <li><strong><em>Минимальное приемочное (позитивное)</em></strong> - Minimal Acceptance
+                                Test (MAT, Positive test)
+                                <br>
+                                тестирование системы или ее части только на валидных данных (данных, которые необходимо
+                                использовать для корректной работы модуля или функции).
+                                <br>Для крупных и сложных приложений используется ограниченный набор сценариев и
+                                функций.
+                              </li>
+                              <li class="pt-2"><strong><em>Приемочное</em></strong> - Acceptance Test (AT)
+                                <br>
+                                полное тестирование системы или ее части как на корректных, так и на некорректных
+                                данных и сценариях. Направлено на подтверждение того, что приложение может
+                                использоваться
+                                по назначению
+                                при любых условиях.
+                                <br>Тест на этом уровне покрывает все возможные сценарии тестирования:
+                                <ul>
+                                  <li>проверку работоспособности модулей при вводе корректных значений;</li>
+                                  <li>проверку при вводе некорректных значений;</li>
+                                  <li>использование форматов данных отличных от тех, которые указаны в требованиях;</li>
+                                  <li>проверку исключительных ситуаций, сообщений об ошибках;</li>
+                                  <li>тестирование на различных комбинациях входных параметров;</li>
+                                  <li>проверку всех классов эквивалентности;</li>
+                                  <li>тестирование граничных значений интервалов;</li>
+                                  <li>сценарии не предусмотренные спецификацией и т.д.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            <span><strong><em>Системное</em></strong> (пользовательское)</span>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p><strong>КАК система должна работать:</strong> бизнес-процессы + технические процессы +
+                              нефункциональные требования.
+                            </p>
+                            <p>
+                              Проводится с точки зрения конечного пользователя по User-story. Максимальное количество
+                              модулей (тестирование путей и потоков данных, максимальный сбор информации о
+                              работоспособности всех частей приложения как единого целого - длинные Е2Е тесты +
+                              окружение + роли).
+                            </p>
+                            <p>
+                              Проверяется вся системы в целом с учетом внешнего окружения (ОС, язык, браузер, девайс) и
+                              ролей пользователей. Выполняется на полной, интегрированной системе с целью проверки
+                              соответствия системы исходным требованиям.
+                            </p>
+                            <p>
+                              <strong>Основной задачей</strong> является проверка как функциональных, так и
+                              нефункциональных требований к системе в целом.
+                            </p>
+                            <p class="pb-0"><strong>Позволяет обнаружить</strong> следующие дефекты:</p>
+                            <ul class="mb-0">
+                              <li>неверное использование ресурсов системы;</li>
+                              <li>несовместимость с окружением;</li>
+                              <li>непредусмотренные сценарии использования;</li>
+                              <li>отсутствующая или неверная функциональность;</li>
+                              <li>неудобство использования и т.д.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            <span><strong><em>Интеграционное</em></strong> (вызывает, возвращает, читает)</span>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p>Проверяет связи, взаимодействие и передачу данных между соседними объектами, связанными
+                              модулями и компонентами, между несколькими частями приложения или систем.</p>
+                            <p class="pb-0"><strong>Позволяет обнаружить</strong> следующие дефекты:</p>
+                            <ul class="mb-0">
+                              <li>потеря данных при прохождении через интерфейс;</li>
+                              <li>отсутствие в модуле необходимой ссылки;</li>
+                              <li>неблагоприятное влияние одного модуля на другой;</li>
+                              <li>подфункции при объединении не образуют требуемую главную функцию;</li>
+                              <li>проблемы при работе с глобальными структурами данных.</li>
+                            </ul>
+                            <p class="pb-0"><strong>Что тестировать:</strong></p>
+                            <ul class="mb-0">
+                              <li>аутентификация и параметры сервиса;</li>
+                              <li>корректность отправляемых данных;</li>
+                              <li>корректность обработки полученных данных;</li>
+                              <li>сервис используется в тех местах, где это нужно и только когда нужно;</li>
+                              <li>обработка ошибок:
+                                <ul>
+                                  <li>уровень сервиса - ошибки, описанные в документации;</li>
+                                  <li>уровень протокола - ошибки HTTP 401, 404, 500;</li>
+                                  <li>уровень сети - обрыв связи, отсутствие ответа.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            <span><strong><em>Модульное</em></strong> (обрабатывает)</span>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p class="pb-0">
+                              Направлено на проверку отдельного модуля или части приложения:
+                            </p>
+                            <ul class="mb-0">
+                              <li>особое внимание уделяется входным и выходным значениям, чтобы были протестированы все
+                                точки входа и выхода на уровне отдельного поля, формы, страницы, модуля, компоненты;
+                              </li>
+                              <li>проверяется правильность обработки данных, свойства и публичные методы отдельного
+                                объекта.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseSix">
+                    по степени автоматизации
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingSix">
+                  <div class="accordion-body">
+                    <p><strong><em>Ручное</em></strong><br>тестирование, в котором тест-кейсы выполняются тестировщиком
+                      вручную без использования средств автоматизации.</p>
+                    <p><strong><em>Автоматизированное</em></strong><br>набор техник, подходов и инструментальных
+                      средств, позволяющий исключить человека из выполнения некоторых задач в процессе тестирования.
+                      Тест-кейсы частично или полностью выполняет специальное инструментальное средство.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseSeven">
+                    по знанию системы
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingSeven">
+                  <div class="accordion-body">
+                    <p><strong><em>Черный ящик</em></strong><br>тестирование системы, функциональное или
+                      нефункциональное, без знания внутренней структуры и компонентов системы. У
+                      тестировщика нет доступа к внутренней структуре и коду приложения либо в процессе тестирования он
+                      не обращается к ним.</p>
+                    <p><strong><em>Белый ящик</em></strong><br>тестирование основанное на анализе внутренней структуры
+                      компонентов или системы. У тестировщика есть доступ к внутренней
+                      структуре и коду приложения.</p>
+                    <p><strong><em>Серый ящик</em></strong><br>комбинация методов белого и черного ящика, состоящая в
+                      том, что к части кода архитектуры у тестировщика есть доступ, а к части кода – нет.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseEight">
+                    по формальности проведения
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingEight">
+                  <div class="accordion-body">
+                    <p><strong><em>Тестирование по тестам</em></strong><br>тестирование по заранее подготовленным
+                      тестовым
+                      сценариям или руководству по осуществлению тестов.</p>
+                    <p><strong><em>Исследовательское тестирование</em></strong><br>метод проектирования тестовых
+                      сценариев во время выполнения этих сценариев. Тестировщик во время выполнения проверок,
+                      продумывает новые, используя для этого полученную информацию.</p>
+                    <p><strong><em>Интуитивное тестирование</em></strong><br>выполняется без подготовки, без
+                      определения ожидаемых результатов, без проектирования тестовых сценариев.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item mb-lg-0 mb-4">
+                <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseNine">
+                    по исполнителям тестирования
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingNine">
+                  <div class="accordion-body">
+                    <p><strong><em>Альфа-тестирование</em></strong><br>моделируемое или действительное функциональное
+                      тестирование, выполняется в организации, разрабатывающей продукт, но не проектной командой (это
+                      может быть независимая команда тестировщиков, потенциальные пользователи, заказчики).
+                      <br>Альфа-тестирование часто применяется к коробочному программному обеспечению в качестве
+                      внутреннего приемочного тестирования.
+                    </p>
+                    <p><strong><em>Бета-тестирование</em></strong><br>эксплуатационное тестирование потенциальными или
+                      существующими пользователями (заказчиками) в среде, где продукт будет использоваться, с целью
+                      определения действительно ли компонент или система удовлетворяет требованиям пользователя
+                      (заказчика) и вписывается в бизнес-процессы.
+                      <br>Бета-тестирование часто проводится как форма внешнего приемочного тестирования готового
+                      программного обеспечения для того, чтобы получить отзывы участников рынка.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="customer-bg border-top border-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="mt-3 pb-0">
+              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
+            </p>
+            <nav class="mb-2">
+              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../js/current-year.js"></script>
+</body>
+
+</html>

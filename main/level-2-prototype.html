@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Прототипирование продукта - page404.info</title>
+  <meta name="description" content="Способы реализации прототипирования продукта.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div class="main-bg">
+    <header class="customer-bg ps-1 border-bottom border-3">
+      <div class="container">
+        <div class="row align-items-center pt-2 pb-2">
+          <div class="col-3">
+            <a href="../index.html">main page</a>
+          </div>
+          <div class="col text-end">
+            <nav>
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../qa/qa-main.html">QA</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="customer-bg-body">
+      <div class="container pt-4 pb-3">
+        <div class="row">
+          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
+            <nav>
+              <div class="row">
+                <div class="col">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-5-data-analysis.html">Анализ данных</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-5-support.html">Тех поддержка</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-3-code-testing.html">Тестирование кода</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-3-code-writing.html">Написание кода</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-2-architecture.html">Архитектура</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0)">Прототипирование</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-1-requirements.html">Требования</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="level-1-users.html">Целевая аудитория</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col">
+            <h1 class="fs-3">Прототипирование</h1>
+            <div class="row">
+              <nav>
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:void(0)">Общее</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="level-2-prototype-tools.html">Инструменты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <p class="mt-3">
+              <b>Прототипирование</b> &mdash; "черновая" реализация базовой функциональности будущего продукта.
+              Используется
+              для эксперементирования и&nbsp;анализа работы системы в&nbsp;целом.
+            </p>
+
+            <p><ins>Способы реализации</ins>:</p>
+            <ul class="mb-lg-0 mb-4">
+              <li><b>UML-диаграммы</b> (унифицированный язык моделирования)
+                <br><a href="https://www.youtube.com/watch?v=GUckLNJ-dh8&list=PL_DKSMPuELblFOEfu98AAtPLJVt7LqtXl"
+                  target="_blank" rel="noopener noreferrer">видео&ndash;курс</a>&emsp;&emsp;<a
+                  href="http://book.uml3.ru/content" target="_blank" rel="noopener noreferrer">онлайн&ndash;книга</a>
+                <ul>
+                  <li><strong>диаграмма прецедентов</strong> (use&ndash;case diagram) &mdash; определяет границы
+                    системы, роли и&nbsp;события;</li>
+                  <li><strong>диаграмма классов</strong> (class diagram) &mdash; набор статических, декларативных
+                    элементов
+                    модели. Информация с&nbsp;диаграммы классов напрямую отображается в&nbsp;исходный код приложения;
+                  </li>
+                  <li><strong>диаграмма объектов</strong> (object diagram) &mdash; показывает статические отношения
+                    между
+                    объектами в&nbsp;некоторый момент времени, т.&nbsp;е.&nbsp;предоставляет снимок состояния системы;
+                  </li>
+                  <li><strong>диаграмма последовательностей</strong> (sequence diagram) &mdash; отображает
+                    взаимодействие
+                    объектов в&nbsp;динамике, отображает временные особенности передачи и&nbsp;приема сообщений
+                    объектами;</li>
+                  <li><strong>диаграмма взаимодействия</strong> (кооперации, collaboration diagram) &mdash; показывает
+                    поток
+                    сообщений между объектами системы и&nbsp;основные ассоциации между ними. Является альтернативой
+                    диаграммы
+                    последовательностей;</li>
+                  <li><strong>диаграмма состояний</strong> (statechart diagram) &mdash; показывает, как объект переходит
+                    из&nbsp;одного состояния в&nbsp;другое. Описывает процесс изменения состояний только одного
+                    экземпляра
+                    определенного класса &mdash; одного объекта, причем объекта реактивного, то&nbsp;есть объекта,
+                    поведение
+                    которого характеризуется его реакцией на&nbsp;внешние события;
+                  </li>
+                  <li><strong>диаграмма активности</strong> (деятельности, activity diagram) &mdash; раскрывает детали
+                    алгоритмической реализации операций, выполняемых системой, т.&nbsp;е.&nbsp;описывает <b>алгоритм</b>
+                    через
+                    блок&ndash;схему;
+                  </li>
+                  <li><strong>диаграмма развертывания</strong> (deployment diagram) &mdash; показывает топологию системы
+                    и&nbsp;распределение компонентов системы по&nbsp;ее&nbsp;узлам, а&nbsp;также соединения &mdash;
+                    маршруты передачи
+                    информации
+                    между аппаратными узлами.
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-3"><b>BPMN&ndash;диаграммы</b> (модель и&nbsp;нотация бизнес-процессов) &mdash; метод
+                составления
+                блок&ndash;схем,
+                отображающий этапы выполнения бизнес&ndash;процесса от&nbsp;начала до&nbsp;конца. BPMN&ndash;диаграммы
+                наглядно и&nbsp;подробно демонстрируют последовательность рабочих процессов и&nbsp;перемещение
+                информационных
+                потоков,
+                необходимых для выполнения процесса</li>
+              <li class="mt-3"><b>Мокапы</b>
+                <ul>
+                  <li><strong>скетч</strong>
+                    <ul>
+                      <li>применение &mdash; идея, быстрое взаимодействие;</li>
+                      <li>основные черты &mdash; наброски карандашом;</li>
+                      <li>точность представления &mdash; низкая;</li>
+                      <li>стоимость &mdash; низкая.</li>
+                    </ul>
+                  </li>
+                  <li><strong>вайрфрейм</strong>
+                    <ul>
+                      <li>применение &mdash; документация, быстрое взаимодействие;</li>
+                      <li>основные черты &mdash; наброски карандашом, монохромная палитра;</li>
+                      <li>точность представления &mdash; низкая;</li>
+                      <li>стоимость &mdash; низкая.</li>
+                    </ul>
+                  </li>
+                  <li><strong>мокап</strong>
+                    <ul>
+                      <li>применение &mdash; сбор обратной связи, утверждение у&nbsp;стейкхолдеров;</li>
+                      <li>основные черты &mdash; статичная визуализация;</li>
+                      <li>точность представления &mdash; высокая;</li>
+                      <li>стоимость &mdash; средняя.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-3"><b>Прототип</b>
+                <ul>
+                  <li>применение &mdash; UX&ndash;тесты, наборы для повторного использования;</li>
+                  <li>основные черты &mdash; интерактивность;</li>
+                  <li>точность представления &mdash; средняя, высокая;</li>
+                  <li>стоимость &mdash; высокая.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="customer-bg border-top border-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="mt-3 pb-0">
+              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
+            </p>
+            <nav class="mb-2">
+              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/current-year.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Тестирование защищенности - page404.info</title>
+  <meta name="description" content="Объекты не должны раскрывать служебную информацию, содержать личные данные.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div class="main-bg">
+    <header class="customer-bg ps-1 border-bottom border-3">
+      <div class="container">
+        <div class="row align-items-center pt-2 pb-2">
+          <div class="col-3">
+            <a href="../index.html">main page</a>
+          </div>
+          <div class="col text-end">
+            <nav>
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="javascript:void(0)">QA</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="customer-bg-body">
+      <div class="container pt-4 pb-3">
+        <div class="row">
+          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
+            <nav>
+              <div class="row">
+
+                <div class="col">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-level-2-running.html">Выполнение</a>
+                      <ul class="nav nav-pills flex-column">
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-2-running-test.html">тестирование</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-2-running-report.html">отчетность</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-2-running-retro.html">ретроспектива</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-level-1-planning.html">Планирование</a>
+                      <ul class="nav nav-pills flex-column">
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-analysis.html">тест-анализ</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-plan.html">тест-план</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-design.html">тест-дизайн</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-chitlists.html">чит-листы</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-testing-types.html">Виды тестирования</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-testing-tasks.html">Принципы тестирования</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-quality-characteristics.html">Характеристики качества</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main-quality.html">Качество продукта</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-main.html">Тестирование - Качество</a>
+                    </li>
+                    <li>
+                      <hr>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0)"><b>Защищенность</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="qa-load.html"><b>Производительность</b></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col">
+            <h1 class="fs-3">Защищенность</h1>
+            <p class="pb-0"><b>Объекты проверки</b> не должны раскрывать служебную информацию, пути к служебным
+              файлам, содержать личные данные (пароль, налоговый номер, адрес):</p>
+            <ul>
+              <li>строка браузера;</li>
+              <li>авторизация;</li>
+              <li>поля ввода;</li>
+              <li>cookies;</li>
+              <li>cashe;</li>
+              <li>комментарии в коде;</li>
+              <li>файл robots.txt;</li>
+              <li>текст ошибок приложения.</li>
+            </ul>
+
+            <div class="accordion accordion-flush mb-md-0 mb-4" id="accordionFlushExample">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-1" aria-expanded="false" aria-controls="flush-collapse-1">
+                    <b>СТРОКА БРАУЗЕРА</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-1" class="accordion-collapse collapse" aria-labelledby="flush-heading-1"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>http / https;</li>
+                      <li>GET / POST;</li>
+                      <li>изменение параметров;</li>
+                      <li>обратный путь;</li>
+                      <li>инъекции;</li>
+                      <li>переход по url, который доступен после авторизации, для неавторизированного пользователя;</li>
+                      <li>доступ к конфигурационным файлам;</li>
+                      <li>доступ к админке через https с проверкой ip.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-2" aria-expanded="false" aria-controls="flush-collapse-2">
+                    <b>АВТОРИЗАЦИЯ</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>капча (защита от перебора);</li>
+                      <li>учитывать количество попыток;</li>
+                      <li>наличие в словаре паролей;</li>
+                      <li>двухфакторная авторизация;</li>
+                      <li>хеширование паролей (проверить хеш-функцию на актуальность);</li>
+                      <li>звездочки в строке пароль;</li>
+                      <li>инъекции.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-3" aria-expanded="false" aria-controls="flush-collapse-3">
+                    <b>ПОЛЯ ВВОДА</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-3" class="accordion-collapse collapse" aria-labelledby="flush-heading-3"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>обязательность заполнения;</li>
+                      <li>инъекции.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-4" aria-expanded="false" aria-controls="flush-collapse-4">
+                    <b>COOKIES</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-4" class="accordion-collapse collapse" aria-labelledby="flush-heading-4"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>валидатор <a href="https://2gdpr.com/ru/" target="_blank"
+                        rel="noopener noreferrer">https://2gdpr.com/ru/</a></p>
+                    <p>Файлы cookie сеанса. Эти куки-файлы временны, которые удаляются, когда пользователь
+                      закрывает браузер. Даже если пользователь входит в систему снова, создается новый файл
+                      cookie для этого сеанса.</p>
+                    <p>Постоянные файлы cookie - эти куки остаются на жестком диске, если пользователь не вытер
+                      их или не истекает. Срок действия Cookie зависит от того, как долго они могут длиться.</p>
+                    <p class="pb-0">Проверки:</p>
+                    <ul>
+                      <li>согласие на использование cookies;</li>
+                      <li>имя сервера, с которого отправлен файл cookie;</li>
+                      <li>время жизни файла cookie;</li>
+                      <li>значение cookie;</li>
+                      <li>нет личных данных, хранящихся в файле cookie или они хранятся в зашифрованном формате;</li>
+                      <li>отключение файлов cookie;</li>
+                      <li>удаление файлов cookie;</li>
+                      <li>редактирование файлов cookie;</li>
+                      <li>совместимость между браузерами.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-5" aria-expanded="false" aria-controls="flush-collapse-5">
+                    <b>ROBOTS.TXT</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-5" class="accordion-collapse collapse" aria-labelledby="flush-heading-5"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>https://<b>siteName</b>/robots.txt</p>
+                    <p>Например, <a href="https://www.google.com/robots.txt" target="_blank"
+                        rel="noopener noreferrer">https://www.google.com/robots.txt</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-6" aria-expanded="false" aria-controls="flush-collapse-6">
+                    <b>ИНЪЕКЦИИ</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-6" class="accordion-collapse collapse" aria-labelledby="flush-heading-6"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <p>"[|]'~&lt;!--@/*$%^&#*/()?&gt;,.*`/\</p>
+                        <p>&lt;u&gt;TEST&lt;/u&gt;</p>
+                        <p>hello&lt;br&gt;world</p>
+                        <p>hello" &lt;br&gt; world</p>
+                        <p>&lt;script&gt;allert(1)&lt;/script&gt;</p>
+                        <p>&lt;img src="wefef" onerror="allert(1)"&gt;</p>
+                      </div>
+                      <div class="col">
+                        <p>'-- -</p>
+                        <p>' order by 2-- -</p>
+                        <p>id=1 order by 2</p>
+                        <p>id=-1 or 1=1</p>
+                        <p>for LIKE= ') and (id='1</p>
+                        <p>'select * from customer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="customer-bg border-top border-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="mt-3 pb-0">
+              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
+            </p>
+            <nav class="mb-2">
+              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/current-year.js"></script>
+</body>
+
+</html>

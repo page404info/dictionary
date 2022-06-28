@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Инструменты. SQL - page404.info</title>
+  <meta name="description" content="Запросы к базе данных на SQL.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div class="main-bg">
+    <header class="customer-bg ps-1 border-bottom border-3">
+      <div class="container">
+        <div class="row align-items-center pt-2 pb-2">
+          <div class="col-3">
+            <a href="../index.html">main page</a>
+          </div>
+          <div class="col text-end">
+            <nav>
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" href="tools-main.html">Tools</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../qa/qa-main.html">QA</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="customer-bg-body">
+      <div class="container pt-4 pb-3">
+        <div class="row">
+          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
+            <nav>
+              <div class="row">
+            
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="javascript:void(0)">SQL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-api.html">API</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-bash.html">Bash</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="tools-main-network.html">Network</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-browser.html">Browser</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-notepad.html">Notepad++</a></li>
+                  </ul>
+                </div>
+            
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">PageChecker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adaptability/adaptability.html"
+                        target="_blank">Adaptability</a></li>
+                    <li class="nav-item"><a class="nav-link" href="curlload/curlLoad.html" target="_blank">curlLoad</a></li>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="typograph/typograph.html" target="_blank">TypoGraph</a>
+                    <li class="nav-item"><a class="nav-link" href="monitoring/monitoring.html" target="_blank">Monitoring</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="logstat/logstat.html" target="_blank">LogStat</a></li>
+                    </li>
+                  </ul>
+                </div>
+            
+              </div>
+            </nav>
+          </div>
+          <div class="col">
+            <h1 class="fs-3">SQL</h1>
+
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <p class="pb-2"><b>--can I use</b><br>SELECT * FROM all_objects;</p>
+
+                <p class="pb-2"><b>--get info about schema</b><br>
+                  SELECT object_type, count(1)<br>
+                  FROM dba_objects<br>
+                  WHERE owner = '<b>setName</b>'<br>
+                  GROUP BY object_type<br>
+                  ORDER BY object_type;
+                </p>
+              </div>
+
+              <div class="col">
+                <p class="pb-2"><b>--get tables</b><br>SELECT table_name FROM dba_tables<br>WHERE owner =
+                  '<b>setName</b>' ORDER BY 1;</p>
+
+                <p class="pb-2"><b>--get views</b><br>SELECT view_name FROM dba_views<br>WHERE owner = '<b>setName</b>'
+                  ORDER BY 1;
+                </p>
+
+                <p class="pb-2"><b>--get info about table (view)</b><br><span style="color: red;">DESCRIBE</span>
+                  schema.table_name;</p>
+              </div>
+            </div>
+
+            <p class="pt-3 pb-4">
+              DML = SELECT, INSERT, UPDATE, DELETE, MERGE<br>
+              TCL = COMMIT, ROLLBACK, SAVEPOINT<br>
+              DDL = CREATE, ALTER, DROP, RENAME, TRUNCATE<br>
+              DCL = GRANT, REVOKE
+            </p>
+
+
+
+            <div class="accordion accordion-flush mb-md-0 mb-4" id="accordionFlushExample">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <b>SELECT</b>
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <p class="pb-0"><b>Порядок выполнения запроса</b></p>
+                        <ol>
+                          <li>FROM</li>
+                          <li>WHERE</li>
+                          <li>SELECT</li>
+                          <li>GROUP BY</li>
+                          <li>HAVING</li>
+                          <li>ORDER BY</li>
+                          <li>LIMIT</li>
+                        </ol>
+                      </div>
+                      <div class="col">
+                        <p class="pb-2"><b>--get 5 rows</b><br>
+                          SELECT * FROM <b>schema.table_name</b><br>
+                          WHERE rownum &lt;= 5;
+                        </p>
+                        <p class="pb-2"><b>--get order NULL</b><br>
+                          SELECT * FROM <b>schema.table_name</b><br>
+                          ORDER BY field_name <b>nulls last</b>; --//first
+                        </p>
+                      </div>
+                    </div>
+
+                    <p>SELECT * FROM table_name;</p>
+                    <p>SELECT colum(s)_name FROM table_name;</p>
+                    <p>select DISTINCT colum(s)_name from table_name;</p>
+                    <p>select * from table_name WHERE condition(s);</p>
+                    <p>select * from table_name where age &gt; &gt;= &lt; &lt;= = &lt;&gt; != 5;</p>
+                    <p>select * from table_name where age BETWEEN 5 AND 50;</p>
+                    <p>select * from table_name where age IN (5, 10);</p>
+                    <p>select * from table_name where age IS NULL / IS NOT NULL;</p>
+                    <p>select * from table_name where name LIKE 'A%';</p>
+                    <p>select * from table_name where name LIKE 'ар_а';</p>
+                    <p>select * from table_name where name LIKE 'Dr\_%' escape '\'; (Dr_Anna)</p>
+                    <p>select * from table_name where age&lt;18 AND name LIKE 'A%';</p>
+                    <p>select * from table_name where age&lt;18 OR age&gt;65;</p>
+                    <p>select * from table_name where name NOT LIKE 'A%';</p>
+                    <p>select * from table_name where NOT name = 'Anna';</p>
+                    <p>select * from table_name ORDER BY name;</p>
+                    <p>select * from table_name order by name DESC;</p>
+                    <p>select * from table_name order by name NULLS FIRST / NULLS LAST;</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <b>CHARACTER</b>&nbsp;length(), trim(), substr(), replace()
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>LENGTH(value) --//get length from the word</p>
+
+                    <p>
+                      LOWER(string) --//to small symbol<br>
+                      UPPER(string) --//to big symbol<br>
+                      INITCAP(string) --//to big first symbol in the each word
+                    </p>
+
+                    <p>
+                      CONCAT(string, string) --//to concatanation two words<br>
+                      SELECT colum_name1 ||' '|| colum_name2 FROM table_name; --//to concatanation
+                    </p>
+
+                    <p>
+                      LPAD(s,n,p) --//add to left symbol p, where n – length new word<br>
+                      RPAD(s,n,p) --//add to right symbol p, where n – length new word<br>
+                      select LPAD('123',4, '0') from dual; --//123 = 0123
+                    </p>
+
+                    <p>
+                      TRIM()<br>
+                      select trim(' Valera ') from dual; --//delete all space<br>
+                      select trim(trailing 'a' from 'Valeraaaaa') from dual; --//delete all end 'a'<br>
+                      select trim(leading 'a' from 'aaValeraaaa') from dual; --//delete all begin 'a'<br>
+                      select trim(both 'a' from 'aaValeraaaa') from dual; --//delete all begin/end 'a'
+                    </p>
+
+                    <p>
+                      INSTR()<br>
+                      select instr('Valera', 'a') from dual; --//get first position for 'a'<br>
+                      select instr('Valera','a',4) from dual; --//4 – start position for search<br>
+                      select instr('Valera','a',1,2) from dual; --//2 – second position for 'a'
+                    </p>
+
+                    <p>
+                      SUBSTR(string, start position, number of characters)<br>
+                      select substr('Valera',2) from dual; --//alera<br>
+                      select substr('Valera',2,2) from dual; --//al
+                    </p>
+
+                    <p>
+                      REPLACE(string, search item, replacement item)<br>
+                      select replace('Valera, hello', 'hello') from dual; --//Valera,<br>
+                      select replace('Valera, hello', 'hello', 'bye') from dual; --//Valera, bye<br>
+                      select replace('Valera, hello', 'l', '*') from dual; --//Va*era, he**o
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <b>NUMERIC</b>&nbsp;round(), trunc(), mod()
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      ROUND(n, presition)<br>
+                      select round(3.14) from dual; --//3<br>
+                      select round(3.16, 1) from dual; --//3.2<br>
+                      select round(3568, -1) from dual; --//3570
+                    </p>
+
+                    <p>
+                      TRUNC(n, presition)<br>
+                      select trunc(3.14) from dual; --//3<br>
+                      select trunc(3.16, 1) from dual; --//3.1<br>
+                      select trunc(3568, -1) from dual; --//3560
+                    </p>
+
+                    <p>
+                      MOD(dividend, divisor)<br>
+                      select mod(5, 2) from dual; --//1 остаток от деления
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-4" aria-expanded="false" aria-controls="flush-collapse-4">
+                    <b>DATE</b>&nbsp;sysdate, round(), trunc()
+                  </button>
+                </h2>
+                <div id="flush-collapse-4" class="accordion-collapse collapse" aria-labelledby="flush-heading-4"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      SYSDATE<br>
+                      select sysdate from dual; --//get today date
+                    </p>
+
+                    <p>
+                      MONTHS_BETWEEN(end_date, start_date)<br>
+                      ADD_MONTHS(date, number_of_months)<br>
+                      NEXT_DAY(date, day_of_the_week)<br>
+                      LAST_DAY(date)
+                    </p>
+
+                    <p>
+                      ROUND(date, date precision format)<br>
+                      TRUNC(date, date precision format)<br>
+                      date precision format = centorial-CC, year-YYYY, quarter-Q, month-MM, week-W,
+                      day-DD, hour-HH, minut-MI
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-5" aria-expanded="false" aria-controls="flush-collapse-5">
+                    <b>CONVERSION</b>&nbsp;to_char(), to_date(), to_number(), nvl()
+                  </button>
+                </h2>
+                <div id="flush-collapse-5" class="accordion-collapse collapse" aria-labelledby="flush-heading-5"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      TO_CHAR(number, format_mask, nls_parameters)<br>
+                      select '$'||to_char(15) from dual; --//$15<br>
+                      format_mask = '99999' - 18<br>
+                      format_mask = '099999' - 000018<br>
+                      format_mask = '099999.999' - 000018.350<br>
+                      format_mask = '099999D999' - 000018.350<br>
+                      format_mask = '099,999,999' - 001,234,567<br>
+                      format_mask = '099999G999' – 001,234,567<br>
+                      format_mask = '$099999' - $000018 (dollar change)<br>
+                      format_mask = 'L099999' - $000018 (local change)<br>
+                      format_mask = '099999MI' - 000018- (end minus for negative number)<br>
+                      format_mask = '099999PR' - &lt;000018&gt; (&lt;&gt; for negative number)<br>
+                      format_mask = 'S099999' - +000018 (show sign of number)
+                    </p>
+                    <hr>
+                    <p>
+                      TO_CHAR(date, format_mask, nls_parameters)<br>
+                      select to_char('20.10.2019') from dual;<br>
+                      select to_char(sysdate,'Month','NLS_DATE_LANGUAGE = AMERICAN') from dual;<br>
+                      format_mask = 'Y' – 9<br>
+                      format_mask = 'YY' - 19<br>
+                      format_mask = 'YYY' - 019<br>
+                      format_mask = 'YYYY' - 2019<br>
+                      format_mask = 'RR' - 19<br>
+                      format_mask = 'YEAR' - twenty nineteen<br>
+                      format_mask = 'MM' - 10<br>
+                      format_mask = 'MON' - OCT<br>
+                      format_mask = 'MONTH' - OCTOBER<br>
+                      format_mask = 'D' – 6 day number<br>
+                      format_mask = 'DD' – 20 day of month<br>
+                      format_mask = 'DDD' – 263 day of year<br>
+                      format_mask = 'DY' – FRI day of week<br>
+                      format_mask = 'DAY' – FRIDAY full day of week<br>
+                      format_mask = 'W' – 3 week of month<br>
+                      format_mask = 'WW' – 38 week of year<br>
+                      format_mask = 'Q' – 3 quarter of year<br>
+                      format_mask = 'CC' – 21 centure<br>
+                      format_mask = 'PM' – AM/PM show for time<br>
+                      format_mask = 'HH24' – show time in format 24 hour
+                    </p>
+                    <hr>
+                    <p>
+                      TO_DATE(text, format_mask, nls_parameters)<br>
+                      select to_date('08-10-19', 'dd-mm-YYYY') from dual;<br>
+                      select to_char(to_date('08-10-19', 'yy-mm-dd'),'dd-MON-yyyy hh24:mi:ss') from dual;
+                    </p>
+                    <hr>
+                    <p>
+                      TO_NUMBER(text, format_mask, nls_parameters)<br>
+                      select to_number('4555,77') from dual;<br>
+                      select to_number('4555.77', '9999.99') from dual;<br>
+                      select to_number('$4555.77', '$9999.99') from dual;<br>
+                      select to_number('4,555.77', '9,999.99') from dual;<br>
+                      select to_number('&lt;4,555.77&gt;', '9,999.99PR') from dual;
+                    </p>
+                    <hr>
+                    <p>
+                      NVL(value, ifnull)<br>
+                      select nvl(18, 19) from dual;<br>
+                      select nvl(null, 19) from dual;
+                    </p>
+
+                    <p>
+                      NVL2(value, ifnotnull, ifnull)<br>
+                      select nvl2(18, 19, 20) from dual;<br>
+                      select nvl2(null, 19, 20) from dual;
+                    </p>
+
+                    <p>
+                      NULLIF(value1, value2)<br>
+                      select nullif(18, 19) from dual;<br>
+                      select nullif(19, 19) from dual;
+                    </p>
+
+                    <p>
+                      COALESCE(value1, value2, …, valueN)<br>
+                      select coalesce(1, null, 2) from dual;<br>
+                      select coalesce(null, null, 2) from dual;
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-6" aria-expanded="false" aria-controls="flush-collapse-6">
+                    <b>GROUP</b>&nbsp;count(), sum(), avg(), max(), min(), group by
+                  </button>
+                </h2>
+                <div id="flush-collapse-6" class="accordion-collapse collapse" aria-labelledby="flush-heading-6"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      COUNT(1) – only number<br>
+                      select count(1) from table_name;<br>
+                      select count(field_name) from table_name; --//null not count<br>
+                      select count(field_name) from table_name where field_name &lt; 5;<br>
+                      select count(distinct field_name) from table_name; --//uniq value count
+                    </p>
+
+                    <p>
+                      SUM(field_name) – only number<br>
+                      select sum(field_name) from table_name; --//null not sum<br>
+                      select sum(distinct field_name) from table_name; --//uniq value sum
+                    </p>
+
+                    <p>
+                      AVG(field_name) – only number<br>
+                      select avg(field_name) from table_name; --//null not avg<br>
+                      select avg(distinct field_name) from table_name; --//uniq value avg
+                    </p>
+
+                    <p>
+                      MAX(field_name) – number and string<br>
+                      select max(field_name) from table_name;
+                    </p>
+
+                    <p>
+                      MIN(field_name) – number and string<br>
+                      select min(field_name) from table_name;
+                    </p>
+
+                    <p>
+                      GROUP BY<br>
+                      select department_id, count(1) from employees group by department_id;<br>
+                      select department_id, count(1) from employees group by department_id HAVING count(1) &gt; 5;
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-7" aria-expanded="false" aria-controls="flush-collapse-7">
+                    <b>SUBQUERY</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-7" class="accordion-collapse collapse" aria-labelledby="flush-heading-7"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      Need to get a single subquery result if using <b>= &lt; &lt;= &gt; &gt;= &lt;&gt;</b><br>
+                      Need to get a multi subquery result if using <b>IN, NOT IN, >ANY, >ALL</b>
+                    </p>
+                    <hr>
+                    <p>
+                      select first_name, salary from employees<br>
+                      where salary &gt; (select avg(salary) from employees);
+                    </p>
+
+                    <p>
+                      select (<br>
+                      select min(salary) from jobs) min_zp,<br>
+                      (select max(length(first_name)) from employees) max_length_name<br>
+                      from dual;
+                    </p>
+
+                    <p>
+                      select t1.fname from employee t1<br>
+                      where t1.salary &gt;<br>
+                      (select avg(t2.salary) from employee t2<br>
+                      where t2.department_id = t1.department_id);
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-8">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-8" aria-expanded="false" aria-controls="flush-collapse-8">
+                    <b>JOIN, UNION</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-8" class="accordion-collapse collapse" aria-labelledby="flush-heading-8"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p class="pb-0">Горизонтальное объединение</p>
+                    <ul>
+                      <li>INNER JOIN = X,Y,K + Z,X,M = X</li>
+                      <li>LEFT JOIN = X,Y,K + Z,X,M = X,Y.K</li>
+                      <li>RIGHT JOIN = X,Y,K + Z,X,M = Z,X,M</li>
+                      <li>FULL JOIN = X,Y,K + Z,X,M = X,Y,K,Z,M</li>
+                      <li>CROSS JOIN = X,Y,K + Z,X,M = XZ, XX, XM, YZ, YX, YM, KZ, KX, KM</li>
+                    </ul>
+
+                    <p class="pb-0">Вертикальное объединение</p>
+                    <ul>
+                      <li>UNION</li>
+                      <li>INTERSECT</li>
+                      <li>MINUS</li>
+                    </ul>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <b>INNER JOIN</b>&nbsp;has not null fields, tables have the total field name
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingOne">
+                          <div class="accordion-body">
+                            <p>
+                              NATURAL JOIN (EQUIJOIN)<br>
+                              select * from table1<br>
+                              natural join table2;
+                            </p>
+                            <hr>
+                            <p>
+                              JOIN USING (EQUIJOIN)<br>
+                              select column(s) from table1<br>
+                              join table2 using (column(s));
+                            </p>
+                            <hr>
+                            <p>
+                              JOIN ON (EQUIJOIN)<br>
+                              select column(s) from table1 as t1<br>
+                              join table2 as t2 on t1.field = t2.field;<br><br>
+
+                              select column(s) from table1 as t1<br>
+                              join table2 as t2 on (t1.fieldA=t2.fieldA and t1.fieldB=t2.fieldB)<br>
+                              where salary>500;
+                            </p>
+                            <hr>
+                            <p>
+                              SELF JOIN – for structure info<br>
+                              select column(s) from table1 as t1<br>
+                              join table1 as t2 on t1.field = t2.field;
+                            </p>
+                            <hr>
+                            <p>
+                              NONEQUIJOIN<br>
+                              select column(s) from table1 as t1<br>
+                              join table1 as t2 on (t1.field = t2.field and salary*2&lt;max_salary); --//&lt; &lt;= &gt;
+                              &gt;=
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            <b>OUTER JOIN</b>&nbsp;has null fields
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingTwo">
+                          <div class="accordion-body">
+                            <p>
+                              LEFT OUTER JOIN<br>
+                              select column(s) from table1 as t1<br>
+                              left outer join table2 as t2 on t1.field = t2.field;
+                            </p>
+                            <hr>
+                            <p>
+                              RIGHT OUTER JOIN<br>
+                              select column(s) from table1 as t1<br>
+                              right outer join table2 as t2 on t1.field = t2.field;
+                            </p>
+                            <hr>
+                            <p>
+                              FULL OUTER JOIN<br>
+                              select column(s) from table1 as t1<br>
+                              full outer join table2 as t2 on t1.field = t2.field;
+                            </p>
+                            <hr>
+                            <p>
+                              CROSS JOIN<br>
+                              select column(s) from table1<br>
+                              cross join table2;
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            <b>UNION</b>&nbsp;t1.fields count = t2.fields count
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingThree">
+                          <div class="accordion-body">
+                            <p>
+                              UNION ALL – 5f + 4f = 9f [2f - total]<br>
+                              select * from t1 where salary &gt; 5<br>
+                              union all<br>
+                              select * from t2 where salary &lt; 25;
+                            </p>
+                            <hr>
+                            <p>
+                              UNION – (sort + set) 5f + 4f = 7f<br>
+                              select salary from t1<br>
+                              union<br>
+                              select salary from t2<br>
+                              order by salary desc;
+                            </p>
+                            <hr>
+                            <p>
+                              INTERSECT – (sort + set) 5f + 4f = 2f<br>
+                              select salary from t1<br>
+                              intersect<br>
+                              select salary from t2;
+                            </p>
+                            <hr>
+                            <p>
+                              EXCEPT / MINUS – (sort + set) 5f – 4f = 3f; 4f – 5f = 2f<br>
+                              select salary from t1<br>
+                              minus<br>
+                              select salary from t2;<br><br>
+
+                              select salary from t2<br>
+                              minus<br>
+                              select salary from t1;
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-9">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-9" aria-expanded="false" aria-controls="flush-collapse-9">
+                    <b>DML</b>&nbsp;insert, update, delete, merge
+                  </button>
+                </h2>
+                <div id="flush-collapse-9" class="accordion-collapse collapse" aria-labelledby="flush-heading-9"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      INSERT<br>
+                      insert into table_name (columns list) values(value);<br>
+                      insert into countries (country_id, country_name, region_id) values('SW', 'Sweden', 1);
+                    </p>
+                    <hr>
+                    <p>
+                      UPDATE<br>
+                      update table_name set column(s)=value(s) where condition(s);<br>
+                      update employees set salary=1000 where employee_id=15;
+                    </p>
+                    <hr>
+                    <p>
+                      DELETE<br>
+                      delete from table_name where condition(s);<br>
+                      delete from new_emps where age=24;
+                    </p>
+                    <hr>
+                    <p>
+                      MERGE<br>
+                      merge into new_emps ne<br>
+                      using employees e<br>
+                      on (ne.emp_id=e.employee_id)<br>
+                      when matched then<br>
+                      update set ne.start_date=sysdate<br>
+                      delete where ne.job like '%IT%'<br>
+                      when not matched then<br>
+                      insert (emp_id, name, start_date, job)<br>
+                      values (employee_id, last_name, hire_date, job_id);
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-10">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-10" aria-expanded="false" aria-controls="flush-collapse-10">
+                    <b>TCL</b>&nbsp;commit, rollback, savepoint
+                  </button>
+                </h2>
+                <div id="flush-collapse-10" class="accordion-collapse collapse" aria-labelledby="flush-heading-10"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>transaction = DML commands list</p>
+
+                    <p>
+                      COMMIT – show update for all sessions (users)<br>
+                      transaction;<br>
+                      commit;
+                    </p>
+                    <hr>
+                    <p class="pb-0">ROLLBACK</p>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6 col-12">
+                          transaction;<br>
+                          rollback;
+                        </div>
+                        <div class="col">
+                          transaction;<br>
+                          rollback to savepoint savepoint_name;
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <p class="mt-2">
+                      SAVEPOINT<br>
+                      savepoint savepoint_name;
+                    </p>
+                    <hr>
+                    <p>
+                      AUTOCOMMIT – do not use<br>
+                      set autocommit on;<br>
+                      set autocommit off;
+                    </p>
+                    <hr>
+                    <p>
+                      LOCK<br>
+                      select * from employee for update;
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-11">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-11" aria-expanded="false" aria-controls="flush-collapse-11">
+                    <b>DDL</b>&nbsp;create, alter, rename, truncate, drop
+                  </button>
+                </h2>
+                <div id="flush-collapse-11" class="accordion-collapse collapse" aria-labelledby="flush-heading-11"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      CREATE<br>
+                      create table students(<br>
+                      student_id integer,<br>
+                      name varchar2(15)<br>
+                      );
+                    </p>
+                    <hr>
+                    <p>
+                      ALTER<br>
+                      alter table table_name add (column_name data_type default expr);<br>
+                      alter table table_name modify (column_name data_type default expr);<br>
+                      alter table table_name read only;<br>
+                      alter table table_name drop column column_name;<br>
+                      alter table table_name set unused column column_name;<br>
+                      alter table table_name drop unused columns;
+                    </p>
+                    <hr>
+                    <p>
+                      RENAME<br>
+                      alter table table_name rename column column_name1 to column_name2;
+                    </p>
+                    <hr>
+                    <p>
+                      TRUNCATE<br>
+                      truncate table table_name;
+                    </p>
+                    <hr>
+                    <p>
+                      DROP<br>
+                      drop table shema.table_name;
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-12">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-12" aria-expanded="false" aria-controls="flush-collapse-12">
+                    <b>CONSTRAINT, SEQUENCE, INDEX</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-12" class="accordion-collapse collapse" aria-labelledby="flush-heading-12"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p><b>constraint</b> – business rools: unique, not null, primary key, foreign key, check</p>
+
+                    <p>
+                      UNIQUE CONSTRAINT<br>
+                      столбец(цы) содержит только уникальные значения (отсутствие
+                      дубликатов в столбце). Исключение – null.
+                    </p>
+
+                    <p>
+                      NOT NULL CONSTRAINT<br>
+                      не разрешается столбцам содержать значение null.
+                    </p>
+
+                    <p>
+                      PRIMARY KEY CONSTRAINT<br>
+                      столбец(цы) содержит только уникальные значения (отсутствие
+                      дубликатов в столбце) и не разрешает содержать значение null.
+                    </p>
+
+                    <p>
+                      FOREIGN KEY CONSTRAINT<br>
+                      использовать только значения из определенного столбца таблицы-родителя или значение
+                      null. Связывает две таблицы между собой.
+                    </p>
+
+                    <p>
+                      CHECK CONSTRAINT<br>
+                      использовать только те значения, которые удовлетворяют указанному условию(ям).
+                    </p>
+                    <hr>
+                    <p>
+                      SEQUENCE<br>
+                      генерировать уникальные значения по заранее определенному алгоритму.
+                      Используется для primary key.
+                    </p>
+                    <hr>
+                    <p>INDEX – set automation for primary key, unique</p>
+                    <p class="pb-0">B-TREE INDEX – default, используется:</p>
+                    <ul>
+                      <li>когда много строк;</li>
+                      <li>когда количество строк в оутпуте составляет 2%-4% от общего кол-ва строк;</li>
+                      <li>когда много уникальных значений;</li>
+                      <li>когда используется WHERE, JOIN по столбцу.</li>
+                    </ul>
+                    <p class="pb-0">BITMAP INDEX используется:</p>
+                    <ul>
+                      <li>когда много строк;</li>
+                      <li>когда мало уникальных значений;</li>
+                      <li>когда используется AND, OR, NOT по столбцу.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-13">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-13" aria-expanded="false" aria-controls="flush-collapse-13">
+                    <b>VIEW, SYNONYM</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-13" class="accordion-collapse collapse" aria-labelledby="flush-heading-13"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p class="pb-0">VIEW – select to table</p>
+                    <ul>
+                      <li>безопасность / ограничение (доступ к 3 полям из 5);</li>
+                      <li>упрощение написания запроса (не нужен JOIN);</li>
+                      <li>предотвращение ошибок;</li>
+                      <li>понятные названия полей;</li>
+                      <li>перфоменс.</li>
+                    </ul>
+
+                    <p class="pb-0">SIMPLE VIEW</p>
+                    <ul>
+                      <li>one table</li>
+                      <li>no functions</li>
+                      <li>no aggregation</li>
+                    </ul>
+
+                    <p class="pb-0">COMPLEX VIEW</p>
+                    <ul>
+                      <li>join tables</li>
+                      <li>functions</li>
+                      <li>aggregation</li>
+                    </ul>
+
+                    <p>
+                      SYNONYM<br>
+                      предоставляет таблице другое имя.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-14">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse-14" aria-expanded="false" aria-controls="flush-collapse-14">
+                    <b>ПОДСТАНОВКИ</b>
+                  </button>
+                </h2>
+                <div id="flush-collapse-14" class="accordion-collapse collapse" aria-labelledby="flush-heading-14"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <p>
+                          SELECT name, salary<br>
+                          FROM employees<br>
+                          WHERE employee_id = 30;
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          SELECT name, salary<br>
+                          FROM employees<br>
+                          WHERE employee_id = &amp;ID;
+                        </p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <p>
+                          SELECT name, salary<br>
+                          FROM employees<br>
+                          WHERE name = 'Steven';
+                        </p>
+                      </div>
+                      <div class="col">
+                        <p>
+                          SELECT name, salary<br>
+                          FROM employees<br>
+                          WHERE name = '&name';
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="customer-bg border-top border-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="mt-3 pb-0">
+              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
+            </p>
+            <nav class="mb-2">
+              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/current-year.js"></script>
+</body>
+
+</html>
