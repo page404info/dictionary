@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Customer Adaptability - page404.info</title>
+    <link rel="icon" type="image/png" href="favicon-adaptability.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="box-mini">
+        <h1><a href="adaptability.html">Home</a> - Customer Size Device</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu">
+        <p>width:</p>
+        <input id="width" type="text" size="3" />
+        <p>height:</p>
+        <input id="height" type="text" size="3" />
+        <input id="checkButton" type="submit" value="Check" />
+        <input id="checkReverce" type="submit" value="Reverse" />
+      </div>
+
+      <div class="box-max">
+        <div>
+          <iframe id="iframe" src="" width="" height=""></iframe>
+        </div>
+      </div>
+    </main>
+
+      <footer>
+        <div class="wrapper-footer">
+          <p>
+            <a href="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank"
+              rel="noopener noreferrer">Device statistics</a>
+            &emsp;&emsp;
+            <a href="readme.txt" target="_blank">readme.txt</a>
+            &emsp;&emsp;
+            <a href="https://page404info.github.io/dictionary/tools/tools-main.html">More tools</a>
+          </p>
+          <br />
+          <p class="copyright">&copy; Valeriy Novikov, 2022</p>
+        </div>
+      </footer>
+
+    <script>
+      document.getElementById("width").value = localStorage.getItem("width");
+      document.getElementById("height").value = localStorage.getItem("height");
+
+      let iframe = document.getElementById("iframe");
+      iframe.src = localStorage.getItem("url");
+      iframe.width = localStorage.getItem("width");
+      iframe.height = localStorage.getItem("height");
+    </script>
+
+    <script>
+      let checkButton = document.getElementById("checkButton");
+      checkButton.addEventListener("click", function (event) {
+        let userWidth = document.getElementById("width").value;
+        let userHeight = document.getElementById("height").value;
+
+        localStorage.setItem("width", userWidth);
+        localStorage.setItem("height", userHeight);
+
+        let iframe = document.getElementById("iframe");
+        iframe.src = localStorage.getItem("url");
+        iframe.width = localStorage.getItem("width");
+        iframe.height = localStorage.getItem("height");
+      });
+
+      let checkReverce = document.getElementById("checkReverce");
+      checkReverce.addEventListener("click", function (event) {
+        let iframe = document.getElementById("iframe");
+        iframe.src = localStorage.getItem("url");
+        iframe.width = localStorage.getItem("height");
+        iframe.height = localStorage.getItem("width");
+      });
+    </script>
+  </body>
+</html>

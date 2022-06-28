@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Adaptability - page404.info</title>
+  <meta name="description" content="Проверка адаптивности приложения.">
+  <link rel="icon" type="image/png" href="favicon-adaptability.png">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="box-mini">
+      <h1>Adaptability</h1>
+    </div>
+
+    <div class="search">
+      <input id="inputUrl" type="text" name="url" size="35" placeholder="input URL" />
+      <input id="button" type="submit" value="Check" />
+    </div>
+
+    <div class="menu">
+      <p><a href="page-mobile.html">mobile</a></p>
+      <p><a href="page-tablet.html">tablet</a></p>
+      <p><a href="page-desktop.html">desktop</a></p>
+      <p><a href="page-customer.html">customer</a></p>
+      <p>
+        <a href="page-bootstrap.html" title="check Bootstrap grid">Bootstrap</a>
+      </p>
+      <p>
+        <a href="page-zoom.html" target="_blank" title="75% - 150%">zoom</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper-footer">
+      <p>
+        <a href="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank"
+          rel="noopener noreferrer">Device statistics</a>
+        &emsp;&emsp;
+        <a href="readme.txt" target="_blank">readme.txt</a>
+        &emsp;&emsp;
+        <a href="https://page404info.github.io/dictionary/tools/tools-main.html">More tools</a>
+      </p>
+      <br />
+      <p class="copyright">&copy; Valeriy Novikov, 2022</p>
+    </div>
+  </footer>
+
+  <script>
+    let checkButton = document.getElementById("button");
+
+    checkButton.addEventListener("click", function (event) {
+      let userUrl = document.getElementById("inputUrl").value;
+      let siteName = "";
+
+      if (userUrl.includes("http://") || userUrl.includes("https://") || userUrl.includes("file://")) {
+        siteName = userUrl;
+      } else {
+        siteName = "http://" + userUrl;
+      }
+
+      localStorage.setItem("url", siteName);
+    });
+  </script>
+</body>
+
+</html>

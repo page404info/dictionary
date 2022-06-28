@@ -1,0 +1,20 @@
+@page {
+  size: A4;
+  margin: 0;
+  margin-left: 3cm;
+  margin-right: 2cm;
+}
+
+@media print {
+  html,
+  body {
+    font-size: 16px;
+  }
+  body {
+    margin: 0 auto;
+    border: 0;
+  }
+  p {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Инструменты. Сети - page404.info</title>
+  <meta name="description" content="Уровни моделей OSI, TCP/IP. Терминология.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div class="main-bg">
+    <header class="customer-bg ps-1 border-bottom border-3">
+      <div class="container">
+        <div class="row align-items-center pt-2 pb-2">
+          <div class="col-3">
+            <a href="../index.html">main page</a>
+          </div>
+          <div class="col text-end">
+            <nav>
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" href="tools-main.html">Tools</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../qa/qa-main.html">QA</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="customer-bg-body">
+      <div class="container pt-4 pb-3">
+        <div class="row">
+          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
+            <nav>
+              <div class="row">
+            
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="tools-main-sql.html">SQL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-api.html">API</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-bash.html">Bash</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="javascript:void(0)">Network</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-browser.html">Browser</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools-main-notepad.html">Notepad++</a></li>
+                  </ul>
+                </div>
+            
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">PageChecker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adaptability/adaptability.html"
+                        target="_blank">Adaptability</a></li>
+                    <li class="nav-item"><a class="nav-link" href="curlload/curlLoad.html" target="_blank">curlLoad</a></li>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="typograph/typograph.html" target="_blank">TypoGraph</a>
+                    <li class="nav-item"><a class="nav-link" href="monitoring/monitoring.html" target="_blank">Monitoring</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="logstat/logstat.html" target="_blank">LogStat</a></li>
+                    </li>
+                  </ul>
+                </div>
+            
+              </div>
+            </nav>
+          </div>
+          <div class="col">
+            <h1 class="fs-3">Network</h1>
+
+            <div class="table-responsive mt-3">
+              <table class="table">
+                <thead class="table-light table-active">
+                  <tr>
+                    <th scope="col" class="align-top ">level</th>
+                    <th scope="col" class="align-top ">OSI</th>
+                    <th scope="col" class="align-top">TCP/IP</th>
+                    <th scope="col" class="align-top">protocols</th>
+                    <th scope="col" class="align-top">описание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-top">7</td>
+                    <td class="align-top">Прикладной</td>
+                    <td class="align-top" rowspan="3">Прикладной</td>
+                    <td class="align-top" rowspan="3">HTTP:80, HTTPS:443,<br>SMTP:25, SMTPS:465,<br>DNS:53, FTP:21,
+                      IMAPS</td>
+                    <td class="align-top">данные</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">6</td>
+                    <td class="align-top">Представления</td>
+                    <td class="align-top">форматирование</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">5</td>
+                    <td class="align-top">Сеансовый</td>
+                    <td class="align-top">сессия</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">4</td>
+                    <td class="align-top">Транспортный</td>
+                    <td class="align-top">Транспортный</td>
+                    <td class="align-top">TCP, UDP</td>
+                    <td class="align-top">порт, интерфейс сокетов</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">3</td>
+                    <td class="align-top"><b>Сетевой</b></td>
+                    <td class="align-top">Сетевой</td>
+                    <td class="align-top">IP,<br>DHCP:67,68, ICMP</td>
+                    <td class="align-top">IP-адрес</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">2</td>
+                    <td class="align-top"><b>Канальный</b></td>
+                    <td class="align-top" rowspan="2">Сетевые интерфейсы</td>
+                    <td class="align-top">ARP, STP</td>
+                    <td class="align-top">МАС-адрес</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">1</td>
+                    <td class="align-top"><b>Физический</b></td>
+                    <td class="align-top">Ethernet, Wi-Fi</td>
+                    <td class="align-top">технология Ethernet, Wi-Fi</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mt-3 pb-0">Уровни Сетевой, Канальный, Физический работают на СЕТЕВОМ ОБОРУДОВАНИИ.</p>
+            <p class="pt-0">Уровни Транспортный - Прикладной работают на ХОСТАХ.</p>
+
+            <div class="table-responsive mt-3">
+              <table class="table">
+                <thead class="table-light table-active">
+                  <tr>
+                    <th scope="col" class="align-top ">термин</th>
+                    <th scope="col" class="align-top ">описание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-top">МАС-адрес</td>
+                    <td class="align-top">физический адрес. Делает компьютер уникальным в сети (МАС можно изменить
+                      вручную), служит для
+                      обмена данными между устройствами в одной сети (второй уровень)</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">IP-адрес</td>
+                    <td class="align-top">логический адрес. Определяет принадлежность компьютера к сети (где
+                      географически находится
+                      устройство), служит для обмена данными между разными сетями (третий уровень)</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол IP</td>
+                    <td class="align-top">объединение сетей, маршрутизация без гарантии доставки. Содержит IP-адрес
+                      получателя и отправителя</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол DHCP</td>
+                    <td class="align-top">позволяет автоматически назначать компьютерам в сети IP-адреса</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол ARP</td>
+                    <td class="align-top">позволяет по IP-адресу определить МАС-адрес компьютера; связывает сетевой и
+                      канальный уровни (таблица IP- МАС)</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол ICMP</td>
+                    <td class="align-top">отвечает за межсетевые сообщения; ping, traceroute</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол TCP</td>
+                    <td class="align-top">обеспечивает гарантию доставки и порядок следования сообщений</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол UDP</td>
+                    <td class="align-top">не гарантирует доставку данных, но работает быстрее ТСР</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">технология NAT</td>
+                    <td class="align-top">преобразование IP-адресов внутренней сети в IP-адреса внешней сети с помощью
+                      таблицы NAT</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">внутренние адреса</td>
+                    <td class="align-top">не маршрутизируются в Интернет, допускается использование одинаковых адресов в
+                      разных сетях</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">диапазон внутренних адресов</td>
+                    <td class="align-top">10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол DNS</td>
+                    <td class="align-top">преобразовывает доменные имена в IP-адреса (nslookup siteName)</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол HTTP</td>
+                    <td class="align-top">протокол передачи гипертекста (4-8 соединений на 1 веб-страницу)
+                      <br><b>запрос:</b> метод / заголовки / тело сообщения
+                      <br><b>ответ:</b> статус код 1хх, 2хх, 3хх, 4хх, 5хх / заголовки / тело сообщения
+                      <br><b>Connection:</b> keep-alive – не закрывать соединение (только для HTTP 1.1 и выше)
+                      <br><b>Expires:</b> Sun, 12 Jul 2016 – указывает до какого времени можно хранить ресурс в кэше
+                      <br><b>Last-Modified:</b> Sun, 12 Jul 2015 – последняя дата изменений ресурса
+                      <br><b>ETag:</b> хеш-код данных страницы
+                      <br><b>Cache-Control:</b> private, max-age=10 – описывает применение кэш
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол SMTP, POP3, IMAP</td>
+                    <td class="align-top">протоколы управления электронной почтой</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол FTP</td>
+                    <td class="align-top">протокол передачи файлов, не безопасный</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top">протокол TLS, SSL</td>
+                    <td class="align-top">транспортный уровень, обеспечивает безопасность протоколов прикладного уровня
+                      путем шифрования</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top"></td>
+                    <td class="align-top"></td>
+                  </tr>
+                  <tr>
+                    <td class="align-top"><b>межсетевой экран</b></td>
+                    <td class="align-top">защищает внутреннюю сеть от внешнего воздействия, работает на
+                      сетевом-транспортном уровнях. Анализирует порты и
+                      IP-адреса по таблице правил, таблица соединений</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top"><b>коммутатор</b></td>
+                    <td class="align-top">фильтрация на портах коммутатора по МАС-адресам</td>
+                  </tr>
+                  <tr>
+                    <td class="align-top"><b>прокси-сервер</b></td>
+                    <td class="align-top">фильтрация содержимого на прикладном уровне</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="pb-0">Протоколы решают следующие вопросы:</p>
+            <ul class="mb-lg-0 mb-4">
+              <li><b>Установление соединения.</b> Кто инициирует установление соединения: клиент или сервер? Какой
+                информацией следует
+                обменяться, прежде чем устанавливать соединение?</li>
+              <li><b>Согласование характеристик соединения.</b> Шифруется ли передача данных по сетевому протоколу?
+                Каким образом происходит
+                обмен ключами шифрования между связывающимися хостами (т.е. сетевыми узлами)?</li>
+              <li><b>Форматирование данных.</b> Каким образом организованы данные, содержащиеся в пакете? В каком
+                порядке данные обрабатываются
+                принимающим их устройством?</li>
+              <li><b>Обнаружение и исправление ошибок.</b> Что происходит в том случае, если пакет слишком долго
+                достигает места своего
+                назначения? Каким образом клиент возобновляет свою работу, если он не в состоянии установить соединение
+                с сервером в
+                кратчайший период времени?</li>
+              <li><b>Разрыв соединения.</b> Каким образом один хост дает знать другому, что связь окончена? Какую
+                завершающую информацию следует
+                передать, чтобы корректно разорвать соединение?</li>
+            </ul>
+
+            <p class="mt-3 pb-0">Официальное руководство Cisco по сетям <a
+                href="../documents/tools-ciscoNetwork.pdf">(смотреть pdf)</a></p>
+            <p class="pb-0">Официальное руководство Cisco по маршрутизации и коммутации <a
+                href="../documents/tools-ciscoRouting.pdf">(смотреть pdf)</a>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="customer-bg border-top border-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="mt-3 pb-0">
+              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
+            </p>
+            <nav class="mb-2">
+              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/current-year.js"></script>
+</body>
+
+</html>
