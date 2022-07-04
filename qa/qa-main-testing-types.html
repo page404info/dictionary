@@ -55,17 +55,20 @@
           <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
             <nav>
               <div class="row">
-            
+
                 <div class="col">
                   <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
                       <a class="nav-link" href="qa-level-2-running.html">Выполнение</a>
                       <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-2-running-test.html">тестирование</a>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-2-running-test.html">тестирование</a>
                         </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-2-running-report.html">отчетность</a>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-2-running-report.html">отчетность</a>
                         </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-2-running-retro.html">ретроспектива</a></li>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-2-running-retro.html">ретроспектива</a></li>
                       </ul>
                     </li>
                     <li class="nav-item">
@@ -73,7 +76,8 @@
                       <ul class="nav nav-pills flex-column">
                         <li class="nav-item ps-4"><a class="nav-link pt-0"
                             href="qa-level-1-planning-analysis.html">тест-анализ</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0" href="qa-level-1-planning-plan.html">тест-план</a>
+                        <li class="nav-item ps-4"><a class="nav-link pt-0"
+                            href="qa-level-1-planning-plan.html">тест-план</a>
                         </li>
                         <li class="nav-item ps-4"><a class="nav-link pt-0"
                             href="qa-level-1-planning-design.html">тест-дизайн</a></li>
@@ -84,7 +88,7 @@
                     </li>
                   </ul>
                 </div>
-            
+
                 <div class="col">
                   <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
@@ -113,7 +117,7 @@
                     </li>
                   </ul>
                 </div>
-            
+
               </div>
             </nav>
           </div>
@@ -130,7 +134,7 @@
                     Классификация видов тестирования
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                   aria-labelledby="panelsStayOpen-headingOne">
                   <div class="accordion-body">
                     <ul>
@@ -138,15 +142,17 @@
                         <ul>
                           <li>функциональное:
                             <ul>
-                              <li>тестирование функциональности;</li>
+                              <li>тестирование функциональности, валидация ссылок;</li>
                               <li>тестирование защищенности и безопасности;</li>
-                              <li>тестирование данных.</li>
+                              <li>тестирование данных (достоверность, орфография, типографика).</li>
                             </ul>
                           </li>
                           <li class="mt-2">нефункциональное:
                             <ul>
                               <li>тестирование требований;</li>
                               <li>тестирование прототипа;</li>
+                              <li>валидация кода, соблюдение стандартов оформления кода (code style);</li>
+                              <li>валидация SEO;</li>
                               <li>тестирование пользовательского интерфейса (верстки);</li>
                               <li>тестирование производительности и нагрузки:
                                 <ul>
@@ -157,10 +163,11 @@
                                   <li>тестирование на отказ и восстановление.</li>
                                 </ul>
                               </li>
-                              <li>тестирование удобства использования;</li>
+                              <li>тестирование удобства использования (навигация, подсказки);</li>
+                              <li>тестирование удобства сопровождения (логирование, мониторинг);</li>
                               <li>тестирование доступности;</li>
                               <li>тестирование интернационализации / локализации;</li>
-                              <li>тестирование совместимости:
+                              <li>тестирование переносимости (совместимости):
                                 <ul>
                                   <li>кроссбраузерное тестирование;</li>
                                   <li>кроссплатформенное тестирование;</li>
@@ -265,20 +272,29 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                     aria-controls="panelsStayOpen-collapseTwo">
-                    функциональное тестирование (работа приложения)
+                    <b>функциональное</b>&nbsp;тестирование (работа приложения)
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                   aria-labelledby="panelsStayOpen-headingTwo">
                   <div class="accordion-body">
                     <p><strong>Тестирование функциональности</strong><br>
-                      проверяет правильность работы системы (правильность расчетов, поведения) по проведенному анализу
-                      спецификации, функциональности компонента или системы.
+                      проверяет правильность работы системы / компонента: правильность расчетов и поведение, в том числе
+                      валидация ссылок.
                     </p>
 
-                    <p><strong>Тестирование защищенности</strong><br>
-                      проверяет фактическую реакцию защитных механизмов, встроенных в систему, на проникновение.
+                    <p class="pb-0"><strong>Тестирование защищенности</strong><br>
+                      проверяет фактическую реакцию защитных механизмов, встроенных в систему, на проникновение:
                     </p>
+                    <ul>
+                      <li>логин/пароль (перебор, лимитирование попыток ввода, блокирование аккаунта после N попыток);
+                      </li>
+                      <li>раскрытие путей и информации (файл robots.txt, текст сообщений об ошибках базы данных);</li>
+                      <li>подмена параметров запроса;</li>
+                      <li>подбор системных папок;</li>
+                      <li>обратный путь в директории (переход в родительскую папку);</li>
+                      <li>инъекции.</li>
+                    </ul>
 
                     <p><strong>Тестирование безопасности</strong><br>
                       проверяет способность программного продукта при использовании оговоренным образом оставаться в
@@ -297,7 +313,10 @@
                       <li><em>точность</em> - длина значения, количество знаков после запятой. Данные должны быть близки
                         к их среднему значению;</li>
                       <li><em>согласованность</em> - поля содержат значения, независимо от способа их измерения;</li>
-                      <li><em>актуальность</em> - данные должны своевременно обновляться.</li>
+                      <li><em>актуальность</em> - данные должны своевременно обновляться;</li>
+                      <li><em>орфография</em> - данные не должны содержать орфографических ошибок;</li>
+                      <li><em>типографика</em> - данные должны восприниматься в легчайшей для чтения и восприятия
+                        форме..</li>
                     </ul>
 
                   </div>
@@ -309,21 +328,37 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                     aria-controls="panelsStayOpen-collapseThree">
-                    нефункциональное тестирование (свойства приложения)
+                    <b>нефункциональное</b>&nbsp;тестирование (свойства приложения)
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                   aria-labelledby="panelsStayOpen-headingThree">
                   <div class="accordion-body">
                     <p><strong><em>Тестирование требований</em></strong><br>
-                      проверка требований на соответствие характеристикам <a
-                        href="qa-main-quality-characteristics.html" target="_blank">качества продукта</a> и
-                      характеристикам <a href="../main/level-1-requirements-characteristics.html" target="_blank">качества
+                      проверка требований на соответствие характеристикам <a href="qa-main-quality-characteristics.html"
+                        target="_blank">качества продукта</a> и
+                      характеристикам <a href="../main/level-1-requirements-characteristics.html"
+                        target="_blank">качества
                         требований.</a>
                     </p>
                     <p><strong><em>Тестирование прототипа</em></strong><br>
                       метод выявления структурных, логических ошибок и ошибок проектирования на ранней стадии развития
                       продукта до начала фактической разработки.
+                    </p>
+                    <p class="pb-0"><strong><em>Валидация кода</em></strong><br>
+                      проверка на соответствие стандартам и правилам оформления кода:
+                    </p>
+                    <ul>
+                      <li>название и порядок атрибутов;</li>
+                      <li>вложенность и закрываемость тегов;</li>
+                      <li>комментарии;</li>
+                      <li>относительный и абсолютный пути;</li>
+                      <li>семантические теги.</li>
+                    </ul>
+
+                    <p><strong><em>Валидация SEO</em></strong><br>
+                      проверка на соответствие требованиям по размещению сайта в поисковых системах (наличие заголовков
+                      H1-H6, meta тегов, размер картинок).
                     </p>
                     <p class="pb-0"><strong><em>Тестирование пользовательского интерфейса</em></strong> (верстки)<br>
                       выполняется путем взаимодействия с системой через интерфейс пользователя (графический, командная
@@ -342,6 +377,8 @@
                       процесс тестирования с целью определения производительности программного продукта:
                     </p>
                     <ul>
+                      <li><em>тестирование на клиенте</em> – объем полученных данных от сервера, скорость передачи
+                        данных;</li>
                       <li><em>нагрузочное тестирование</em> – вид тестирования производительности, проводимый с целью
                         оценки поведения компонента или системы при возрастающей нагрузке, например, количестве
                         параллельных пользователей и/или операций, а также определения какую нагрузку может выдержать
@@ -364,6 +401,10 @@
                       привлекательности программного продукта для пользователя при условии использования в заданных
                       условиях эксплуатации (навигация, логичность, информативность сообщений).
                     </p>
+                    <p><strong><em>Тестирование удобства сопровождения</em></strong><br>
+                      способность команды сопровождения быстро находить и устранять неисправности (какой функционал
+                      логируется, уровень логирования, мониторинг какой функциональности проводится).
+                    </p>
                     <p><strong><em>Тестирование доступности</em></strong><br>
                       тестирование, которое определяет степень легкости, с которой пользователи с ограниченными
                       способностями могут использовать систему или ее компоненты.
@@ -382,14 +423,17 @@
                       тестирование, проводимое с целью проверки качества перевода продукта с одного языка на другой.
                     </p>
 
-                    <p class="pb-0"><strong><em>Тестирование совместимости</em></strong><br>
-                      проверка работоспособности приложения в различных средах (браузеры, операционные системы, их типы, версии и
-                      разрядность):
+                    <p class="pb-0"><strong><em>Тестирование переносимости (тестирование окружения)</em></strong><br>
+                      проверка работоспособности приложения в различных средах (браузеры, операционные системы, их типы,
+                      версии и разрядность):
                     </p>
                     <ul>
                       <li>кроссбраузерное тестирование (виды браузеров и их версии);</li>
-                      <li>кроссплатформенное тестирование (типы операционных систем, их версии и разрядность);</li>
-                      <li>адаптивность (размер окна браузера и разрешение экрана).</li>
+                      <li>кроссплатформенное тестирование (типы операционных систем, их версии и разрядность, слеш в
+                        пути, перевод строки \n,\r, регистр в названии, работа с архивом);</li>
+                      <li>адаптивность (отображение картинок, таблиц, горизонтального скролла в разных размерах окон
+                        браузера и разрешениях экрана);</li>
+                      <li>местоположение, часовой пояс, время, скорость интернета.</li>
                     </ul>
 
                     <p class="pb-0"><strong><em>Тестирование установки и лицензирования</em></strong><br>
@@ -412,7 +456,7 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
                     aria-controls="panelsStayOpen-collapseFour">
-                    тестирование связанное с изменениями
+                    тестирование&nbsp;<b>связанное с изменениями</b>
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
@@ -481,13 +525,13 @@
 
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
                     aria-controls="panelsStayOpen-collapseFive">
-                    по уровням тестирования
+                    <b>по уровням</b>&nbsp;тестирования
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show"
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
                   aria-labelledby="panelsStayOpen-headingFive">
                   <div class="accordion-body">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -792,11 +836,12 @@
         </div>
       </div>
     </footer>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="../js/current-year.js"></script>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/current-year.js"></script>
 </body>
 
 </html>
