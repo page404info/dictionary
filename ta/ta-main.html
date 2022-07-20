@@ -63,7 +63,7 @@
                     <li class="nav-item">
                       <a class="nav-link" href="ta-projectinit.html">Project init</a>
                     </li>
-                    
+
                   </ul>
                 </div>
               </nav>
@@ -72,10 +72,41 @@
           <div class="col">
             <h1 class="fs-3">Test Automation</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Sapiente fuga at, excepturi porro deleniti cupiditate dicta
-              aliquid dignissimos repellendus? Nam blanditiis quasi, qui
-              recusandae quod dolorem perferendis voluptates eveniet iusto?
+              <b>Хороший тест</b> отвечает на вопрос: "Верен ли конечный результат?".<br>
+              <b>Плохой тест</b> отвечает на вопрос: "Верен ли процесс?".<br>
+              <b>Тесты должны</b> покрывать "все что нужно", предоставлять быструю обратную связь, быть актуальными.
+            </p>
+
+            <table class="table text-center">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Просто (Unit test)</th>
+                  <th scope="col">Сложно (E2E test)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Важно</th>
+                  <td>1</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Не важно</th>
+                  <td>3</td>
+                  <td>x</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>
+              <b>E2E test</b> - наилучшая защита от багов, наилучшая устойчивость к рефакторингу, максимальный охват
+              модулей системы, медленная обратная связь, большая стоимость поддержки.<br>
+              <b>Integration test</b> - проверяет контроллеры.<br>
+              <b>Unit test</b> - проверяет алгоритмы, доменную модель. Высокая скорость обратной связи, простота поддержки.
+            </p>
+            <p>
+              Создание объектов >> Фильтрация >> Выполнение >> Формирование отчета
             </p>
           </div>
         </div>
