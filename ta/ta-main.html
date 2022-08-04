@@ -111,15 +111,15 @@
                     <th scope="col"></th>
                     <th scope="col">Просто (Unit test)</th>
                     <th scope="col">Integration test</th>
-                    <th scope="col">Сложно (E2E test)</th>
+                    <th scope="col">Сложно (e2e test)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">Важно</th>
                     <td>1</td>
-                    <td>3</td>
                     <td>2</td>
+                    <td>3</td>
                   </tr>
                   <tr>
                     <th scope="row">Не важно</th>
@@ -142,15 +142,81 @@
                 </tbody>
               </table>
 
-              <p>
-                <b>E2E test</b> - наилучшая защита от багов, наилучшая
+              <p class="mb-3">
+                <b>e2e test</b> - наилучшая защита от багов, наилучшая
                 устойчивость к рефакторингу, максимальный охват модулей системы,
                 медленная обратная связь, большая стоимость поддержки.<br />
                 <b>Integration test</b> - проверяет контроллеры.<br />
                 <b>Unit test</b> - проверяет алгоритмы, доменную модель. Высокая
                 скорость обратной связи, простота поддержки.
               </p>
-              <p>
+
+              <div class="row">
+                <div class="mb-md-0 mb-3 col-md-6 col-12">
+                  <table class="table text-center">
+                    <tbody>
+                      <tr>
+                        <td class="col-2"></td>
+                        <td class="col-2"></td>
+                        <td class="col-4" colspan="2"><b>e2e</b><br />long</td>
+                        <td class="col-2"></td>
+                        <td class="col-2"></td>
+                      </tr>
+                      <tr>
+                        <td class="col-2"></td>
+                        <td class="col-4" colspan="2">
+                          <b>DB-API</b><br />integration
+                        </td>
+                        <td class="col-4" colspan="2">
+                          <b>API-GUI</b><br />integration
+                        </td>
+                        <td class="col-2"></td>
+                      </tr>
+                      <tr>
+                        <td class="col-4" colspan="2"><b>DB</b><br />unit</td>
+                        <td class="col-4" colspan="2"><b>API</b><br />unit</td>
+                        <td class="col-4" colspan="2"><b>GUI</b><br />unit</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col">
+                  <table class="table text-center">
+                    <tbody>
+                      <tr>
+                        <td>5%</td>
+                        <td>1</td>
+                        <td>10<br />tests</td>
+                        <td>
+                          <b>3<br />level</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>25%</td>
+                        <td>5:1</td>
+                        <td>50<br />tests</td>
+                        <td>
+                          <b>2<br />level</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>70%</td>
+                        <td>3:1</td>
+                        <td>150<br />tests</td>
+                        <td>
+                          <b>1<br />level</b>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <p class="mb-md-0 mb-4">
+                <b>Тестовое покрытие</b> = количество проверенных требований /
+                общее количество требований.<br />
+                <b>% автоматизации</b> = количество автоматизированных тестов /
+                общее количество тестов.<br />
                 Создание объектов >> Фильтрация >> Выполнение >> Формирование
                 отчета
               </p>
