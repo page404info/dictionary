@@ -122,17 +122,28 @@
           </div>
           <div class="col">
             <h1 class="fs-3">Защищенность</h1>
-            <p class="pb-0"><b>Объекты проверки</b> не должны раскрывать служебную информацию, пути к служебным
-              файлам, содержать личные данные (пароль, налоговый номер, адрес):</p>
+            <p class="pb-0"><b>Объекты проверки</b> не должны раскрывать служебную и личную информацию:</p>
             <ul>
-              <li>строка браузера;</li>
-              <li>авторизация;</li>
-              <li>поля ввода;</li>
-              <li>cookies;</li>
-              <li>cashe;</li>
-              <li>комментарии в коде;</li>
-              <li>файл robots.txt;</li>
-              <li>текст ошибок приложения.</li>
+              <li>конфигурация системы, оборудования;</li>
+              <li>раскрытие информации:
+                <ul>
+                  <li>файл robots.txt;</li>
+                  <li>комментарии, пути в HTML/CSS/JS коде;</li>
+                  <li>версии в заголовках ответов;</li>
+                  <li>личные данные (пароль, налоговый номер, адрес).</li>
+                </ul>
+              </li>
+              <li>переполнение буфера памяти, файлов логирования.</li>
+              <li>предупреждения системы.</li>
+            </ul>
+            <p class="mt-4 pb-0"><b>Сканеры безопасности</b></p>
+            <ul>
+              <li><a href="https://cwe.mitre.org/data/index.html" target="_blank" rel="noopener noreferrer">слабые стороны программного обеспечения</a></li>
+              <li><a href="https://www.virustotal.com/gui/home/url" target="_blank" rel="noopener noreferrer">проверка на вирусы</a></li>
+              <li><a href="https://www.zaproxy.org/" target="_blank" rel="noopener noreferrer">OWASP ZAP</a></li>
+              <li><a href="https://sqlmap.org/" target="_blank" rel="noopener noreferrer">sqlmap</a></li>
+              <li><a href="https://portswigger.net/burp/communitydownload" target="_blank" rel="noopener noreferrer">Burp Suite</a></li>
+              <li><a href="https://wfuzz.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Wfuzz</a></li>
             </ul>
 
             <div class="accordion accordion-flush mb-md-0 mb-4" id="accordionFlushExample">
@@ -152,6 +163,7 @@
                       <li>GET / POST;</li>
                       <li>изменение параметров;</li>
                       <li>обратный путь;</li>
+                      <li>перенаправление на другой ресурс;</li>
                       <li>инъекции;</li>
                       <li>переход по url, который доступен после авторизации, для неавторизированного пользователя;</li>
                       <li>доступ к конфигурационным файлам;</li>
@@ -165,7 +177,7 @@
                 <h2 class="accordion-header" id="flush-heading-2">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapse-2" aria-expanded="false" aria-controls="flush-collapse-2">
-                    <b>АВТОРИЗАЦИЯ</b>
+                    <b>АУТЕНТИФИКАЦИЯ</b>
                   </button>
                 </h2>
                 <div id="flush-collapse-2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2"
@@ -178,7 +190,10 @@
                       <li>двухфакторная авторизация;</li>
                       <li>хеширование паролей (проверить хеш-функцию на актуальность);</li>
                       <li>звездочки в строке пароль;</li>
-                      <li>инъекции.</li>
+                      <li>инъекции;</li>
+                      <li>длина, надежность, как быстро сломается, срок жизни пароля;</li>
+                      <li>восстановление, изменение пароля через URL;</li>
+                      <li>АВТОРИЗАЦИЯ - контроль прав доступа.</li>
                     </ul>
                   </div>
                 </div>
@@ -196,6 +211,8 @@
                   <div class="accordion-body">
                     <ul>
                       <li>обязательность заполнения;</li>
+                      <li>есть данные, нет данных, ошибочные данные;</li>
+                      <li>тип данных (массив, целое, плавающая, строка);</li>
                       <li>инъекции.</li>
                     </ul>
                   </div>
@@ -225,6 +242,7 @@
                       <li>имя сервера, с которого отправлен файл cookie;</li>
                       <li>время жизни файла cookie;</li>
                       <li>значение cookie;</li>
+                      <li>флаг HTTP only (обязательно дла авторизации);</li>
                       <li>нет личных данных, хранящихся в файле cookie или они хранятся в зашифрованном формате;</li>
                       <li>отключение файлов cookie;</li>
                       <li>удаление файлов cookie;</li>
@@ -280,6 +298,7 @@
                         <p>');select count(1) from dual;</p>
                       </div>
                     </div>
+                    <p>инъекции <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_SQL-%D0%BA%D0%BE%D0%B4%D0%B0" target="_blank" rel="noopener noreferrer">SQL</a></p>
                   </div>
                 </div>
               </div>
