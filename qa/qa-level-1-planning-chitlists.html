@@ -1,1069 +1,1760 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>Планирование. Чит-листы - page404.info</title>
+    <meta
+      name="description"
+      content="Перечень возможных проверок тестируемого продукта."
+    />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <title>Планирование. Чит-листы - page404.info</title>
-  <meta name="description" content="Перечень возможных проверок тестируемого продукта.">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-ZM3H1R52G7");
+    </script>
+  </head>
 
-    gtag('config', 'G-ZM3H1R52G7');
-  </script>
-</head>
-
-<body>
-  <div class="main-bg">
-    <header class="customer-bg ps-1 border-bottom border-3">
-      <div class="container">
-        <div class="row align-items-center pt-2 pb-2">
-          <div class="col-3">
-            <a href="../index.html">main page</a>
-          </div>
-          <div class="col text-end">
-            <nav>
-              <ul class="nav nav-pills justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="javascript:void(0)">QA</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="customer-bg-body">
-      <div class="container pt-4 pb-3">
-        <div class="row">
-          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
-            <nav>
-              <div class="row">
-
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-level-2-running.html">Выполнение</a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-test.html">тестирование</a>
-                        </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-report.html">отчетность</a>
-                        </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-retro.html">ретроспектива</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-level-1-planning.html">Планирование</a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-analysis.html">тест-анализ</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-plan.html">тест-план</a>
-                        </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-design.html">тест-дизайн</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0 active"
-                            href="javascript:void(0)">чит-листы</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-testing-types.html">Виды тестирования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-testing-tasks.html">Принципы тестирования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-quality-characteristics.html">Характеристики качества</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="javascript:void(0)">Качество продукта</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main.html">Тестирование - Качество</a>
-                    </li>
-                    <li>
-                      <hr>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-security.html"><b>Защищенность</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-load.html"><b>Производительность</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-standard.html"><b>Стандарты</b></a>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-            </nav>
-          </div>
-          <div class="col">
-            <h1 class="fs-3">Чит-листы</h1>
-
-            <div class="accordion accordion-flush mt-3 mb-lg-0 mb-4" id="accordionFlushExample">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    База данных
-                  </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li><strong>Структурное тестирование</strong>
-                        <br>DESCRIBE schema.table_name;
-                        <ul>
-                          <li>cоглашения об именах таблиц и столбцов базы данных;</li>
-                          <li>название схемы, таблицы;</li>
-                          <li>название полей, их количество, тип, длина, обязательность (IS NOT NULL);</li>
-                          <li>первичный ключ (РК), составной ключ, внешний ключ;</li>
-                          <li>связи с другими таблицами, представлениями;</li>
-                          <li>типы данных между столбцом внешнего ключа и столбцом в другой таблице.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><strong>Целостность данных</strong>
-                        <ul>
-                          <li>поля на null, уникальность и длину значений;</li>
-                          <li>проверка дубликатов;</li>
-                          <li>символы в имени, пробелы, отрицательный процент.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><strong>Функциональное тестирование</strong> (Алгоритмические проверки)
-                        <ul>
-                          <li>правильность расчета вычисляемых полей, расчет итогов, разности, процентов;</li>
-                          <li>триггеры;</li>
-                          <li>сопоставление полей с пользовательским интерфейсом (GUI, API);</li>
-                          <li>операции CRUD через внешний интерфейс (web API, GUI);</li>
-                          <li>пароли, номера кредитных карт зашифрованы и не хранятся в виде простого текста.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><strong>Нефункциональное тестирование</strong>
-                        <ul>
-                          <li>нагрузочное тестирование:
-                            <ul>
-                              <li>время ответа для выполнения транзакций для нескольких удаленных пользователей;</li>
-                              <li>время, затраченное базой данных на выборку определенных записей;</li>
-                              <li>многократный запуск наиболее часто используемой пользовательской транзакции, чтобы
-                                увидеть производительность системы базы данных;</li>
-                              <li>загрузка серии больших файлов из Интернета;</li>
-                              <li>запуск нескольких приложений на компьютере или сервере одновременно;</li>
-                              <li>важные системные транзакции (архивирование, выгрузка).</li>
-                            </ul>
-                          </li>
-                          <li>стресс-тестирование - определить точку останова системы.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    ETL процесс
-                  </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li><b>Извлечение данных</b>
-                        <ul>
-                          <li>проверить источник данных;</li>
-                          <li>сравнить количество записей, количество отклоненных записей;</li>
-                          <li>проверить значения методом анализа граничных значений (первая, последняя запись из файла);
-                          </li>
-                          <li>проверить дублирование загруженных данных.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><b>Преобразование данных</b>
-                        <ul>
-                          <li>данные преобразованы правильно;</li>
-                          <li>значения по умолчанию верны.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><b>Загрузка данных в систему DW</b></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    API
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li><strong>Структурное тестирование</strong>
-                        <ul>
-                          <li>проверка заголовков;</li>
-                          <li>проверка параметров;</li>
-                          <li>проверка тела ответа.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><strong>Функциональное тестирование</strong>
-                        <ul>
-                          <li>код ответа;</li>
-                          <li>правильность расчета, сортировки.</li>
-                        </ul>
-                      </li>
-                      <li class="pt-2"><strong>Нефункциональное тестирование</strong>
-                        <ul>
-                          <li>нагрузочное тестирование;</li>
-                          <li>стрессовое тестирование;</li>
-                          <li>объемное тестирование.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading4">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-                    Логирование
-                  </button>
-                </h2>
-                <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>уровень логирования;</li>
-                      <li>размер лог-файла;</li>
-                      <li>срок хранения логов;</li>
-                      <li>обработка событий при отсутствии свободного места на сервере (вызывать ошибки в работе API для
-                        заполнения свободного места логами).</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading4-1">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4-1" aria-expanded="false" aria-controls="flush-collapse4-1">
-                    Удобство использования
-                  </button>
-                </h2>
-                <div id="flush-collapse4-1" class="accordion-collapse collapse" aria-labelledby="flush-heading4-1"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p><strong><em>Принцип</em></strong> - не заставляйте меня думать.</p>
-                    <p><b><em>Навигация</em></b></p>
-                    <ul>
-                      <li>«хлебные крошки»;</li>
-                      <li>кнопка «вверх»;</li>
-                      <li>группировка элементов выбора / меню;</li>
-                      <li>визарды – последовательность шагов при регистрации / инсталляции;</li>
-                      <li>поиск.</li>
-                    </ul>
-
-                    <p><b><em>Курсор</em></b></p>
-                    <ul>
-                      <li>"курсор по умолчанию" (стрелка) для неактивных элементов;</li>
-                      <li>"курсор-рука" (палец) для кликабельных элементов;</li>
-                      <li>"курсор изменения размера" (туда-сюда) для изменяемых размер элементов;</li>
-                      <li>"курсор перемещение" (ладонь) для элементов, которые разрешено перетаскивать;</li>
-                      <li>"курсор текстовое выделение" (палка) для поля ввода, контента для копирования.</li>
-                    </ul>
-
-                    <p><b><em>Подсказки</em></b></p>
-                    <ul>
-                      <li>обязательность заполнения;</li>
-                      <li>плейсхолдер;</li>
-                      <li>размер, тип, длина вводимых значений;</li>
-                      <li>технические ограничения на ввод неразрешенных символов;</li>
-                      <li>наличие подсказки при наведении на элемент.</li>
-                    </ul>
-
-                    <p><b><em>Сообщения об ошибках</em></b></p>
-                    <ul>
-                      <li>понятность;</li>
-                      <li>краткость;</li>
-                      <li>однозначность.</li>
-                    </ul>
-
-                    <p><b><em>Инструкция пользователя</em></b></p>
-                    <ul>
-                      <li>актуальность.</li>
-                    </ul>
-
-                    <p><b><em>Текст</em></b></p>
-                    <ul>
-                      <li>заголовки до 10 слов;</li>
-                      <li>абзац не более 3-5 предложений, предложение не более 10-15 слов;</li>
-                      <li>строка не более 50-75 символов для десктоп, 30-40 для мобильных;</li>
-                      <li>межстрочный интервал на 30% больше высоты символов;</li>
-                      <li>выделение ключевых слов, ссылок.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading4-2">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4-2" aria-expanded="false" aria-controls="flush-collapse4-2">
-                    Локализация
-                  </button>
-                </h2>
-                <div id="flush-collapse4-2" class="accordion-collapse collapse" aria-labelledby="flush-heading4-2"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>язык по умолчанию;</li>
-                      <li>переключение исходной и локализованных версий, редиректы;</li>
-                      <li>стандарты отображения знаков препинания;</li>
-                      <li>целостность верстки после перевода элементов интерфейса;</li>
-                      <li>направление написания текста;</li>
-                      <li>параметры шрифтов.</li>
-                    </ul>
-
-                    <ul>
-                      <li>полнота перевода:
-                        <ul>
-                          <li>языковые файлы (json, yaml, xml);</li>
-                          <li>сокращеня и аббревиатуры;</li>
-                          <li>имена, географические названия;</li>
-                          <li>элементы интерфейса;</li>
-                          <li>системные сообщения и ошибки;</li>
-                          <li>сопроводительная документация (FAQ/Help)</li>
-                          <li>форма "Свяжитесь с нами" / "Свяжитесь с нами по телефону".</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <ul>
-                      <li>форматирование и маски:
-                        <ul>
-                          <li>вид и конвертация валюты;</li>
-                          <li>числа;</li>
-                          <li>даты (дд.мм.гггг, мм-дд-гггг);</li>
-                          <li>время (часовой пояс, АМ/РМ, 12/24);</li>
-                          <li>номер телефона;</li>
-                          <li>индекс, адрес.</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <ul>
-                      <li>система мер и весов:
-                        <ul>
-                          <li>вес (кг, фунты);</li>
-                          <li>длина (метры, футы, дюймы);</li>
-                          <li>размер одежды и обуви;</li>
-                          <li>температура (градусы Цельсия (°C), градусы Фаренгейта(°F)).</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <ul>
-                      <li>ограничения на поля ввода для имен и фамилий;</li>
-                      <li>изображения картинок и фотографий на предмет религиозных особенностей;</li>
-                      <li>соотвествие правовым требованиям и местным законам (соглашение о конфиденциальности, условия
-                        использования сервиса и т.п.);</li>
-                      <li>контроль символики и цветов;</li>
-                      <li>запреты интеграции со сторонними ресурсами;</li>
-                      <li>поддержка региональных раскладок клавиатур и работа горячих клавиш;</li>
-                      <li>перевод мета-тегов (влияет на "SEO");</li>
-                      <li>перевод alt-подписей к изображениям и ссылкам;</li>
-                      <li>настройка системы веб-аналитики (метрики, коды, счетчики).</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading4-3">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4-3" aria-expanded="false" aria-controls="flush-collapse4-3">
-                    Адаптивность и кросспроверки
-                  </button>
-                </h2>
-                <div id="flush-collapse4-3" class="accordion-collapse collapse" aria-labelledby="flush-heading4-3"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="pb-0"><strong><em>Адаптивность</em></strong></p>
-                    <ul>
-                      <li>меню, "хлебные крошки";</li>
-                      <li>графики, диаграммы;</li>
-                      <li>иконки, картинки;</li>
-                      <li>таблицы;</li>
-                      <li>кнопка «вверх», горизонтальный скрол.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Кроссбраузерность</em></strong></p>
-                    <ul>
-                      <li>проверка в браузерах с которых наиболее вероятно и часто приходит клиент на сайт
-                        (яндекс-метрики, гугл-аналитика);</li>
-                      <li>основные браузеры и их версии: Chrome, Firefox, Edge, Safari <a
-                          href="https://gs.statcounter.com/browser-market-share" target="_blank"
-                          rel="noopener noreferrer">(статистика)</a>.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Кроссплатформенность</em></strong></p>
-                    <ul>
-                      <li>проверка в операционных системах с которых наиболее вероятно и часто приходит клиент на сайт
-                        (яндекс-метрики, гугл-аналитика);</li>
-                      <li>основные операционные системы и их версии: Android, Windows, iOS, Linux <a
-                          href="https://gs.statcounter.com/os-market-share" target="_blank"
-                          rel="noopener noreferrer">(статистика)</a>;</li>
-                      <li>
-                        обратить внимание:
-                        <ul>
-                          <li>слеш в пути;</li>
-                          <li>перевод строки \n,\r;</li>
-                          <li>регистр в названии;</li>
-                          <li>работа с архивом.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading4-4">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4-4" aria-expanded="false" aria-controls="flush-collapse4-4">
-                    Доступность
-                  </button>
-                </h2>
-                <div id="flush-collapse4-4" class="accordion-collapse collapse" aria-labelledby="flush-heading4-4"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>соответствие рекомендациям <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank"
-                          rel="noopener noreferrer">WCAG</a>;</li>
-                      <li>соответствие рекомендациям <a href="https://www.w3.org/WAI/test-evaluate/preliminary/"
-                          target="_blank" rel="noopener noreferrer">W3C</a>;</li>
-                      <li>перемещение с помощью клавиатуры <a href="https://webaim.org/techniques/keyboard/"
-                          target="_blank" rel="noopener noreferrer">(клавиатурная навигация)</a>;</li>
-                      <li>перемещение с помощью программы чтения с экрана <a href="https://www.nvaccess.org/download/"
-                          target="_blank" rel="noopener noreferrer">NVDA</a>;</li>
-                      <li>перемещение с помощью программы для распознавания речи <a
-                          href="https://help.apple.com/voiceover/mac/10.15/" target="_blank"
-                          rel="noopener noreferrer">Apple VoiceOver</a>;</li>
-                      <li>набор текста с помощью клавиатуры, специально разработанной для людей с двигательными
-                        нарушениями;</li>
-                      <li>просмотр контента с помощью программы для увеличения экрана (экранная лупа);</li>
-                      <li>проверка цветового контраста.</li>
-                    </ul>
-                    <p class="pb-0"><strong><em>Литература</em></strong></p>
-                    <ul>
-                      <li>Политика в области обеспечения доступности веб-ресурсов: международный опыт <a
-                          href="../documents/qa-level-1-chitlists-accessibility-policy.pdf" target="_blank">(смотреть
-                          pdf)</a>;</li>
-                      <li>Как сделать веб-сайт дружественным к людям с ограничениями по зрению <a
-                          href="../documents/qa-level-1-chitlists-accessibility-eyesight.pdf" target="_blank">(смотреть
-                          pdf)</a>;</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading4b">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4b" aria-expanded="false" aria-controls="flush-collapse4b">
-                    SEO
-                  </button>
-                </h2>
-                <div id="flush-collapse4b" class="accordion-collapse collapse" aria-labelledby="flush-heading4b"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="pb-0"><strong><em>URL</em></strong></p>
-                    <ul>
-                      <li>название латиницей;</li>
-                      <li>категории м подкатегории разделять /;</li>
-                      <li>разделять слова через -, а не _;</li>
-                      <li>отсутствие пробелов.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Анализ тегов и метатегов</em></strong></p>
-                    <ul>
-                      <li>title = 60-70 char, uniq, title+companyName <a
-                          href="https://www.highervisibility.com/seo/tools/serp-snippet-optimizer/" target="_blank"
-                          rel="noopener noreferrer">(проверить)</a></li>
-                      <li>description = 120-160 char, uniq, должен быть призыв к действию;</li>
-                      <li>заголовки h1-h6, h1 один на странице;</li>
-                      <li>уникальность title, description, h1 на странице / в пределах сайта;</li>
-                      <li>исходящие ссылки: target="_blank", rel="noopener noreferrer nofollow", где noopener,
-                        noreferrer - для безопасности, nofollow - не отдавать “seo-вес” своего сайта;</li>
-                      <li>циклические ссылки (сам на себя): логотип на главной странице, пункты меню, хлебные крошки
-                        последний пункт, статьи;</li>
-                      <li>картинки с отсутствующим атрибутом alt, title; размер картинки до 100Кб.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Анализ разделов</em></strong></p>
-                    <ul>
-                      <li>контакты;</li>
-                      <li>карта сайта;</li>
-                      <li>политика конфиденциальности;</li>
-                      <li>отказ от ответственности;</li>
-                      <li>согласие с рассылкой;</li>
-                      <li>файл robots.txt (до 32 KB);</li>
-                      <li>файл sitemap.xml (до 50_000 ссылок);</li>
-                      <li>размер html страницы до 500 КВ.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Страница 404</em></strong></p>
-                    <ul>
-                      <li>совпадает с дизайном сайта;</li>
-                      <li>содержит ссылки на главную, другие разделы и полезные материалы;</li>
-                      <li>содержит поиск по сайту;</li>
-                      <li>отображает нестандартное, возможно, приправленное долей юмора сообщение и изображение.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Редирект на главную страницу</em></strong></p>
-                    <div class="row">
-                      <div class="col">
-                        <ul class="mb-0">
-                          <li>http://siteName</li>
-                          <li>http://siteName/</li>
-                          <li>http://www.siteName</li>
-                          <li>http://www.siteName/</li>
-                          <li>http://siteName/index.html</li>
-                          <li>http://siteName.index.php</li>
-                        </ul>
-                      </div>
-                      <div class="col">
-                        <ul>
-                          <li>https://siteName</li>
-                          <li>https://siteName/</li>
-                          <li>https://www.siteName</li>
-                          <li>https://www.siteName/</li>
-                          <li>https://siteName/index.html</li>
-                          <li>https://siteName.index.php</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <p class="pb-0"><strong><em>Рекомендации</em></strong></p>
-                    <ul>
-                      <li>теги Title, Description и Keywords следует располагать сразу после открывающегося тега head;
-                      </li>
-                      <li>CSS-стили и Java-скрипты необходимо выносить в отдельные файлы с расширением css и js. В
-                        противном случае технический
-                        код будет увеличивать объем страницы и негативно влиять на скорость ее загрузки;</li>
-                      <li>весь ненужный код – счетчики статистики (liveinternet, rambler top100, bigmir и т.п.), формы
-                        голосований и опросов,
-                        отправки заявки или поиска товара, логин-панель — следует закрыть от индексации;</li>
-                      <li>важно удалять из исходного кода комментарии верстальщиков к разным элементам, т.к. это
-                        увеличивает объем страницы и
-                        увеличивает скорость ее загрузки;</li>
-                      <li>правильно формировать парные теги – если тег был открыт, его обязательно нужно закрыть;</li>
-                      <li>Устаревшие теги, которые уже не поддерживаются, следует исключить из кода, заменив на
-                        универсальный тег div. Примеры
-                        таких тегов: applet, acronym, bgsound, dir, frame, frameset, noframe, isindex, listing, xmp,
-                        nextid, noembed, plaintext,
-                        rb, strike, basefont, big, blink, center, font, marquee, multicol, nobr, spacer, tt, u;</li>
-                      <li>прописывать атрибут alt для всех изображений;</li>
-                      <li>для атрибутов ширины и высоты в элементе img нужно указывать только цифры без «px»;</li>
-                      <li>из кода необходимо удалять все скрытые от поисковых систем средствами CSS-форматирования
-                        элементы. К наиболее часто
-                        встречающимся элементам этой категории относятся «display:none» и «visibility:hidden»;</li>
-                      <li>корректная конструкция тега noindex выглядит следующим образом: &lt;!–noindex–&gt;Текст или
-                        код, который нужно исключить из
-                        индексации&lt;!– /noindex–&gt;. Не следует использовать конструкцию [noindex]Текст или код,
-                        который нужно исключить из
-                        индексации[/noindex].</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!---->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading5">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                    <strong>Элементы управления</strong>
-                  </button>
-                </h2>
-                <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <div class="row">
-                      <div class="col">
-                        <p><strong><em>Элементы ввода</em></strong></p>
-                        <ul>
-                          <li>формы;</li>
-                          <li>списки;</li>
-                          <li>время, дата;</li>
-                          <li>переключатели.</li>
-                        </ul>
-                      </div>
-                      <div class="col">
-                        <p><strong><em>Элементы вывода</em></strong></p>
-                        <ul>
-                          <li>таблицы;</li>
-                          <li>графики;</li>
-                          <li>файлы.</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col">
-                        <p><strong><em>Элементы навигации</em></strong></p>
-                        <ul>
-                          <li>слайдер;</li>
-                          <li>поиск;</li>
-                          <li>&laquo;хлебные крошки&raquo;;</li>
-                          <li>пейдженация.</li>
-                        </ul>
-                      </div>
-                      <div class="col">
-                        <p><strong><em>Информационные элементы</em></strong></p>
-                        <ul>
-                          <li>полоса загрузки;</li>
-                          <li>подсказки;</li>
-                          <li>сообщения.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!---->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading6">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                    Верстка
-                  </button>
-                </h2>
-                <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>favicon;</li>
-                      <li>кодировка (UTF8, Windows1251);</li>
-                      <li>общий дизайн интерфейса (логотип, корпоративные цвета);</li>
-                      <li>наличие всех элементов, их размер и цвет, расположение в соответствии макету;</li>
-                      <li>вертикальное / горизонтальное выравнивание элементов, взаимное расположение;</li>
-                      <li>единый формат заголовков, кнопок, фильтров;</li>
-                      <li>название элементов;</li>
-                      <li>правильность шрифтов (название, размер);</li>
-                      <li>цвета интерфейса;</li>
-                    </ul>
-
-                    <ul>
-                      <li>кликабельность логотипа, меню, кнопок, ссылок;</li>
-                      <li>кликабельность, выбираемость, вводимость, удаляемость данных в полях;</li>
-                      <li>очистка введенных значений при клике на крестик в правой части поля;</li>
-                    </ul>
-
-                    <ul>
-                      <li>кнопка F5;</li>
-                      <li>браузерная кнопка НАЗАД;</li>
-                      <li>переходы с помощью TAB;</li>
-                      <li>работа Enter, как кнопки;</li>
-                    </ul>
-
-                    <ul>
-                      <li>отсутствие горизонтального скролла (для статичных страниц минимальная ширина 800рх);</li>
-                      <li>масштабируемость окна браузера (на весь экран, ½, ¼, 80% экрана);</li>
-                      <li>масштабируемость страницы (75% - 200%);</li>
-                      <li>изменение размера элемента (поле textarea);</li>
-                    </ul>
-
-                    <ul>
-                      <li>информация должна оставаться доступной:
-                        <ul>
-                          <li>отключить стили, скрипты (css, js);</li>
-                          <li>отключить картинки (отображается альтернативный текст);</li>
-                          <li>отключить Flesh, Turbo;</li>
-                          <li>отключить / включить браузерные расширения, например AdBlock</li>
-                          <li>увеличенный размер шрифта;</li>
-                          <li>монохромный экран.</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <ul>
-                      <li>параметры печати.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading7">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
-                    Модальное окно
-                  </button>
-                </h2>
-                <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>текст;</li>
-                      <li>скрол;</li>
-                      <li>закрытие окна (Esc, x, button).</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading8">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
-                    Слайдер
-                  </button>
-                </h2>
-                <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>размер слайда;</li>
-                      <li>количество слайдов;</li>
-                      <li>частота обновления (продолжительность пауз);</li>
-                      <li>ручное переключение.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading9">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
-                    Ползунок
-                  </button>
-                </h2>
-                <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>название (количество элементов), шрифт, цвет, размер, расположение;</li>
-                      <li>значение по дефолту, кликабельность;</li>
-                      <li>шаг ползунка и плавность изменения данных;</li>
-                      <li>граничные значения: min, max, (max/2), (min+1), (max-1).</li>
-                    </ul>
-                    <p>
-                      Применяется для изменения размера изображения или когда не важно указывать точное значение.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading10">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
-                    Таблица
-                  </button>
-                </h2>
-                <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>шрифт, цвет, размер, расположение;</li>
-                      <li>горизонтальный скрол для таблицы, а не страницы;</li>
-                      <li>количество и название колонок, строк;</li>
-                      <li>значения в колонке одного типа, разрешенного формата;</li>
-                      <li>отображение данных:
-                        <ul>
-                          <li>единица измерения, размерность;</li>
-                          <li>разделитель дробной части (точка / запятая);</li>
-                          <li>разделитель разрядов (пробел / без пробела);</li>
-                          <li>длина дробной части (1 или 2 знака);</li>
-                          <li>особенности расчета (если план = 0, тогда % выполнения не считать и выводить прочерк);
-                          </li>
-                          <li>количество записей на странице;</li>
-                          <li>варианты вложенности, схлопывания.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading11">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
-                    Список
-                  </button>
-                </h2>
-                <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>шрифт, цвет, размер, расположение;</li>
-                      <li>горизонтальный, вертикальный скрол;</li>
-                      <li>количество и название элементов;</li>
-                      <li>порядок отображения и сортировки значений.</li>
-                    </ul>
-                    <p>Позволяет выбрать одно или несколько (Ctrl + Shift) значений из предложенных.
-                      <br>Для списка с единственным выбором - выбрать один элемент из множества.
-                      <br>Для списка с мультивыбором - проверить граничные значения: min, max, (max/2), (min+1),
-                      (max-1).
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading12">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12">
-                    Переключатель
-                  </button>
-                </h2>
-                <div id="flush-collapse12" class="accordion-collapse collapse" aria-labelledby="flush-heading12"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>шрифт, цвет, размер, расположение;</li>
-                      <li>количество и название элементов;</li>
-                      <li>значение по дефолту.</li>
-                    </ul>
-                    <p class="pb-0">
-                      <strong><em>Радиокнопки</em></strong> - позволяет выбрать один единственный вариант из
-                      предложенного списка. Группа
-                      радиокнопок, рассматривается как единый объект, который может быть только в одном из предложенных
-                      состояний. Необходимо проверить каждое состояние.
-                    </p>
-                    <ul>
-                      <li>любое значение можно выбрать;</li>
-                      <li>можно выбрать только 1 значение;</li>
-                      <li>можно ли не выбрать ни одного?</li>
-                    </ul>
-
-                    <p class="pb-0">
-                      <strong><em>Чекбоксы</em></strong> - позволяет выбрать любое количество вариантов из предложенного
-                      списка. Группа чекбоксов, рассматривается как единый объект, который может быть в (max! + 2)
-                      состояниях.
-                    </p>
-                    <ul>
-                      <li>любое значение можно выбрать;</li>
-                      <li>можно выбрать любое количество значений;</li>
-                      <li>можно ли не выбрать ни одного?</li>
-                      <li>граничные значения: min, max, (max/2), (min+1), (max-1).</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading13">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13">
-                    Календарь
-                  </button>
-                </h2>
-                <div id="flush-collapse13" class="accordion-collapse collapse" aria-labelledby="flush-heading13"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>шрифт, цвет, размер, расположение;</li>
-                      <li>значение по дефолту;</li>
-                      <li>выбор даты в будущем, прошлом.</li>
-                    </ul>
-                    <p>
-                      Позволяет установить год, месяц, число путем выбора значения. Ввод значений не возможен. Обычно
-                      это стороннее приложение.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading14">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
-                    Файл
-                  </button>
-                </h2>
-                <div id="flush-collapse14" class="accordion-collapse collapse" aria-labelledby="flush-heading14"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>тип (расширение);</li>
-                      <li>название (допустимые символы, длина);</li>
-                      <li>размер и кодировка;</li>
-                      <li>разделитель полей (запятая, TAB, точка с запятой);</li>
-                      <li>язык представления данных (английский, китайский);</li>
-                      <li>корректность данных;</li>
-                      <li>права на редактирование и удаление;</li>
-                      <li>сообщения во время экспорта / импорта.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading15">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapse15">
-                    Поиск
-                  </button>
-                </h2>
-                <div id="flush-collapse15" class="accordion-collapse collapse" aria-labelledby="flush-heading15"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>от 3-х символов;</li>
-                      <li>часть слова;</li>
-                      <li>точное слово;</li>
-                      <li>точная фраза;</li>
-                    </ul>
-
-                    <ul>
-                      <li>аббревиатуры;</li>
-                      <li>словосочетание;</li>
-                      <li>несколько неполных слов;</li>
-                      <li>спецсимволы;</li>
-                      <li>цифры (положительные, отрицательные, ноль, целые, дробные, специальные значения, например,
-                        "Infinity");</li>
-                      <li>регистр ввода;</li>
-                      <li>различные языки / раскладки;</li>
-                      <li>пустое значение;</li>
-                      <li>морфология;</li>
-                    </ul>
-
-                    <ul>
-                      <li>анализ граничных значений и классы эквивалентности для длины;</li>
-                      <li>поиск по всем полям;</li>
-                      <li>поиск по некоторым полям;</li>
-                      <li>поиск без заполнения обязательных полей;</li>
-                      <li>поиск по обязательным полям;</li>
-                      <li>учет разнообразных параметров.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading16">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapse16">
-                    Поле
-                  </button>
-                </h2>
-                <div id="flush-collapse16" class="accordion-collapse collapse" aria-labelledby="flush-heading16"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>ввод с клавиатуры;</li>
-                      <li>вставка из буфера (через контекстное меню, горячие клавиши: Ctrl+V, alt+код);</li>
-                      <li>ввод с экранной клавиатуры;</li>
-                      <li>редактирование, копирование;</li>
-                      <li>символы конца строки: \n, \r;</li>
-                      <li>перенос строки;</li>
-                      <li>очистка поля через Esc, Delete, Backspace;</li>
-                      <li>очистка поля через кнопку приложения.</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Текстовое поле</em></strong></p>
-                    <ul>
-                      <li>placeholder;</li>
-                      <li>буквы, цифры, специальные символы;</li>
-                      <li>длина строки;</li>
-                      <li>текст с пробелом: в начале, середине, конце, только пробел;</li>
-                      <li>не ASCII символы: смайлики;</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Числовое поле</em></strong></p>
-                    <ul>
-                      <li>положительные, отрицательные, ноль;</li>
-                      <li>целые, дробные;</li>
-                      <li>степени двойки;</li>
-                      <li>научная запись чисел: 1Е-10;</li>
-                      <li>вычисляемые выражения: 2+2;</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Числовое поле</em></strong></p>
-                    <ul>
-                      <li>границы минуты, часа, дня, недели, месяца, года, столетия;</li>
-                      <li>переход на зимнее / летнее время;</li>
-                      <li>несуществующие значения: 29 февраля;</li>
-                      <li>часовые пояса;</li>
-                      <li>соотношение с "сейчас";</li>
-                      <li>несколько связанных дат: с 01.01 - по 31.01</li>
-                    </ul>
-
-                    <p class="pb-0"><strong><em>Нестандартный ввод</em></strong></p>
-                    <ul class="mb-0 pb-0">
-                      <li>'; SELECT *</li>
-                      <li>&lt;!--abc&gt;</li>
-                      <li>&lt;script&gt;alert("Alert text")&lt;/script&gt;</li>
-                      <li>"[|]'~&lt;!--@/*$%^&#*/()?&gt;,.*'/\</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
+  <body>
+    <div class="main-bg">
+      <header class="customer-bg ps-1 border-bottom border-3">
+        <div class="container">
+          <div class="row align-items-center pt-2 pb-2">
+            <div class="col-3">
+              <a href="../index.html">main page</a>
             </div>
-
+            <div class="col text-end">
+              <nav>
+                <ul class="nav nav-pills justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../tools/tools-main.html"
+                      >Tools</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="javascript:void(0)">QA</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </header>
 
-    <footer class="customer-bg border-top border-3">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <p class="mt-3 pb-0">
-              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
-            </p>
-            <nav class="mb-2">
-              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
-            </nav>
+      <main class="customer-bg-body">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div
+              class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded"
+            >
+              <nav>
+                <div class="row">
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-level-2-running.html"
+                          >Выполнение</a
+                        >
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-test.html"
+                              >тестирование</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-report.html"
+                              >отчетность</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-retro.html"
+                              >ретроспектива</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-level-1-planning.html"
+                          >Планирование</a
+                        >
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-analysis.html"
+                              >тест-анализ</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-plan.html"
+                              >тест-план</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-design.html"
+                              >тест-дизайн</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0 active"
+                              href="javascript:void(0)"
+                              >чит-листы</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-testing-types.html"
+                          >Виды тестирования</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-testing-tasks.html"
+                          >Принципы тестирования</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="qa-main-quality-characteristics.html"
+                          >Характеристики качества</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)"
+                          >Качество продукта</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main.html"
+                          >Тестирование - Качество</a
+                        >
+                      </li>
+                      <li>
+                        <hr />
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-security.html"
+                          ><b>Защищенность</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-load.html"
+                          ><b>Производительность</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-standard.html"
+                          ><b>Стандарты</b></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="col">
+              <h1 class="fs-3">Чит-листы</h1>
+
+              <div
+                class="accordion accordion-flush mt-3 mb-lg-0 mb-4"
+                id="accordionFlushExample"
+              >
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      База данных
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <strong>Структурное тестирование</strong>
+                          <br />DESCRIBE schema.table_name;
+                          <ul>
+                            <li>
+                              cоглашения об именах таблиц и столбцов базы
+                              данных;
+                            </li>
+                            <li>название схемы, таблицы;</li>
+                            <li>
+                              название полей, их количество, тип, длина,
+                              обязательность (IS NOT NULL);
+                            </li>
+                            <li>
+                              первичный ключ (РК), составной ключ, внешний ключ;
+                            </li>
+                            <li>связи с другими таблицами, представлениями;</li>
+                            <li>
+                              типы данных между столбцом внешнего ключа и
+                              столбцом в другой таблице.
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <strong>Целостность данных</strong>
+                          <ul>
+                            <li>
+                              поля на null, уникальность и длину значений;
+                            </li>
+                            <li>проверка дубликатов;</li>
+                            <li>
+                              символы в имени, пробелы, отрицательный процент.
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <strong>Функциональное тестирование</strong>
+                          (Алгоритмические проверки)
+                          <ul>
+                            <li>
+                              правильность расчета вычисляемых полей, расчет
+                              итогов, разности, процентов;
+                            </li>
+                            <li>триггеры;</li>
+                            <li>
+                              сопоставление полей с пользовательским интерфейсом
+                              (GUI, API);
+                            </li>
+                            <li>
+                              операции CRUD через внешний интерфейс (web API,
+                              GUI);
+                            </li>
+                            <li>
+                              пароли, номера кредитных карт зашифрованы и не
+                              хранятся в виде простого текста.
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <strong>Нефункциональное тестирование</strong>
+                          <ul>
+                            <li>
+                              нагрузочное тестирование:
+                              <ul>
+                                <li>
+                                  время ответа для выполнения транзакций для
+                                  нескольких удаленных пользователей;
+                                </li>
+                                <li>
+                                  время, затраченное базой данных на выборку
+                                  определенных записей;
+                                </li>
+                                <li>
+                                  многократный запуск наиболее часто
+                                  используемой пользовательской транзакции,
+                                  чтобы увидеть производительность системы базы
+                                  данных;
+                                </li>
+                                <li>
+                                  загрузка серии больших файлов из Интернета;
+                                </li>
+                                <li>
+                                  запуск нескольких приложений на компьютере или
+                                  сервере одновременно;
+                                </li>
+                                <li>
+                                  важные системные транзакции (архивирование,
+                                  выгрузка).
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              стресс-тестирование - определить точку останова
+                              системы.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      ETL процесс
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <b>Извлечение данных</b>
+                          <ul>
+                            <li>проверить источник данных;</li>
+                            <li>
+                              сравнить количество записей, количество
+                              отклоненных записей;
+                            </li>
+                            <li>
+                              проверить значения методом анализа граничных
+                              значений (первая, последняя запись из файла);
+                            </li>
+                            <li>проверить дублирование загруженных данных.</li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <b>Преобразование данных</b>
+                          <ul>
+                            <li>данные преобразованы правильно;</li>
+                            <li>значения по умолчанию верны.</li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <b>Загрузка данных в систему DW</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      API
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <strong>Структурное тестирование</strong>
+                          <ul>
+                            <li>проверка заголовков;</li>
+                            <li>проверка параметров;</li>
+                            <li>проверка тела ответа.</li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <strong>Функциональное тестирование</strong>
+                          <ul>
+                            <li>код ответа;</li>
+                            <li>правильность расчета, сортировки.</li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <strong>Нефункциональное тестирование</strong>
+                          <ul>
+                            <li>нагрузочное тестирование;</li>
+                            <li>стрессовое тестирование;</li>
+                            <li>объемное тестирование.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4"
+                    >
+                      Логирование
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>уровень логирования;</li>
+                        <li>размер лог-файла;</li>
+                        <li>срок хранения логов;</li>
+                        <li>
+                          обработка событий при отсутствии свободного места на
+                          сервере (вызывать ошибки в работе API для заполнения
+                          свободного места логами).
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4-1">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4-1"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4-1"
+                    >
+                      Удобство использования
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4-1"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4-1"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <strong><em>Принцип</em></strong> - не заставляйте меня
+                        думать.
+                      </p>
+                      <p>
+                        <b><em>Навигация</em></b>
+                      </p>
+                      <ul>
+                        <li>«хлебные крошки»;</li>
+                        <li>кнопка «вверх»;</li>
+                        <li>группировка элементов выбора / меню;</li>
+                        <li>
+                          визарды – последовательность шагов при регистрации /
+                          инсталляции;
+                        </li>
+                        <li>поиск.</li>
+                      </ul>
+
+                      <p>
+                        <b><em>Курсор</em></b>
+                      </p>
+                      <ul>
+                        <li>
+                          "курсор по умолчанию" (стрелка) для неактивных
+                          элементов;
+                        </li>
+                        <li>
+                          "курсор-рука" (палец) для кликабельных элементов;
+                        </li>
+                        <li>
+                          "курсор изменения размера" (туда-сюда) для изменяемых
+                          размер элементов;
+                        </li>
+                        <li>
+                          "курсор перемещение" (ладонь) для элементов, которые
+                          разрешено перетаскивать;
+                        </li>
+                        <li>
+                          "курсор текстовое выделение" (палка) для поля ввода,
+                          контента для копирования.
+                        </li>
+                      </ul>
+
+                      <p>
+                        <b><em>Подсказки</em></b>
+                      </p>
+                      <ul>
+                        <li>обязательность заполнения;</li>
+                        <li>плейсхолдер;</li>
+                        <li>размер, тип, длина вводимых значений;</li>
+                        <li>
+                          технические ограничения на ввод неразрешенных
+                          символов;
+                        </li>
+                        <li>наличие подсказки при наведении на элемент.</li>
+                      </ul>
+
+                      <p>
+                        <b><em>Сообщения об ошибках</em></b>
+                      </p>
+                      <ul>
+                        <li>понятность;</li>
+                        <li>краткость;</li>
+                        <li>однозначность.</li>
+                      </ul>
+
+                      <p>
+                        <b><em>Инструкция пользователя</em></b>
+                      </p>
+                      <ul>
+                        <li>актуальность.</li>
+                      </ul>
+
+                      <p>
+                        <b><em>Текст</em></b>
+                      </p>
+                      <ul>
+                        <li>заголовки до 10 слов;</li>
+                        <li>
+                          абзац не более 3-5 предложений, предложение не более
+                          10-15 слов;
+                        </li>
+                        <li>
+                          строка не более 50-75 символов для десктоп, 30-40 для
+                          мобильных;
+                        </li>
+                        <li>
+                          межстрочный интервал на 30% больше высоты символов;
+                        </li>
+                        <li>выделение ключевых слов, ссылок.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4-2">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4-2"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4-2"
+                    >
+                      Локализация
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4-2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4-2"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <b>Интернационализация (18n)</b> - программное и аппратное
+                        обеспечение для упрощения адаптации продукта к
+                        использованию в других языковых и культурных регионах.
+                        Производится на начальных этапах разработки.
+                      </p>
+                      <p class="pb-0">
+                        <b>Локализация (L10n)</b> - добавление специальных функций для
+                        использования в определенном регионе. Производится для
+                        каждого целевого языка.
+                      </p>
+                      <ul>
+                        <li>название элементов, сообщений, мета-информации, инструкций</li>
+                        <li>формат даты, времени, адреса, телефона</li>
+                        <li>разделитель разрядности числа, копеек, отрицательные числа</li>
+                        <li>валюта, мера, шрифт</li>
+                        <li>ограничения цветов, чисел, музыки, фото, видео</li>
+                        <li>культурные особенности</li>
+                      </ul>
+
+                      <p><b>Проверки</b></p>
+                      <ul>
+                        <li>язык по умолчанию;</li>
+                        <li>
+                          переключение исходной и локализованных версий,
+                          редиректы;
+                        </li>
+                        <li>стандарты отображения знаков препинания;</li>
+                        <li>
+                          целостность верстки после перевода элементов
+                          интерфейса;
+                        </li>
+                        <li>направление написания текста;</li>
+                        <li>параметры шрифтов.</li>
+                      </ul>
+
+                      <ul>
+                        <li>
+                          полнота перевода:
+                          <ul>
+                            <li>языковые файлы (json, yaml, xml);</li>
+                            <li>сокращеня и аббревиатуры;</li>
+                            <li>имена, географические названия;</li>
+                            <li>элементы интерфейса;</li>
+                            <li>системные сообщения и ошибки;</li>
+                            <li>сопроводительная документация (FAQ/Help)</li>
+                            <li>
+                              форма "Свяжитесь с нами" / "Свяжитесь с нами по
+                              телефону".
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <ul>
+                        <li>
+                          форматирование и маски:
+                          <ul>
+                            <li>вид и конвертация валюты;</li>
+                            <li>числа;</li>
+                            <li>даты (дд.мм.гггг, мм-дд-гггг);</li>
+                            <li>время (часовой пояс, АМ/РМ, 12/24);</li>
+                            <li>номер телефона;</li>
+                            <li>индекс, адрес.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <ul>
+                        <li>
+                          система мер и весов:
+                          <ul>
+                            <li>вес (кг, фунты);</li>
+                            <li>длина (метры, футы, дюймы);</li>
+                            <li>размер одежды и обуви;</li>
+                            <li>
+                              температура (градусы Цельсия (°C), градусы
+                              Фаренгейта(°F)).
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <ul>
+                        <li>ограничения на поля ввода для имен и фамилий;</li>
+                        <li>
+                          изображения картинок и фотографий на предмет
+                          религиозных особенностей;
+                        </li>
+                        <li>
+                          соотвествие правовым требованиям и местным законам
+                          (соглашение о конфиденциальности, условия
+                          использования сервиса и т.п.);
+                        </li>
+                        <li>контроль символики и цветов;</li>
+                        <li>запреты интеграции со сторонними ресурсами;</li>
+                        <li>
+                          поддержка региональных раскладок клавиатур и работа
+                          горячих клавиш;
+                        </li>
+                        <li>перевод мета-тегов (влияет на "SEO");</li>
+                        <li>перевод alt-подписей к изображениям и ссылкам;</li>
+                        <li>
+                          настройка системы веб-аналитики (метрики, коды,
+                          счетчики).
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4-3">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4-3"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4-3"
+                    >
+                      Портативность: адаптивность, кросспроверки
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4-3"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4-3"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0">
+                        <b>Портативность</b> (переносимость) - способность
+                        программы работать в различном окружении
+                      </p>
+                      <ul>
+                        <li>размер, разрешение экрана (адаптивность)</li>
+                        <li>разные браузеры</li>
+                        <li>разные операционные системы</li>
+                        <li>местоположение пользователя</li>
+                        <li>часовой пояс</li>
+                        <li>время, дни недели, сезон</li>
+                        <li>скорость интернета</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Адаптивность</em></strong>
+                      </p>
+                      <ul>
+                        <li>меню, "хлебные крошки";</li>
+                        <li>графики, диаграммы;</li>
+                        <li>иконки, картинки;</li>
+                        <li>таблицы;</li>
+                        <li>кнопка «вверх», горизонтальный скрол.</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Кроссбраузерность</em></strong>
+                      </p>
+                      <ul>
+                        <li>
+                          проверка в браузерах с которых наиболее вероятно и
+                          часто приходит клиент на сайт (яндекс-метрики,
+                          гугл-аналитика);
+                        </li>
+                        <li>
+                          основные браузеры и их версии: Chrome, Firefox, Edge,
+                          Safari
+                          <a
+                            href="https://gs.statcounter.com/browser-market-share"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >(статистика)</a
+                          >.
+                        </li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Кроссплатформенность</em></strong>
+                      </p>
+                      <ul>
+                        <li>
+                          проверка в операционных системах с которых наиболее
+                          вероятно и часто приходит клиент на сайт
+                          (яндекс-метрики, гугл-аналитика);
+                        </li>
+                        <li>
+                          основные операционные системы и их версии: Android,
+                          Windows, iOS, Linux
+                          <a
+                            href="https://gs.statcounter.com/os-market-share"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >(статистика)</a
+                          >;
+                        </li>
+                        <li>
+                          обратить внимание:
+                          <ul>
+                            <li>слеш в пути;</li>
+                            <li>перевод строки \n,\r;</li>
+                            <li>регистр в названии;</li>
+                            <li>работа с архивом.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4-4">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4-4"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4-4"
+                    >
+                      Доступность
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4-4"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4-4"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          соответствие рекомендациям
+                          <a
+                            href="https://www.w3.org/WAI/WCAG21/quickref/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >WCAG</a
+                          >;
+                        </li>
+                        <li>
+                          соответствие рекомендациям
+                          <a
+                            href="https://www.w3.org/WAI/test-evaluate/preliminary/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >W3C</a
+                          >;
+                        </li>
+                        <li>
+                          перемещение с помощью клавиатуры
+                          <a
+                            href="https://webaim.org/techniques/keyboard/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >(клавиатурная навигация)</a
+                          >;
+                        </li>
+                        <li>
+                          перемещение с помощью программы чтения с экрана
+                          <a
+                            href="https://www.nvaccess.org/download/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >NVDA</a
+                          >;
+                        </li>
+                        <li>
+                          перемещение с помощью программы для распознавания речи
+                          <a
+                            href="https://help.apple.com/voiceover/mac/10.15/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Apple VoiceOver</a
+                          >;
+                        </li>
+                        <li>
+                          набор текста с помощью клавиатуры, специально
+                          разработанной для людей с двигательными нарушениями;
+                        </li>
+                        <li>
+                          просмотр контента с помощью программы для увеличения
+                          экрана (экранная лупа);
+                        </li>
+                        <li>проверка цветового контраста.</li>
+                      </ul>
+                      <p class="pb-0">
+                        <strong><em>Литература</em></strong>
+                      </p>
+                      <ul>
+                        <li>
+                          Политика в области обеспечения доступности
+                          веб-ресурсов: международный опыт
+                          <a
+                            href="../documents/qa-level-1-chitlists-accessibility-policy.pdf"
+                            target="_blank"
+                            >(смотреть pdf)</a
+                          >;
+                        </li>
+                        <li>
+                          Как сделать веб-сайт дружественным к людям с
+                          ограничениями по зрению
+                          <a
+                            href="../documents/qa-level-1-chitlists-accessibility-eyesight.pdf"
+                            target="_blank"
+                            >(смотреть pdf)</a
+                          >;
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4b">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4b"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4b"
+                    >
+                      SEO
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4b"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4b"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0">
+                        <strong><em>URL</em></strong>
+                      </p>
+                      <ul>
+                        <li>название латиницей;</li>
+                        <li>категории м подкатегории разделять /;</li>
+                        <li>разделять слова через -, а не _;</li>
+                        <li>отсутствие пробелов.</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Анализ тегов и метатегов</em></strong>
+                      </p>
+                      <ul>
+                        <li>
+                          title = 60-70 char, uniq, title+companyName
+                          <a
+                            href="https://www.highervisibility.com/seo/tools/serp-snippet-optimizer/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >(проверить)</a
+                          >
+                        </li>
+                        <li>
+                          description = 120-160 char, uniq, должен быть призыв к
+                          действию;
+                        </li>
+                        <li>заголовки h1-h6, h1 один на странице;</li>
+                        <li>
+                          уникальность title, description, h1 на странице / в
+                          пределах сайта;
+                        </li>
+                        <li>
+                          исходящие ссылки: target="_blank", rel="noopener
+                          noreferrer nofollow", где noopener, noreferrer - для
+                          безопасности, nofollow - не отдавать “seo-вес” своего
+                          сайта;
+                        </li>
+                        <li>
+                          циклические ссылки (сам на себя): логотип на главной
+                          странице, пункты меню, хлебные крошки последний пункт,
+                          статьи;
+                        </li>
+                        <li>
+                          картинки с отсутствующим атрибутом alt, title; размер
+                          картинки до 100Кб.
+                        </li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Анализ разделов</em></strong>
+                      </p>
+                      <ul>
+                        <li>контакты;</li>
+                        <li>карта сайта;</li>
+                        <li>политика конфиденциальности;</li>
+                        <li>отказ от ответственности;</li>
+                        <li>согласие с рассылкой;</li>
+                        <li>файл robots.txt (до 32 KB);</li>
+                        <li>файл sitemap.xml (до 50_000 ссылок);</li>
+                        <li>размер html страницы до 500 КВ.</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Страница 404</em></strong>
+                      </p>
+                      <ul>
+                        <li>совпадает с дизайном сайта;</li>
+                        <li>
+                          содержит ссылки на главную, другие разделы и полезные
+                          материалы;
+                        </li>
+                        <li>содержит поиск по сайту;</li>
+                        <li>
+                          отображает нестандартное, возможно, приправленное
+                          долей юмора сообщение и изображение.
+                        </li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Редирект на главную страницу</em></strong>
+                      </p>
+                      <div class="row">
+                        <div class="col">
+                          <ul class="mb-0">
+                            <li>http://siteName</li>
+                            <li>http://siteName/</li>
+                            <li>http://www.siteName</li>
+                            <li>http://www.siteName/</li>
+                            <li>http://siteName/index.html</li>
+                            <li>http://siteName.index.php</li>
+                          </ul>
+                        </div>
+                        <div class="col">
+                          <ul>
+                            <li>https://siteName</li>
+                            <li>https://siteName/</li>
+                            <li>https://www.siteName</li>
+                            <li>https://www.siteName/</li>
+                            <li>https://siteName/index.html</li>
+                            <li>https://siteName.index.php</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <p class="pb-0">
+                        <strong><em>Рекомендации</em></strong>
+                      </p>
+                      <ul>
+                        <li>
+                          теги Title, Description и Keywords следует располагать
+                          сразу после открывающегося тега head;
+                        </li>
+                        <li>
+                          CSS-стили и Java-скрипты необходимо выносить в
+                          отдельные файлы с расширением css и js. В противном
+                          случае технический код будет увеличивать объем
+                          страницы и негативно влиять на скорость ее загрузки;
+                        </li>
+                        <li>
+                          весь ненужный код – счетчики статистики (liveinternet,
+                          rambler top100, bigmir и т.п.), формы голосований и
+                          опросов, отправки заявки или поиска товара,
+                          логин-панель — следует закрыть от индексации;
+                        </li>
+                        <li>
+                          важно удалять из исходного кода комментарии
+                          верстальщиков к разным элементам, т.к. это увеличивает
+                          объем страницы и увеличивает скорость ее загрузки;
+                        </li>
+                        <li>
+                          правильно формировать парные теги – если тег был
+                          открыт, его обязательно нужно закрыть;
+                        </li>
+                        <li>
+                          Устаревшие теги, которые уже не поддерживаются,
+                          следует исключить из кода, заменив на универсальный
+                          тег div. Примеры таких тегов: applet, acronym,
+                          bgsound, dir, frame, frameset, noframe, isindex,
+                          listing, xmp, nextid, noembed, plaintext, rb, strike,
+                          basefont, big, blink, center, font, marquee, multicol,
+                          nobr, spacer, tt, u;
+                        </li>
+                        <li>прописывать атрибут alt для всех изображений;</li>
+                        <li>
+                          для атрибутов ширины и высоты в элементе img нужно
+                          указывать только цифры без «px»;
+                        </li>
+                        <li>
+                          из кода необходимо удалять все скрытые от поисковых
+                          систем средствами CSS-форматирования элементы. К
+                          наиболее часто встречающимся элементам этой категории
+                          относятся «display:none» и «visibility:hidden»;
+                        </li>
+                        <li>
+                          корректная конструкция тега noindex выглядит следующим
+                          образом: &lt;!–noindex–&gt;Текст или код, который
+                          нужно исключить из индексации&lt;!– /noindex–&gt;. Не
+                          следует использовать конструкцию [noindex]Текст или
+                          код, который нужно исключить из индексации[/noindex].
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!---->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading5">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse5"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse5"
+                    >
+                      <strong>Элементы управления</strong>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse5"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading5"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col">
+                          <p>
+                            <strong><em>Элементы ввода</em></strong>
+                          </p>
+                          <ul>
+                            <li>формы;</li>
+                            <li>списки;</li>
+                            <li>время, дата;</li>
+                            <li>переключатели.</li>
+                          </ul>
+                        </div>
+                        <div class="col">
+                          <p>
+                            <strong><em>Элементы вывода</em></strong>
+                          </p>
+                          <ul>
+                            <li>таблицы;</li>
+                            <li>графики;</li>
+                            <li>файлы.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <p>
+                            <strong><em>Элементы навигации</em></strong>
+                          </p>
+                          <ul>
+                            <li>слайдер;</li>
+                            <li>поиск;</li>
+                            <li>&laquo;хлебные крошки&raquo;;</li>
+                            <li>пейдженация.</li>
+                          </ul>
+                        </div>
+                        <div class="col">
+                          <p>
+                            <strong><em>Информационные элементы</em></strong>
+                          </p>
+                          <ul>
+                            <li>полоса загрузки;</li>
+                            <li>подсказки;</li>
+                            <li>сообщения.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!---->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading6">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse6"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse6"
+                    >
+                      Верстка
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse6"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading6"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>favicon;</li>
+                        <li>кодировка (UTF8, Windows1251);</li>
+                        <li>
+                          общий дизайн интерфейса (логотип, корпоративные
+                          цвета);
+                        </li>
+                        <li>
+                          наличие всех элементов, их размер и цвет, расположение
+                          в соответствии макету;
+                        </li>
+                        <li>
+                          вертикальное / горизонтальное выравнивание элементов,
+                          взаимное расположение;
+                        </li>
+                        <li>единый формат заголовков, кнопок, фильтров;</li>
+                        <li>название элементов;</li>
+                        <li>правильность шрифтов (название, размер);</li>
+                        <li>цвета интерфейса;</li>
+                      </ul>
+
+                      <ul>
+                        <li>кликабельность логотипа, меню, кнопок, ссылок;</li>
+                        <li>
+                          кликабельность, выбираемость, вводимость, удаляемость
+                          данных в полях;
+                        </li>
+                        <li>
+                          очистка введенных значений при клике на крестик в
+                          правой части поля;
+                        </li>
+                      </ul>
+
+                      <ul>
+                        <li>кнопка F5;</li>
+                        <li>браузерная кнопка НАЗАД;</li>
+                        <li>переходы с помощью TAB;</li>
+                        <li>работа Enter, как кнопки;</li>
+                      </ul>
+
+                      <ul>
+                        <li>
+                          отсутствие горизонтального скролла (для статичных
+                          страниц минимальная ширина 800рх);
+                        </li>
+                        <li>
+                          масштабируемость окна браузера (на весь экран, ½, ¼,
+                          80% экрана);
+                        </li>
+                        <li>масштабируемость страницы (75% - 200%);</li>
+                        <li>изменение размера элемента (поле textarea);</li>
+                      </ul>
+
+                      <ul>
+                        <li>
+                          информация должна оставаться доступной:
+                          <ul>
+                            <li>отключить стили, скрипты (css, js);</li>
+                            <li>
+                              отключить картинки (отображается альтернативный
+                              текст);
+                            </li>
+                            <li>отключить Flesh, Turbo;</li>
+                            <li>
+                              отключить / включить браузерные расширения,
+                              например AdBlock
+                            </li>
+                            <li>увеличенный размер шрифта;</li>
+                            <li>монохромный экран.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <ul>
+                        <li>параметры печати.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading7">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse7"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse7"
+                    >
+                      Модальное окно
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse7"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading7"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>текст;</li>
+                        <li>скрол;</li>
+                        <li>закрытие окна (Esc, x, button).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading8">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse8"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse8"
+                    >
+                      Слайдер
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse8"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading8"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>размер слайда;</li>
+                        <li>количество слайдов;</li>
+                        <li>частота обновления (продолжительность пауз);</li>
+                        <li>ручное переключение.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading9">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse9"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse9"
+                    >
+                      Ползунок
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse9"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading9"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          название (количество элементов), шрифт, цвет, размер,
+                          расположение;
+                        </li>
+                        <li>значение по дефолту, кликабельность;</li>
+                        <li>шаг ползунка и плавность изменения данных;</li>
+                        <li>
+                          граничные значения: min, max, (max/2), (min+1),
+                          (max-1).
+                        </li>
+                      </ul>
+                      <p>
+                        Применяется для изменения размера изображения или когда
+                        не важно указывать точное значение.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading10">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse10"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse10"
+                    >
+                      Таблица
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse10"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading10"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>шрифт, цвет, размер, расположение;</li>
+                        <li>
+                          горизонтальный скрол для таблицы, а не страницы;
+                        </li>
+                        <li>количество и название колонок, строк;</li>
+                        <li>
+                          значения в колонке одного типа, разрешенного формата;
+                        </li>
+                        <li>
+                          отображение данных:
+                          <ul>
+                            <li>единица измерения, размерность;</li>
+                            <li>
+                              разделитель дробной части (точка / запятая);
+                            </li>
+                            <li>
+                              разделитель разрядов (пробел / без пробела);
+                            </li>
+                            <li>длина дробной части (1 или 2 знака);</li>
+                            <li>
+                              особенности расчета (если план = 0, тогда %
+                              выполнения не считать и выводить прочерк);
+                            </li>
+                            <li>количество записей на странице;</li>
+                            <li>варианты вложенности, схлопывания.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading11">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse11"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse11"
+                    >
+                      Список
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse11"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading11"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>шрифт, цвет, размер, расположение;</li>
+                        <li>горизонтальный, вертикальный скрол;</li>
+                        <li>количество и название элементов;</li>
+                        <li>порядок отображения и сортировки значений.</li>
+                      </ul>
+                      <p>
+                        Позволяет выбрать одно или несколько (Ctrl + Shift)
+                        значений из предложенных. <br />Для списка с
+                        единственным выбором - выбрать один элемент из
+                        множества. <br />Для списка с мультивыбором - проверить
+                        граничные значения: min, max, (max/2), (min+1), (max-1).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading12">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse12"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse12"
+                    >
+                      Переключатель
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse12"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading12"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>шрифт, цвет, размер, расположение;</li>
+                        <li>количество и название элементов;</li>
+                        <li>значение по дефолту.</li>
+                      </ul>
+                      <p class="pb-0">
+                        <strong><em>Радиокнопки</em></strong> - позволяет
+                        выбрать один единственный вариант из предложенного
+                        списка. Группа радиокнопок, рассматривается как единый
+                        объект, который может быть только в одном из
+                        предложенных состояний. Необходимо проверить каждое
+                        состояние.
+                      </p>
+                      <ul>
+                        <li>любое значение можно выбрать;</li>
+                        <li>можно выбрать только 1 значение;</li>
+                        <li>можно ли не выбрать ни одного?</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Чекбоксы</em></strong> - позволяет выбрать
+                        любое количество вариантов из предложенного списка.
+                        Группа чекбоксов, рассматривается как единый объект,
+                        который может быть в (max! + 2) состояниях.
+                      </p>
+                      <ul>
+                        <li>любое значение можно выбрать;</li>
+                        <li>можно выбрать любое количество значений;</li>
+                        <li>можно ли не выбрать ни одного?</li>
+                        <li>
+                          граничные значения: min, max, (max/2), (min+1),
+                          (max-1).
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading13">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse13"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse13"
+                    >
+                      Календарь
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse13"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading13"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>шрифт, цвет, размер, расположение;</li>
+                        <li>значение по дефолту;</li>
+                        <li>выбор даты в будущем, прошлом.</li>
+                      </ul>
+                      <p>
+                        Позволяет установить год, месяц, число путем выбора
+                        значения. Ввод значений не возможен. Обычно это
+                        стороннее приложение.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading14">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse14"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse14"
+                    >
+                      Файл
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse14"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading14"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>тип (расширение);</li>
+                        <li>название (допустимые символы, длина);</li>
+                        <li>размер и кодировка;</li>
+                        <li>
+                          разделитель полей (запятая, TAB, точка с запятой);
+                        </li>
+                        <li>
+                          язык представления данных (английский, китайский);
+                        </li>
+                        <li>корректность данных;</li>
+                        <li>права на редактирование и удаление;</li>
+                        <li>сообщения во время экспорта / импорта.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading15">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse15"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse15"
+                    >
+                      Поиск
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse15"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading15"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>от 3-х символов;</li>
+                        <li>часть слова;</li>
+                        <li>точное слово;</li>
+                        <li>точная фраза;</li>
+                      </ul>
+
+                      <ul>
+                        <li>аббревиатуры;</li>
+                        <li>словосочетание;</li>
+                        <li>несколько неполных слов;</li>
+                        <li>спецсимволы;</li>
+                        <li>
+                          цифры (положительные, отрицательные, ноль, целые,
+                          дробные, специальные значения, например, "Infinity");
+                        </li>
+                        <li>регистр ввода;</li>
+                        <li>различные языки / раскладки;</li>
+                        <li>пустое значение;</li>
+                        <li>морфология;</li>
+                      </ul>
+
+                      <ul>
+                        <li>
+                          анализ граничных значений и классы эквивалентности для
+                          длины;
+                        </li>
+                        <li>поиск по всем полям;</li>
+                        <li>поиск по некоторым полям;</li>
+                        <li>поиск без заполнения обязательных полей;</li>
+                        <li>поиск по обязательным полям;</li>
+                        <li>учет разнообразных параметров.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading16">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse16"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse16"
+                    >
+                      Поле
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse16"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading16"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>ввод с клавиатуры;</li>
+                        <li>
+                          вставка из буфера (через контекстное меню, горячие
+                          клавиши: Ctrl+V, alt+код);
+                        </li>
+                        <li>ввод с экранной клавиатуры;</li>
+                        <li>редактирование, копирование;</li>
+                        <li>символы конца строки: \n, \r;</li>
+                        <li>перенос строки;</li>
+                        <li>очистка поля через Esc, Delete, Backspace;</li>
+                        <li>очистка поля через кнопку приложения.</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Текстовое поле</em></strong>
+                      </p>
+                      <ul>
+                        <li>placeholder;</li>
+                        <li>буквы, цифры, специальные символы;</li>
+                        <li>длина строки;</li>
+                        <li>
+                          текст с пробелом: в начале, середине, конце, только
+                          пробел;
+                        </li>
+                        <li>не ASCII символы: смайлики;</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Числовое поле</em></strong>
+                      </p>
+                      <ul>
+                        <li>положительные, отрицательные, ноль;</li>
+                        <li>целые, дробные;</li>
+                        <li>степени двойки;</li>
+                        <li>научная запись чисел: 1Е-10;</li>
+                        <li>вычисляемые выражения: 2+2;</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Числовое поле</em></strong>
+                      </p>
+                      <ul>
+                        <li>
+                          границы минуты, часа, дня, недели, месяца, года,
+                          столетия;
+                        </li>
+                        <li>переход на зимнее / летнее время;</li>
+                        <li>несуществующие значения: 29 февраля;</li>
+                        <li>часовые пояса;</li>
+                        <li>соотношение с "сейчас";</li>
+                        <li>несколько связанных дат: с 01.01 - по 31.01</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Нестандартный ввод</em></strong>
+                      </p>
+                      <ul class="mb-0 pb-0">
+                        <li>'; SELECT *</li>
+                        <li>&lt;!--abc&gt;</li>
+                        <li>
+                          &lt;script&gt;alert("Alert text")&lt;/script&gt;
+                        </li>
+                        <li>"[|]'~&lt;!--@$%^&amp;&num;&ast;&sol;()?&gt;,.\</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="../js/current-year.js"></script>
-</body>
+      <footer class="customer-bg border-top border-3">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="mt-3 pb-0">
+                &copy; Valeriy Novikov, 2021&mdash;<span
+                  id="currentYear"
+                ></span>
+              </p>
+              <nav class="mb-2">
+                <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a
+                  href="mailto:page404.info@gmail.com"
+                  >support</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/current-year.js"></script>
+  </body>
 </html>
