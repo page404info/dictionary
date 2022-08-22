@@ -1,277 +1,468 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>Тестирование производительности - page404.info</title>
+    <meta
+      name="description"
+      content="Цели и требования к параметрам производительности."
+    />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <title>Тестирование производительности - page404.info</title>
-  <meta name="description" content="Цели и требования к параметрам производительности.">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-ZM3H1R52G7");
+    </script>
+  </head>
 
-    gtag('config', 'G-ZM3H1R52G7');
-  </script>
-</head>
-
-<body>
-  <div class="main-bg">
-    <header class="customer-bg ps-1 border-bottom border-3">
-      <div class="container">
-        <div class="row align-items-center pt-2 pb-2">
-          <div class="col-3">
-            <a href="../index.html">main page</a>
-          </div>
-          <div class="col text-end">
-            <nav>
-              <ul class="nav nav-pills justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="javascript:void(0)">QA</a>
-                </li>
-              </ul>
-            </nav>
+  <body>
+    <div class="main-bg">
+      <header class="customer-bg ps-1 border-bottom border-3">
+        <div class="container">
+          <div class="row align-items-center pt-2 pb-2">
+            <div class="col-3">
+              <a href="../index.html">main page</a>
+            </div>
+            <div class="col text-end">
+              <nav>
+                <ul class="nav nav-pills justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../tools/tools-main.html"
+                      >Tools</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="javascript:void(0)">QA</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="customer-bg-body">
-      <div class="container pt-4 pb-3">
-        <div class="row">
-          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
-            <nav>
-              <div class="row">
-
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-level-2-running.html">Выполнение</a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-test.html">тестирование</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-report.html">отчетность</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-retro.html">ретроспектива</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-level-1-planning.html">Планирование</a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-analysis.html">тест-анализ</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-plan.html">тест-план</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-design.html">тест-дизайн</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-chitlists.html">чит-листы</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-testing-types.html">Виды тестирования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-testing-tasks.html">Принципы тестирования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-quality-characteristics.html">Характеристики качества</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-quality.html">Качество продукта</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main.html">Тестирование - Качество</a>
-                    </li>
-                    <li>
-                      <hr>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-security.html"><b>Защищенность</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="javascript:void(0)"><b>Производительность</b></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-          <div class="col">
-            <h1 class="fs-3">Производительность и нагрузка</h1>
-            <p class="pb-0"><b>Основные цели:</b></p>
-            <ul>
-              <li>снижение времени ожидания пользователя;</li>
-              <li>определение критических метрик производительности:</li>
-              <ul>
-                <li>время отклика;</li>
-                <li>пропускная способность;</li>
-                <li>масштабируемость.</li>
-              </ul>
-              <li>обеспечение гарантированной оптимальной производительности приложения.</li>
-            </ul>
-
-            <p class="pb-0"><b>Требования к параметрам производительности:</b></p>
-            <ul>
-              <li>допустимое время отклика;</li>
-              <li>пропускная способность и число одновременных пользователей;</li>
-              <li>требования к будущему росту производительности.</li>
-            </ul>
-
-            <p class="pb-0"><b>Инструменты:</b></p>
-            <ul>
-              <li><a href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">https://gtmetrix.com/</a>
-              </li>
-              <li><a href="https://www.webpagetest.org/" target="_blank"
-                  rel="noopener noreferrer">https://www.webpagetest.org/</a></li>
-            </ul>
-
-            <div class="accordion accordion-flush mb-md-0 mb-4" id="accordionFlushExample">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading-1">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-1" aria-expanded="false" aria-controls="flush-collapse-1">
-                    <b>ПРОИЗВОДИТЕЛЬНОСТЬ НА КЛИЕНТЕ</b>
-                  </button>
-                </h2>
-                <div id="flush-collapse-1" class="accordion-collapse collapse" aria-labelledby="flush-heading-1"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <ul>
-                      <li><b>объем загружаемых данных</b> (общий вес страницы, вес картинки);</li>
-                      <li><b>количество запросов</b>. Пропускная способность браузера до 6 одновременных запросов.
-                        Каждый запрос увеличивает время обработки сервером, т.к. требуется
-                        время на установление и закрытие соединения. Решение: объединять запросы в архивы, использовать
-                        кеширование
-                        браузера, например, для картинок.
+      <main class="customer-bg-body">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div
+              class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded"
+            >
+              <nav>
+                <div class="row">
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-level-2-running.html"
+                          >Выполнение</a
+                        >
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-test.html"
+                              >тестирование</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-report.html"
+                              >отчетность</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-retro.html"
+                              >ретроспектива</a
+                            >
+                          </li>
+                        </ul>
                       </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-heading-2">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-2" aria-expanded="false" aria-controls="flush-collapse-2">
-                    <b>ПРОИЗВОДИТЕЛЬНОСТЬ СЕРВЕРА</b>
-                  </button>
-                </h2>
-                <div id="flush-collapse-2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="pb-0"><b>Цели:</b></p>
-                    <ul>
-                      <li>сравнить две версии системы (до и после рефакторинга);</li>
-                      <li>найти причину проблемы с производительностью;</li>
-                      <li>оценить потенциальные возможности системы:
-                        <ul>
-                          <li>сколько пользователей смогут работать с приложением вообще;</li>
-                          <li>сколько пользователей сможет работать одновременно:
-                            <ul>
-                              <li>когда закончатся коннекты (пропускная способность сети);</li>
-                              <li>когда закончится оперативная память;</li>
-                              <li>когда перегрузится процессор.</li>
-                            </ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-level-1-planning.html"
+                          >Планирование</a
+                        >
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-analysis.html"
+                              >тест-анализ</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-plan.html"
+                              >тест-план</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-design.html"
+                              >тест-дизайн</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-chitlists.html"
+                              >чит-листы</a
+                            >
                           </li>
                         </ul>
                       </li>
                     </ul>
+                  </div>
 
-                    <p class="pb-0"><b>Профили нагрузки:</b></p>
-                    <ol>
-                      <li class="pt-2"><b>Непрерывно возрастающая нагрузка (стресс-тест).</b> Цель - поиск точки
-                        насыщения. Каждую секунду
-                        увеличивать количество пользователей на 1, пока не будет достигнут один из критериев остановки
-                        теста:
-                        <ul>
-                          <li>превышение требуемых значений отклика в несколько раз;</li>
-                          <li>достижение критического уровня использования аппаратных ресурсов (ЦП&gt;80%,
-                            память&gt;90%);</li>
-                          <li>количество ошибок HTTP превышает 1% от общего числа запросов;</li>
-                          <li>сбой системного ПО.</li>
-                        </ul>
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-testing-types.html"
+                          >Виды тестирования</a
+                        >
                       </li>
-                      <li class="pt-2"><b>Постоянная нагрузка (штатный режим)</b> - 20-80% от максимума. Цель -
-                        подтверждение
-                        максимальной
-                        производительности. Задается или постоянное кол-во пользователей или постоянное
-                        количество транзакций (запросов). Время обработки 90% операций удовлетворяют метрикам
-                        производительности. Длительность - 4-8 часов.</li>
-                      <li class="pt-2"><b>Постоянная длительная нагрузка.</b> Цель - проверка надежности. Длительность -
-                        несколько дней.</li>
-                      <li class="pt-2"><b>Ступенчато возрастающая нагрузка.</b> Цель - определение максимальной
-                        производительности.
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-testing-tasks.html"
+                          >Принципы тестирования</a
+                        >
                       </li>
-                      <li class="pt-2"><b>Нагрузка всплесками</b> (авторизация в начале рабочего дня, после обеда) Цель
-                        - проверка отказоустойчивости. Отсутствуют ошибки при
-                        кратковременном увеличении запросов, время обработки 90% операций удовлетворяют метрикам
-                        производительности.</li>
-                      <li class="pt-2"><b>Объемное тестирование.</b> Цель - производительность приложения при увеличении
-                        объема передаваемых данных.</li>
-                      <li class="pt-2"><b>Проверка масштабируемости.</b> Цель - оценить способность решения увеличивать
-                        производительность пропорционально
-                        добавлению аппаратных ресурсов системы.</li>
-                    </ol>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="qa-main-quality-characteristics.html"
+                          >Характеристики качества</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-quality.html"
+                          >Качество продукта</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main.html"
+                          >Тестирование - Качество</a
+                        >
+                      </li>
+                      <li>
+                        <hr />
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-security.html"
+                          ><b>Защищенность</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="javascript:void(0)"
+                          ><b>Производительность</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-standard.html"><b>Стандарты</b></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="col">
+              <h1 class="fs-3">Производительность и нагрузка</h1>
+              <p class="pb-0"><b>Основные цели:</b></p>
+              <ul>
+                <li>снижение времени ожидания пользователя;</li>
+                <li>определение критических метрик производительности:</li>
+                <ul>
+                  <li>время отклика;</li>
+                  <li>пропускная способность;</li>
+                  <li>масштабируемость.</li>
+                </ul>
+                <li>
+                  обеспечение гарантированной оптимальной производительности
+                  приложения.
+                </li>
+              </ul>
 
-                    <p>10 шагов для запуска тестирования производительности с Apache JMeter
-                      (<a
-                        href="https://medium.com/effective-developers/10-steps-to-run-first-performance-test-with-apache-jmeter-52867c12b0a4"
-                        target="_blank" rel="noopener noreferrer">смотреть</a>).</p>
+              <p class="pb-0">
+                <b>Требования к параметрам производительности:</b>
+              </p>
+              <ul>
+                <li>допустимое время отклика;</li>
+                <li>
+                  пропускная способность и число одновременных пользователей;
+                </li>
+                <li>требования к будущему росту производительности.</li>
+              </ul>
 
+              <div
+                class="accordion accordion-flush mb-md-0 mb-4"
+                id="accordionFlushExample"
+              >
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading-2">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse-2"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse-2"
+                    >
+                      <b>ПРОИЗВОДИТЕЛЬНОСТЬ СЕРВЕРА</b>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse-2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading-2"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body pb-lg-0 pb-4">
+                      <p class="pb-0"><b>Цели</b></p>
+                      <ul>
+                        <li>
+                          сравнить две версии системы (до и после рефакторинга);
+                        </li>
+                        <li>найти причину проблемы с производительностью;</li>
+                        <li>
+                          оценить потенциальные возможности системы:
+                          <ul>
+                            <li>
+                              сколько пользователей смогут работать с
+                              приложением вообще;
+                            </li>
+                            <li>
+                              сколько пользователей сможет работать
+                              одновременно:
+                              <ul>
+                                <li>
+                                  когда закончатся коннекты (пропускная
+                                  способность сети);
+                                </li>
+                                <li>когда закончится оперативная память;</li>
+                                <li>когда перегрузится процессор.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <div class="text-center">
+                        <img class="img-fluid"
+                          src="../images/qa-load.png"
+                          alt="Профили нагрузки">
+                      </div>
+
+                      <p class="pb-0"><b>Профили нагрузки</b></p>
+                      <ol>
+                        <li class="pt-2">
+                          <b>Непрерывно возрастающая нагрузка</b> (Breakpoint
+                          Test).<br />Цель - поиск точки насыщения. Каждую
+                          секунду увеличивать количество пользователей на 1,
+                          пока не будет достигнут один из критериев остановки
+                          теста:
+                          <ul>
+                            <li>
+                              превышение требуемых значений отклика в несколько
+                              раз;
+                            </li>
+                            <li>
+                              достижение критического уровня использования
+                              аппаратных ресурсов (ЦП&gt;80%, память&gt;90%);
+                            </li>
+                            <li>
+                              количество ошибок HTTP превышает 1% от общего
+                              числа запросов;
+                            </li>
+                            <li>сбой системного ПО.</li>
+                          </ul>
+                        </li>
+                        <li class="pt-2">
+                          <b>Постоянная нагрузка</b> (штатный режим, Load
+                          Test) - 20-80% от максимума.<br />Цель -
+                          подтверждение максимальной производительности.
+                          Задается или постоянное кол-во пользователей или
+                          постоянное количество транзакций (запросов). Время
+                          обработки 90% операций удовлетворяют метрикам
+                          производительности. Длительность - 4-8 часов.
+                        </li>
+                        <li class="pt-2">
+                          <b>Постоянная длительная нагрузка</b> (Endurance
+                          Test) - до 80% от максимума.<br />Цель - проверка
+                          выносливости. Длительность - несколько дней.
+                        </li>
+                        <li class="pt-2">
+                          <b>Ступенчато возрастающая нагрузка</b> (Stress
+                          Test).<br />Цель - определение максимальной
+                          производительности.
+                        </li>
+                        <li class="pt-2">
+                          <b>Нагрузка всплесками</b> (Spike Test).<br />Цель
+                          - проверка отказоустойчивости при внезапном увеличении
+                          или уменьшении нагрузки (например, авторизация в
+                          начале рабочего дня, после обеда). Отсутствуют ошибки
+                          при кратковременном увеличении запросов, время
+                          обработки 90% операций удовлетворяют метрикам
+                          производительности.
+                        </li>
+                        <li class="pt-2">
+                          <b>Объемное тестирование</b>.<br>Цель -
+                          производительность приложения при увеличении объема
+                          передаваемых данных.
+                        </li>
+                        <li class="pt-2">
+                          <b>Проверка масштабируемости</b>.<br>Цель - оценить
+                          способность решения увеличивать производительность
+                          пропорционально добавлению аппаратных ресурсов
+                          системы.
+                        </li>
+                      </ol>
+
+                      <p class="pb-0"><b>Инструменты</b></p>
+                      <ul>
+                        <li>
+                          <a
+                            href="../tools/curlload/curlLoad.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >curlLoad</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../tools/tools-main-jmeter.html">jMeter</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading-1">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse-1"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse-1"
+                    >
+                      <b>НАГРУЗКА КЛИЕНТА</b>
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse-1"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading-1"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0"><b>Цели</b></p>
+                      <ul>
+                        <li>
+                          <b>объем загружаемых данных</b> (размер HTML файла,
+                          скриптов, картинок);
+                        </li>
+                        <li>
+                          <b>количество запросов</b>. Пропускная способность
+                          браузера до 6 одновременных запросов. Каждый запрос
+                          увеличивает время обработки сервером, т.к. требуется
+                          время на установление и закрытие соединения. Решение:
+                          объединять запросы в архивы, использовать кеширование
+                          браузера, например, для картинок.
+                        </li>
+                      </ul>
+                      <p class="pb-0"><b>Инструменты</b></p>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://gtmetrix.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >https://gtmetrix.com/</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.webpagetest.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >https://www.webpagetest.org/</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://pagespeed.web.dev/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >https://pagespeed.web.dev/</a
+                          >
+                        </li>
+                        <li>
+                          Chrome DevTools (F12) &mdash; Lighthouse (Audits)
+                        </li>
+                        <li>
+                          <a href="../tools/tools-main.html"
+                            >pageAuditor, curlLoad</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-
             </div>
-
-
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <footer class="customer-bg border-top border-3">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <p class="mt-3 pb-0">
-              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
-            </p>
-            <nav class="mb-2">
-              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
-            </nav>
+      <footer class="customer-bg border-top border-3">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="mt-3 pb-0">
+                &copy; Valeriy Novikov, 2021&mdash;<span
+                  id="currentYear"
+                ></span>
+              </p>
+              <nav class="mb-2">
+                <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a
+                  href="mailto:page404.info@gmail.com"
+                  >support</a
+                >
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="../js/current-year.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/current-year.js"></script>
+  </body>
 </html>

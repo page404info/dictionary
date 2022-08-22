@@ -1,4 +1,4 @@
-document.getElementById("refresh").innerHTML = document.getElementsByTagName("META")[3].content;
+document.getElementById("refresh").innerHTML = document.getElementsByTagName("META")[4].content;
 
       let item = document.getElementsByTagName("h2")[0];
       let start = document.getElementById("strt"),

@@ -1,718 +1,1015 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>Планирование. Тест-анализ - page404.info</title>
+    <meta
+      name="description"
+      content="Анализ требований и рисков, декомпозиция и приоритет функциональности, оценка трудозатрат."
+    />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <title>Планирование. Тест-анализ - page404.info</title>
-  <meta name="description" content="Анализ требований и рисков, декомпозиция и приоритет функциональности, оценка трудозатрат.">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-ZM3H1R52G7");
+    </script>
+  </head>
 
-    gtag('config', 'G-ZM3H1R52G7');
-  </script>
-</head>
-
-<body>
-  <div class="main-bg">
-    <header class="d-print-none customer-bg ps-1 border-bottom border-3">
-      <div class="container">
-        <div class="row align-items-center pt-2 pb-2">
-          <div class="col-3">
-            <a href="../index.html">main page</a>
-          </div>
-          <div class="col text-end">
-            <nav>
-              <ul class="nav nav-pills justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="javascript:void(0)">QA</a>
-                </li>
-              </ul>
-            </nav>
+  <body>
+    <div class="main-bg">
+      <header class="d-print-none customer-bg ps-1 border-bottom border-3">
+        <div class="container">
+          <div class="row align-items-center pt-2 pb-2">
+            <div class="col-3">
+              <a href="../index.html">main page</a>
+            </div>
+            <div class="col text-end">
+              <nav>
+                <ul class="nav nav-pills justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../tools/tools-main.html"
+                      >Tools</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="javascript:void(0)">QA</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="customer-bg-body">
-      <div class="container pt-4 pb-3">
-        <div class="row">
-
-          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
-            <nav class="d-print-none">
-              <div class="row">
-
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-level-2-running.html">Выполнение</a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-test.html">тестирование</a>
-                        </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-report.html">отчетность</a>
-                        </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-2-running-retro.html">ретроспектива</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-level-1-planning.html">Планирование</a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item ps-4"><a class="nav-link pt-0 active"
-                            href="javascript:void(0)">тест-анализ</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-plan.html">тест-план</a>
-                        </li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-design.html">тест-дизайн</a></li>
-                        <li class="nav-item ps-4"><a class="nav-link pt-0"
-                            href="qa-level-1-planning-chitlists.html">чит-листы</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-testing-types.html">Виды тестирования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-testing-tasks.html">Принципы тестирования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-quality-characteristics.html">Характеристики качества</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main-quality.html">Качество продукта</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-main.html">Тестирование - Качество</a>
-                    </li>
-                    <li>
-                      <hr>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-security.html"><b>Защищенность</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="qa-load.html"><b>Производительность</b></a>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-            </nav>
-          </div>
-
-          <div class="col-lg-8 col-12">
-            <h1 class="d-print-none fs-3">Тест-анализ (что проверить)</h1>
-
-            <div class="accordion mt-3 mb-lg-0 mb-4" id="accordionPanelsStayOpenExample">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
-                    Домены
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                  aria-labelledby="panelsStayOpen-headingOne">
-                  <div class="accordion-body">
-                    <div class="card-group mt-3">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">1. Бизнес-домен</h5>
-                          <p class="card-text">
-                          <ul>
-                            <li>бизнес стратегия</li>
-                            <li>законодательство</li>
-                            <li>организация</li>
-                            <li>ключевые бизнес процессы</li>
-                          </ul>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">2. Домен данных</h5>
-                          <p class="card-text">
-                          <ul>
-                            <li>логическая структура передачи данных</li>
-                            <li>физическая структура хранения данных</li>
-                            <li>валидация данных</li>
-                            <li>сообщения об ошибках</li>
-                          </ul>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-group mt-2 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">3. Домен визуализации</h5>
-                          <p class="card-text">
-                          <ul>
-                            <li>App: web, mobile, desktop</li>
-                            <li>console</li>
-                            <li>service (API)</li>
-                          </ul>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">4. Технологический домен</h5>
-                          <p class="card-text">
-                          <ul>
-                            <li>программы</li>
-                            <li>железо</li>
-                            <li>топология сети</li>
-                          </ul>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseTwo">
-                    Анализ требований
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingTwo">
-                  <div class="accordion-body">
-                    <p class="pb-2">
-                      Стадия тест-анализа начинается еще до утверждения спецификации и продолжается на стадии разработки
-                      (написания кода) программного продукта. Источником для анализа выступает документация по продукту
-                      и
-                      общение с разработчиками. На данной стадии изучается и анализируется объект тестирования:
-                    </p>
-                    <ul class="mb-0">
-                      <li class="pb-2">кто пользователь, для чего используют продукт, как это важно для пользователя;
+      <main class="customer-bg-body">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div
+              class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded"
+            >
+              <nav class="d-print-none">
+                <div class="row">
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-level-2-running.html"
+                          >Выполнение</a
+                        >
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-test.html"
+                              >тестирование</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-report.html"
+                              >отчетность</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-2-running-retro.html"
+                              >ретроспектива</a
+                            >
+                          </li>
+                        </ul>
                       </li>
-                      <li class="pb-2">какое программное (аппаратное) обеспечение использует продукт;</li>
-                      <li class="pb-2">какие функции предстоит тестировать и как эти функции работают;</li>
-                      <li class="pb-2">какие форматы данных и диапазоны значений, какие правила их обработки;</li>
-                      <li class="pb-2">какие ограничения предметной области: ввод, вывод, редактирование, удаление,
-                        поведение;
-                      </li>
-                      <li>установить зависимости между компонентами продукта:
-                        <ul>
-                          <li>полная или частичная;</li>
-                          <li>прямая (А-В) или обратная (В-А);</li>
-                          <li>транзитивная (А-В-С) или избыточная (А-С).</li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-level-1-planning.html"
+                          >Планирование</a
+                        >
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0 active"
+                              href="javascript:void(0)"
+                              >тест-анализ</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-plan.html"
+                              >тест-план</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-design.html"
+                              >тест-дизайн</a
+                            >
+                          </li>
+                          <li class="nav-item ps-4">
+                            <a
+                              class="nav-link pt-0"
+                              href="qa-level-1-planning-chitlists.html"
+                              >чит-листы</a
+                            >
+                          </li>
                         </ul>
                       </li>
                     </ul>
-                    <p>
-                      Одно требование может определять несколько различных сценариев пользования.
-                    </p>
+                  </div>
 
-                    <table class="table mt-2">
-                      <thead>
-                        <tr class="table-light table-active">
-                          <th scope="col">Вопросы</th>
-                          <th scope="col">Вид требований</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><b><em>какие задачи решает система?</em></b><br>
-                            <ul class="mb-0">
-                              <li>use-case диаграммы</li>
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-testing-types.html"
+                          >Виды тестирования</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-testing-tasks.html"
+                          >Принципы тестирования</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="qa-main-quality-characteristics.html"
+                          >Характеристики качества</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main-quality.html"
+                          >Качество продукта</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-main.html"
+                          >Тестирование - Качество</a
+                        >
+                      </li>
+                      <li>
+                        <hr />
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-security.html"
+                          ><b>Защищенность</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-load.html"
+                          ><b>Производительность</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="qa-standard.html"
+                          ><b>Стандарты</b></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+
+            <div class="col-lg-8 col-12">
+              <h1 class="d-print-none fs-3">Тест-анализ (что проверить)</h1>
+
+              <div
+                class="accordion mt-3 mb-lg-0 mb-4"
+                id="accordionPanelsStayOpenExample"
+              >
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseOne"
+                      aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseOne"
+                    >
+                      Домены
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne"
+                  >
+                    <div class="accordion-body">
+                      <div class="card-group mt-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">1. Бизнес-домен</h5>
+                            <ul class="card-text">
+                              <li>бизнес стратегия</li>
+                              <li>законодательство</li>
+                              <li>организация</li>
+                              <li>ключевые бизнес процессы</li>
                             </ul>
-                          </td>
-                          <td>
-                            требования от бизнеса, требования от пользователей
-                          </td>
-                        </tr>
-                        <tr class="table-light">
-                          <td><b><em>что система делает?</em></b><br>
-                            (регистрирует, сохраняет, экспортирует)<br>
-                            <ul class="mb-0">
-                              <li>операции CRUD</li>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">2. Домен данных</h5>
+                            <ul class="card-text">
+                              <li>логическая структура передачи данных</li>
+                              <li>физическая структура хранения данных</li>
                               <li>валидация данных</li>
                               <li>сообщения об ошибках</li>
                             </ul>
-                          </td>
-                          <td>
-                            функциональные требования
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><b><em>как система это делает?</em></b><br>
-                            (как быстро, на каком окружении)<br>
-                            <ul class="mb-0">
-                              <li>количество пользователей</li>
-                              <li>объем передаваемых данных</li>
-                              <li>объем хранимых данных</li>
-                              <li>скорость передачи информации</li>
-                              <li>тип операционной системы</li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-group mt-2 mb-4">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">3. Домен визуализации</h5>
+                            <ul class="card-text">
+                              <li>App: web, mobile, desktop</li>
+                              <li>console</li>
+                              <li>service (API)</li>
                             </ul>
-                          </td>
-                          <td>
-                            нефункциональные требования
-                          </td>
-                        </tr>
-                        <tr class="table-light">
-                          <td><b><em>какие технологии используются?</em></b><br>
-                            <ul class="mb-0">
-                              <li>диаграмма компонент</li>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">4. Технологический домен</h5>
+                            <ul class="card-text">
+                              <li>программы</li>
+                              <li>железо</li>
+                              <li>топология сети</li>
                             </ul>
-                          </td>
-                          <td>
-                            технические требования
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          </div>
+                        </div>
+                      </div>
 
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree">
-                    Декомпозиция
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingThree">
-                  <div class="accordion-body">
-                    <p>
-                      Для описания достаточно сложных бизнес-процессов прибегают к функциональной декомпозиции, которая
-                      показывает разбиение одного процесса на ряд более мелких функций до тех пор, пока каждую из них
-                      уже нельзя будет разбить без ущерба для смысла.
-                    </p>
-                    <p>
-                      Конечный продукт декомпозиции представляет собой иерархию функций, на самом нижнем уровне
-                      которой находятся атомарные с точки зрения смысловой нагрузки функции. Программа состоит из
-                      классов и объектов.
-                    </p>
-                    <p>
-                      Структура объектов дает схему их взаимодействий друг с другом, структура класса определяет
-                      избыточность средств внутри системы.
-                    </p>
-
-                    <p class="pb-1">
-                      <b>Результат декомпозиции объекта:</b>
-                    </p>
-                    <table class="table mt-2">
-                      <thead>
-                        <tr class="table-light table-active">
-                          <th scope="col">Объект</th>
-                          <th scope="col" class="text-center">Ограничения</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <ul class="mb-0">
-                              <li>характеристики объекта (атрибуты);</li>
-                              <li>состояние объекта (значение атрибутов);</li>
-                              <li>функциональные возможности объекта (методы);</li>
-                              <li>связи объекта:
-                                <ul>
-                                  <li>взаимодействие (ассоциирование) с другими объектами = 1:1, 1:N, M:N;</li>
-                                  <li>может или должен.</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </td>
-                          <td>
-                            <ul class="mb-0">
-                              <li><b><em>для данных</em></b> - не должен состоять из цифр, символов, длина от 2 до 5 …
-                              </li>
-                              <li><b><em>для поведения</em></b> - не должен выполнять …</li>
-                              <li><b><em>для связей</em></b> - должен состоять в одной группе, выполнять не более 3-х
-                                операций.</li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <p class="pb-1">
-                      <b>Результат декомпозиции системы:</b>
-                    </p>
-                    <ul>
-                      <li class="pb-2">определение объектов тестирования, взаимосвязей и зависимостей между ними
-                        (пользователи, окружение, интерфейсы, сервисы);</li>
-                      <li class="pb-2">определение поведения объектов;</li>
-                      <li class="pb-2">определение ограничений:
-                        <ul>
-                          <li>на ввод, редактирование, удаление данных;</li>
-                          <li>на вывод результата (период);</li>
-                          <li>на поведение объекта.</li>
-                        </ul>
-                      </li>
-                      <li>определение алгоритмов поиска и расчетов:
-                        <ul>
-                          <li>формула;</li>
-                          <li>блок-схема;</li>
-                          <li>псевдокод.</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <div class="table-responsive mb-4">
-                      <table class="table caption-top">
-                        <caption>Табличное представление декомпозиции <a href="../documents/qa-example.xlsx">(скачать
-                            xlsx)</a></caption>
-                        <thead class="table-light table-active">
-                          <tr>
-                            <th scope="col" class="align-top">Роль</th>
-                            <th scope="col" class="align-top">Сценарий пользования</th>
-                            <th scope="col" class="align-top">Объект тестирования</th>
-                            <th scope="col" class="align-top">Действия (CRUD)</th>
-                            <th scope="col" class="align-top">Раздел</th>
-                            <th scope="col" class="align-top">Ограничения</th>
-                            <th scope="col" class="align-top">Алгоритм поиска</th>
-                            <th scope="col" class="align-top">Сообщение об ошибке</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="align-top">Пользователь</td>
-                            <td class="align-top">Покупка билета</td>
-                            <td class="align-top">билет</td>
-                            <td class="align-top">поиск билета</td>
-                            <td class="align-top">форма поиска билета</td>
-                            <td class="align-top"></td>
-                            <td class="align-top"></td>
-                            <td class="align-top"></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <p>
+                        Программа состоит из объектов и связей между ними.<br />
+                        Общение между объектами происходит путем
+                        <b>отправки сообщений</b> (обязательно) и
+                        <b>получения сообщений</b> (необязательно).<br />
+                        Объект всегда находится в каком-то состоянии (<b
+                          >характеристики/свойства</b
+                        >
+                        объекта).<br />
+                        Объект сам (или над ним) может выполнять действия (<b
+                          >методы</b
+                        >
+                        объекта).
+                      </p>
+                      <p class="pb-0">На объекты оказывают влияние:</p>
+                      <ul>
+                        <li>рабочее <b>окружение</b>;</li>
+                        <li>
+                          <b>сценарии</b> использования:
+                          <ul>
+                            <li>
+                              сценарий критического пути (только позитивный, проходит через наибольшее количество компонент);
+                            </li>
+                            <li>
+                              стандартные сценарии (позитивные, негативные,
+                              альтернативные) с учетом приоритетности;
+                            </li>
+                            <li>
+                              нестандартные сценарии (определяются условиями
+                              эксплуатации).
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p class="pb-0">
+                        <b>Сценарий использования:</b>
+                      </p>
+                      <ul>
+                        <li>
+                          Пользователь инициирует создание сообщения
+                          <ul>
+                            <li>Система предлагает ввести данные</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Пользователь вводит данные
+                          <ul>
+                            <li>Система помогает ввести данные</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Пользователь инициирует отправку сообщения
+                          <ul>
+                            <li>Система отправляет сообщение</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p class="pb-0">
+                        <b>Вход</b> (интерфейс) определяет КАК можно
+                        воздействовать на систему
+                      </p>
+                      <ul>
+                        <li>что введено Пользователем и принято Системой.</li>
+                      </ul>
+                      <p class="pb-0">
+                        <b>Выход</b> (результат работы системы) определяет ЧТО
+                        можно наблюдать
+                      </p>
+                      <ul>
+                        <li>подтверждение, предупреждение, сообщение об ошибке.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFour">
-                    Анализ рисков
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingFour">
-                  <div class="accordion-body">
-                    <p class="pb-0">Виды рисков:</p>
-                    <ul>
-                      <li><b><em>бюджетный риск</em></b> - сокращение расходов на тестирование;</li>
-                      <li><b><em>временной риск</em></b> - сокращение времени на тестирование;</li>
-                      <li><b><em>организационный риск</em></b> - команда, заказчик, тестовая среда;</li>
-                      <li><b><em>товарный риск</em></b> - функциональные, нефункциональные возможности продукта:
-                        <ul>
-                          <li>система предлагает неправильные решения;</li>
-                          <li>люди используют систему неправильно;</li>
-                          <li>система неправильно определяет сценарий;</li>
-                          <li>система не сможет обрабатывать сложные запросы;</li>
-                          <li>система не сможет обрабатывать большие объемы данных.</li>
-                        </ul>
-                      </li>
-                    </ul>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseTwo"
+                    >
+                      Анализ требований
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0"><b>Ожидаемый результат</b></p>
+                      <ul>
+                        <li>окружение, перформанс</li>
+                        <li>ограничения, уведомления</li>
+                        <li>std in, std out, std err</li>
+                      </ul>
+                      <p class="pb-2">
+                        Стадия тест-анализа начинается еще до утверждения
+                        спецификации и продолжается на стадии разработки
+                        (написания кода) программного продукта. Источником для
+                        анализа выступает документация по продукту и общение с
+                        разработчиками. На данной стадии изучается и
+                        анализируется объект тестирования:
+                      </p>
+                      <ul class="mb-0">
+                        <li class="pb-2">
+                          кто пользователь, для чего используют продукт, как это
+                          важно для пользователя;
+                        </li>
+                        <li class="pb-2">
+                          какое программное (аппаратное) обеспечение использует
+                          продукт;
+                        </li>
+                        <li class="pb-2">
+                          какие функции предстоит тестировать и как эти функции
+                          работают;
+                        </li>
+                        <li class="pb-2">
+                          какие форматы данных и диапазоны значений, какие
+                          правила их обработки;
+                        </li>
+                        <li class="pb-2">
+                          какие ограничения предметной области: ввод, вывод,
+                          редактирование, удаление, поведение;
+                        </li>
+                        <li>
+                          установить зависимости между компонентами продукта:
+                          <ul>
+                            <li>полная или частичная;</li>
+                            <li>прямая (А-В) или обратная (В-А);</li>
+                            <li>транзитивная (А-В-С) или избыточная (А-С).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>
+                        Одно требование может определять несколько различных
+                        сценариев пользования.
+                      </p>
 
-                    <p class="pb-0">
-                      Каждый риск должен быть классифицирован на основе следующих двух параметров:
-                    </p>
-                    <ul>
-                      <li><b><em>вероятность</em></b> возникновения;</li>
-                      <li><b><em>влияние</em></b> на проект.</li>
-                    </ul>
-
-                    <table class="table mt-2">
-                      <thead>
-                        <tr class="table-light table-active">
-                          <th scope="col">Статус&emsp;</th>
-                          <th scope="col" class="text-center">Вероятность</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            Высокий<br>(3 балла)
-                          </td>
-                          <td>
-                            Имеет очень высокую вероятность возникновения, может повлиять на весь проект.
-                          </td>
-                        </tr>
-                        <tr class="table-light">
-                          <td>
-                            Средний<br>(2 балла)
-                          </td>
-                          <td>
-                            Вероятность 50%.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Низкий<br>(1 балл)
-                          </td>
-                          <td>
-                            Низкая вероятность появления.
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <table class="table mt-2">
-                      <thead>
-                        <tr class="table-light table-active">
-                          <th scope="col">Статус&emsp;</th>
-                          <th scope="col" class="text-center">Влияние</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            Высокий<br>(3 балла)
-                          </td>
-                          <td>
-                            Невозможно продолжать работу над проектом, если проблема не решена <b>немедленно</b>.
-                          </td>
-                        </tr>
-                        <tr class="table-light">
-                          <td>
-                            Средний<br>(2 балла)
-                          </td>
-                          <td>
-                            Невозможно продолжить работу над проектом, если проблема не решена.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Низкий<br>(1 балл)
-                          </td>
-                          <td>
-                            Нужно устранить проблему, но можно какое-то время принимать альтернативное решение.
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <div class="table-responsive">
-                      <table class="table caption-top mt-2">
-                        <caption>Табличное представление анализа рисков <a href="../documents/qa-example.xlsx">(скачать
-                            xlsx)</a></caption>
+                      <table class="table mt-2">
                         <thead>
                           <tr class="table-light table-active">
-                            <th scope="col" class="align-top">Название риска<br>(1)</th>
-                            <th scope="col" class="text-center">Вероятность<br>(2)</th>
-                            <th scope="col" class="text-center">Влияние<br>(3)</th>
-                            <th scope="col" class="text-center">Приоритет<br>(2х3)</th>
+                            <th scope="col">Вопросы</th>
+                            <th scope="col">Вид требований</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Нарушен срок передачи проекта на тестирование</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">9</td>
-                          </tr>
-                          <tr>
-                            <td>Сокращение времени на тестирование</td>
-                            <td class="text-center">2</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">6</td>
+                            <td>
+                              <b><em>какие задачи решает система?</em></b
+                              ><br />
+                              <ul class="mb-0">
+                                <li>use-case диаграммы</li>
+                                <li>цели, описание проекта</li>
+                                <li>заказчики, пользователи, исполнители</li>
+                                <li>законы, стандарты</li>
+                              </ul>
+                            </td>
+                            <td>
+                              требования от бизнеса, требования от пользователей
+                            </td>
                           </tr>
                           <tr class="table-light">
-                            <td>Отказ электричества</td>
-                            <td class="text-center">1</td>
-                            <td class="text-center">2</td>
-                            <td class="text-center">2</td>
+                            <td>
+                              <b><em>что система делает?</em></b
+                              ><br />
+                              (регистрирует, сохраняет, экспортирует)<br />
+                              <ul class="mb-0">
+                                <li>операции CRUD</li>
+                                <li>тип, формат и правила валидации данных</li>
+                                <li>ограничения, сообщения об ошибках</li>
+                              </ul>
+                            </td>
+                            <td>функциональные требования</td>
                           </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div class="table-responsive">
-                      <table class="table mt-4">
-                        <thead>
-                          <tr class="table-light table-active">
-                            <th scope="col" class="align-top">Приоритет</th>
-                            <th scope="col" class="text-center">Метод управления рисками</th>
-                          </tr>
-                        </thead>
-                        <tbody>
                           <tr>
-                            <td>Высокий<br>(6-9)</td>
-                            <td><b>Немедленно</b> принять меры по смягчению. Контролировать риск каждый день, пока его
-                              статус
-                              не будет закрыт.</td>
+                            <td>
+                              <b><em>как система это делает?</em></b
+                              ><br />
+                              (как быстро, на каком окружении)<br />
+                              <ul class="mb-0">
+                                <li>количество пользователей</li>
+                                <li>объем передаваемых данных</li>
+                                <li>объем хранимых данных</li>
+                                <li>скорость передачи информации</li>
+                                <li>операционная система, браузер</li>
+                              </ul>
+                            </td>
+                            <td>нефункциональные требования</td>
                           </tr>
                           <tr class="table-light">
-                            <td>Средний<br>(3-5)</td>
-                            <td>Мониторинг риска каждую неделю.</td>
-                          </tr>
-                          <tr>
-                            <td>Низкий<br>(1-2)</td>
-                            <td>Принять и контролировать риск.</td>
+                            <td>
+                              <b><em>какие технологии используются?</em></b
+                              ><br />
+                              <ul class="mb-0">
+                                <li>диаграмма компонент</li>
+                                <li>модули приложения</li>
+                              </ul>
+                            </td>
+                            <td>технические требования</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFive">
-                    Приоритет функциональности
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingFive">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>критический;</li>
-                      <li>важный (желательный);</li>
-                      <li>необязательный.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseThree"
+                    >
+                      Декомпозиция
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Для описания достаточно сложных бизнес-процессов
+                        прибегают к функциональной декомпозиции, которая
+                        показывает разбиение одного процесса на ряд более мелких
+                        функций до тех пор, пока каждую из них уже нельзя будет
+                        разбить без ущерба для смысла.
+                      </p>
+                      <p>
+                        Конечный продукт декомпозиции представляет собой
+                        иерархию функций, на самом нижнем уровне которой
+                        находятся атомарные с точки зрения смысловой нагрузки
+                        функции. Программа состоит из классов и объектов.
+                      </p>
+                      <p>
+                        Структура объектов дает схему их взаимодействий друг с
+                        другом, структура класса определяет избыточность средств
+                        внутри системы.
+                      </p>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseSix">
-                    Оценка трудозатрат
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingSix">
-                  <div class="accordion-body">
-                    <p class="pb-0">Данная стадия анализа позволяет:</p>
-                    <ul>
-                      <li>ответить на вопросы <b>как долго? сколько стоит?</b></li>
-                      <li>определить необходимые ресурсы, время, человеческие навыки и стоимость работ.</li>
-                    </ul>
-
-                    <div class="table-responsive">
-                      <table class="table caption-top">
-                        <caption>Табличное представление оценки трудозатрат <a
-                            href="../documents/qa-example.xlsx">(скачать xlsx)</a>
-                        </caption>
+                      <p class="pb-1">
+                        <b>Результат декомпозиции объекта:</b>
+                      </p>
+                      <table class="table mt-2">
                         <thead>
                           <tr class="table-light table-active">
-                            <th scope="col" class="align-top">#</th>
-                            <th scope="col" class="align-top">Уровень</th>
-                            <th scope="col" class="align-top text-center">Вес уровня, балл</th>
-                            <th scope="col" class="align-top text-center">Количество функциональных точек</th>
-                            <th scope="col" class="align-top text-center">Всего (кол3 х кол4)</th>
+                            <th scope="col">Объект</th>
+                            <th scope="col" class="text-center">Ограничения</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>1</td>
-                            <td>Сложный</td>
-                            <td class="text-center">5</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">15</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Средний</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">5</td>
-                            <td class="text-center">15</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Простой</td>
-                            <td class="text-center">1</td>
-                            <td class="text-center">4</td>
-                            <td class="text-center">4</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td colspan="3"><b>Всего баллов,</b> (р1 + р2 + р3)</td>
-                            <td class="text-center table-light fs-5">34</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td colspan="3"><b>Стоимость одного балла,</b> человеко-часов</td>
-                            <td class="text-center table-light fs-5">5</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td colspan="3"><b>Общее расчетное усилие,</b> человеко-часов (р4 х р5)</td>
-                            <td class="text-center table-light fs-5"><b>170</b></td>
+                            <td>
+                              <ul class="mb-0">
+                                <li>характеристики объекта (атрибуты);</li>
+                                <li>состояние объекта (значение атрибутов);</li>
+                                <li>
+                                  функциональные возможности объекта (методы);
+                                </li>
+                                <li>
+                                  связи объекта:
+                                  <ul>
+                                    <li>
+                                      взаимодействие (ассоциирование) с другими
+                                      объектами = 1:1, 1:N, M:N;
+                                    </li>
+                                    <li>может или должен.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </td>
+                            <td>
+                              <ul class="mb-0">
+                                <li>
+                                  <b><em>для данных</em></b> - не должен
+                                  состоять из цифр, символов, длина от 2 до 5 …
+                                </li>
+                                <li>
+                                  <b><em>для поведения</em></b> - не должен
+                                  выполнять …
+                                </li>
+                                <li>
+                                  <b><em>для связей</em></b> - должен состоять в
+                                  одной группе, выполнять не более 3-х операций.
+                                </li>
+                              </ul>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
-                    </div>
 
+                      <p class="pb-1">
+                        <b>Результат декомпозиции системы:</b>
+                      </p>
+                      <ul>
+                        <li class="pb-2">
+                          определение объектов тестирования, взаимосвязей и
+                          зависимостей между ними (пользователи, окружение,
+                          интерфейсы, сервисы);
+                        </li>
+                        <li class="pb-2">определение поведения объектов;</li>
+                        <li class="pb-2">
+                          определение ограничений:
+                          <ul>
+                            <li>на ввод, редактирование, удаление данных;</li>
+                            <li>на вывод результата (период);</li>
+                            <li>на поведение объекта.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          определение алгоритмов поиска и расчетов:
+                          <ul>
+                            <li>формула;</li>
+                            <li>блок-схема;</li>
+                            <li>псевдокод.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <div class="table-responsive mb-4">
+                        <table class="table caption-top">
+                          <caption>
+                            Табличное представление декомпозиции
+                            <a href="../documents/qa-example.xlsx"
+                              >(скачать xlsx)</a
+                            >
+                          </caption>
+                          <thead class="table-light table-active">
+                            <tr>
+                              <th scope="col" class="align-top">Роль</th>
+                              <th scope="col" class="align-top">
+                                Сценарий пользования
+                              </th>
+                              <th scope="col" class="align-top">
+                                Объект тестирования
+                              </th>
+                              <th scope="col" class="align-top">
+                                Действия (CRUD)
+                              </th>
+                              <th scope="col" class="align-top">Раздел</th>
+                              <th scope="col" class="align-top">Ограничения</th>
+                              <th scope="col" class="align-top">
+                                Алгоритм поиска
+                              </th>
+                              <th scope="col" class="align-top">
+                                Сообщение об ошибке
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="align-top">Пользователь</td>
+                              <td class="align-top">Покупка билета</td>
+                              <td class="align-top">билет</td>
+                              <td class="align-top">поиск билета</td>
+                              <td class="align-top">форма поиска билета</td>
+                              <td class="align-top"></td>
+                              <td class="align-top"></td>
+                              <td class="align-top"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseFour"
+                    >
+                      Анализ рисков
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFour"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0">Виды рисков:</p>
+                      <ul>
+                        <li>
+                          <b><em>бюджетный риск</em></b> - сокращение расходов
+                          на тестирование;
+                        </li>
+                        <li>
+                          <b><em>временной риск</em></b> - сокращение времени на
+                          тестирование;
+                        </li>
+                        <li>
+                          <b><em>организационный риск</em></b> - команда,
+                          заказчик, тестовая среда;
+                        </li>
+                        <li>
+                          <b><em>товарный риск</em></b> - функциональные,
+                          нефункциональные возможности продукта:
+                          <ul>
+                            <li>система предлагает неправильные решения;</li>
+                            <li>люди используют систему неправильно;</li>
+                            <li>система неправильно определяет сценарий;</li>
+                            <li>
+                              система не сможет обрабатывать сложные запросы;
+                            </li>
+                            <li>
+                              система не сможет обрабатывать большие объемы
+                              данных.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <p class="pb-0">
+                        Каждый риск должен быть классифицирован на основе
+                        следующих двух параметров:
+                      </p>
+                      <ul>
+                        <li>
+                          <b><em>вероятность</em></b> возникновения;
+                        </li>
+                        <li>
+                          <b><em>влияние</em></b> на проект.
+                        </li>
+                      </ul>
+
+                      <table class="table mt-2">
+                        <thead>
+                          <tr class="table-light table-active">
+                            <th scope="col">Статус&emsp;</th>
+                            <th scope="col" class="text-center">Вероятность</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Высокий<br />(3 балла)</td>
+                            <td>
+                              Имеет очень высокую вероятность возникновения,
+                              может повлиять на весь проект.
+                            </td>
+                          </tr>
+                          <tr class="table-light">
+                            <td>Средний<br />(2 балла)</td>
+                            <td>Вероятность 50%.</td>
+                          </tr>
+                          <tr>
+                            <td>Низкий<br />(1 балл)</td>
+                            <td>Низкая вероятность появления.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table class="table mt-2">
+                        <thead>
+                          <tr class="table-light table-active">
+                            <th scope="col">Статус&emsp;</th>
+                            <th scope="col" class="text-center">Влияние</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Высокий<br />(3 балла)</td>
+                            <td>
+                              Невозможно продолжать работу над проектом, если
+                              проблема не решена <b>немедленно</b>.
+                            </td>
+                          </tr>
+                          <tr class="table-light">
+                            <td>Средний<br />(2 балла)</td>
+                            <td>
+                              Невозможно продолжить работу над проектом, если
+                              проблема не решена.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Низкий<br />(1 балл)</td>
+                            <td>
+                              Нужно устранить проблему, но можно какое-то время
+                              принимать альтернативное решение.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="table-responsive">
+                        <table class="table caption-top mt-2">
+                          <caption>
+                            Табличное представление анализа рисков
+                            <a href="../documents/qa-example.xlsx"
+                              >(скачать xlsx)</a
+                            >
+                          </caption>
+                          <thead>
+                            <tr class="table-light table-active">
+                              <th scope="col" class="align-top">
+                                Название риска<br />(1)
+                              </th>
+                              <th scope="col" class="text-center">
+                                Вероятность<br />(2)
+                              </th>
+                              <th scope="col" class="text-center">
+                                Влияние<br />(3)
+                              </th>
+                              <th scope="col" class="text-center">
+                                Приоритет<br />(2х3)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                Нарушен срок передачи проекта на тестирование
+                              </td>
+                              <td class="text-center">3</td>
+                              <td class="text-center">3</td>
+                              <td class="text-center">9</td>
+                            </tr>
+                            <tr>
+                              <td>Сокращение времени на тестирование</td>
+                              <td class="text-center">2</td>
+                              <td class="text-center">3</td>
+                              <td class="text-center">6</td>
+                            </tr>
+                            <tr class="table-light">
+                              <td>Отказ электричества</td>
+                              <td class="text-center">1</td>
+                              <td class="text-center">2</td>
+                              <td class="text-center">2</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="table-responsive">
+                        <table class="table mt-4">
+                          <thead>
+                            <tr class="table-light table-active">
+                              <th scope="col" class="align-top">Приоритет</th>
+                              <th scope="col" class="text-center">
+                                Метод управления рисками
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Высокий<br />(6-9)</td>
+                              <td>
+                                <b>Немедленно</b> принять меры по смягчению.
+                                Контролировать риск каждый день, пока его статус
+                                не будет закрыт.
+                              </td>
+                            </tr>
+                            <tr class="table-light">
+                              <td>Средний<br />(3-5)</td>
+                              <td>Мониторинг риска каждую неделю.</td>
+                            </tr>
+                            <tr>
+                              <td>Низкий<br />(1-2)</td>
+                              <td>Принять и контролировать риск.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseFive"
+                    >
+                      Приоритет функциональности
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFive"
+                  >
+                    <div class="accordion-body">
+                      <ul>
+                        <li>критический;</li>
+                        <li>важный (желательный);</li>
+                        <li>необязательный.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseSix"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseSix"
+                    >
+                      Оценка трудозатрат
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseSix"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingSix"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0">Данная стадия анализа позволяет:</p>
+                      <ul>
+                        <li>
+                          ответить на вопросы <b>как долго? сколько стоит?</b>
+                        </li>
+                        <li>
+                          определить необходимые ресурсы, время, человеческие
+                          навыки и стоимость работ.
+                        </li>
+                      </ul>
+
+                      <div class="table-responsive">
+                        <table class="table caption-top">
+                          <caption>
+                            Табличное представление оценки трудозатрат
+                            <a href="../documents/qa-example.xlsx"
+                              >(скачать xlsx)</a
+                            >
+                          </caption>
+                          <thead>
+                            <tr class="table-light table-active">
+                              <th scope="col" class="align-top">#</th>
+                              <th scope="col" class="align-top">Уровень</th>
+                              <th scope="col" class="align-top text-center">
+                                Вес уровня, балл
+                              </th>
+                              <th scope="col" class="align-top text-center">
+                                Количество функциональных точек
+                              </th>
+                              <th scope="col" class="align-top text-center">
+                                Всего (кол3 х кол4)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Сложный</td>
+                              <td class="text-center">5</td>
+                              <td class="text-center">3</td>
+                              <td class="text-center">15</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Средний</td>
+                              <td class="text-center">3</td>
+                              <td class="text-center">5</td>
+                              <td class="text-center">15</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Простой</td>
+                              <td class="text-center">1</td>
+                              <td class="text-center">4</td>
+                              <td class="text-center">4</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td colspan="3">
+                                <b>Всего баллов,</b> (р1 + р2 + р3)
+                              </td>
+                              <td class="text-center table-light fs-5">34</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td colspan="3">
+                                <b>Стоимость одного балла,</b> человеко-часов
+                              </td>
+                              <td class="text-center table-light fs-5">5</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td colspan="3">
+                                <b>Общее расчетное усилие,</b> человеко-часов
+                                (р4 х р5)
+                              </td>
+                              <td class="text-center table-light fs-5">
+                                <b>170</b>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
-      </div>
+      </main>
 
-    </main>
-
-    <footer class="customer-bg border-top border-3">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <p class="mt-3 pb-0">
-              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
-            </p>
-            <nav class="mb-2">
-              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
-            </nav>
+      <footer class="customer-bg border-top border-3">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="mt-3 pb-0">
+                &copy; Valeriy Novikov, 2021&mdash;<span
+                  id="currentYear"
+                ></span>
+              </p>
+              <nav class="mb-2">
+                <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a
+                  href="mailto:page404.info@gmail.com"
+                  >support</a
+                >
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="../js/current-year.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/current-year.js"></script>
+  </body>
 </html>
