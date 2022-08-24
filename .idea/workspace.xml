@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf1adbc-180f-4a80-8806-c99fd5280b4a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tools/tools-main-api.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools-main-bash.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-bash.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools-main-browser.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-browser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools-main-network.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-network.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools-main-notepad.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-notepad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools-main-sql.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-sql.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/tools-main-jmeter.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools-main-jmeter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +24,28 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/myProjects/dictionary"
+    "last_opened_file_path": "D:/myProjects/page_auditor"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="dictionary" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="dictionary" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="fbf1adbc-180f-4a80-8806-c99fd5280b4a" name="Changes" comment="" />
       <created>1660390874569</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
