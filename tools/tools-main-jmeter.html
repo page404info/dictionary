@@ -77,10 +77,12 @@
                         <a class="nav-link" href="tools-main-bash.html">Bash</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="tools-main-testlink.html">TestLink</a>
+                        <a class="nav-link" href="tools-main-testlink.html"
+                          >TestLink</a
+                        >
                       </li>
-                      
-                      <hr>
+
+                      <hr />
                       <li class="nav-item">
                         <a class="nav-link" href="#">PageAuditor</a>
                       </li>
@@ -129,10 +131,12 @@
                         >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="tools-main-virtualbox.html">VirtualBox</a>
+                        <a class="nav-link" href="tools-main-virtualbox.html"
+                          >VirtualBox</a
+                        >
                       </li>
 
-                      <hr>
+                      <hr />
                       <li class="nav-item">
                         <a
                           class="nav-link"
@@ -185,150 +189,74 @@
                   id="accordionFlushExample"
                 >
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
+                    <h2 class="accordion-header" id="flush-heading7">
                       <button
                         class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne"
+                        data-bs-target="#flush-collapse7"
                         aria-expanded="false"
-                        aria-controls="flush-collapseOne"
+                        aria-controls="flush-collapse7"
                       >
-                        Сценарий
+                        <b>Настройка программы</b>
                       </button>
                     </h2>
                     <div
-                      id="flush-collapseOne"
+                      id="flush-collapse7"
                       class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingOne"
+                      aria-labelledby="flush-heading7"
                       data-bs-parent="#accordionFlushExample"
                     >
                       <div class="accordion-body">
-                        <p><b>Файловый подход</b><br /></p>
+                        <ol>
+                          <li class="mb-1">
+                            Установить JAVA (<a
+                              href="https://www.jetbrains.com/ru-ru/idea/download/#section=windows"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >скачать)</a
+                            >, проверить: java -version
+                          </li>
+                          <li class="mb-1">
+                            Установить jMeter (<a
+                              href="https://jmeter.apache.org/download_jmeter.cgi"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >скачать</a
+                            >)
+                          </li>
+                          <li class="mb-1">
+                            Установить plugins-manager.jar (<a
+                              href="https://jmeter-plugins.org/wiki/PluginsManager/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >скачать</a
+                            >), добавить плагины:
+                            <ul>
+                              <li class="pt-2">Custom Thread Groups</li>
+                              <li>Flexible File Writer</li>
+                              <li>PerfMon Servers Performance</li>
+                              <li class="pt-2">Custom JMeter Functions</li>
+                              <li>3 Basic Graphs</li>
+                              <li>5 Additional Graphs</li>
+                              <li>JSON Plugins</li>
+                              <li>Throughput Shaping Timer (ограничения)</li>
+                              <li>Dummy Sampler (в учебных целях)</li>
+                              <li>Distribution/Percentile Graphs</li>
+                              <li>BlazeMeter step-by-step Debugger</li>
+                              <li>KPI vs KPI graphs</li>
+                              <li>5 Additional Graphs</li>
+                              <li class="pt-2">
+                                WebSocket Sampler by Maciej Zaleski
+                              </li>
+                              <li>WebSocket Samplers by Peter Doornbosch</li>
+                            </ul>
+                          </li>
+                        </ol>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseTwo"
-                      >
-                        Профиль нагрузки
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingTwo"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the second
-                        item's accordion body. Let's imagine this being filled
-                        with some actual content.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseThree"
-                      >
-                        Запуск
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseThree"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingThree"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading4">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapse4"
-                        aria-expanded="false"
-                        aria-controls="flush-collapse4"
-                      >
-                        Отчетность
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapse4"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-heading4"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading5">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapse5"
-                        aria-expanded="false"
-                        aria-controls="flush-collapse5"
-                      >
-                        Анализ результатов
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapse5"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-heading5"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading6">
                       <button
@@ -339,7 +267,7 @@
                         aria-expanded="false"
                         aria-controls="flush-collapse6"
                       >
-                        Генератор данных
+                        <b>Динамическое изменение данных</b>
                       </button>
                     </h2>
                     <div
@@ -349,45 +277,857 @@
                       data-bs-parent="#accordionFlushExample"
                     >
                       <div class="accordion-body">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
+                        <h4 class="fs-5">Функция Random</h4>
+                        <ul class="mb-0">
+                          <li>${__Random(300,180000)}</li>
+                          <li>
+                            ${__RandomString(${__Random(3,30)},ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                            abcdefghijklmnopqrstuvwxyz0123456789,)}
+                          </li>
+                          <li>
+                            ${__RandomString(5,abcdefghijk12345,myRandom)}
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Конфигуратор данных</h4>
+                        <ul class="mb-0">
+                          <li>
+                            создать переменную: Add - Config Element - Random
+                            Variable<br />(name = nick, format = user-000,
+                            minValue = 001, maxValue = 999)
+                          </li>
+                          <li>
+                            в запросе указать ссылку на переменную = ${nick}
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Файл .csv</h4>
+                        <ul class="mb-0">
+                          <li>
+                            создать переменную: Add - Config Element - CSV Data
+                            Set Config<br />(filename = pathToCsv, name = nick)
+                          </li>
+                          <li>
+                            в запросе указать ссылку на переменную = ${nick}
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading7">
+                    <h2 class="accordion-header" id="flush-headingOne">
                       <button
                         class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapse7"
+                        data-bs-target="#flush-collapseOne"
                         aria-expanded="false"
-                        aria-controls="flush-collapse7"
+                        aria-controls="flush-collapseOne"
                       >
-                        Установка программы
+                        <b>Сценарий</b>
                       </button>
                     </h2>
                     <div
-                      id="flush-collapse7"
+                      id="flush-collapseOne"
                       class="accordion-collapse collapse"
-                      aria-labelledby="flush-heading7"
+                      aria-labelledby="flush-headingOne"
                       data-bs-parent="#accordionFlushExample"
                     >
                       <div class="accordion-body">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
+                        <h4 class="fs-5">Single (одиночка)</h4>
+                        <ul class="mb-0">
+                          <li>добавить группу: Add - Tread Group</li>
+                          <li>добавить запрос: Add - HTTP Request</li>
+                          <li>
+                            добавить отчеты: Add - Listener - View Result Tree,
+                            Summary Report, Aggregate Report
+                          </li>
+                          <li>
+                            добавить ожидание: Add - Timer - Uniform Random
+                            Timer
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">access.log (для GET запросов)</h4>
+                        <ul class="mb-0">
+                          <li>создать файл access.log</li>
+                          <li>добавить список URL адресов</li>
+                          <li>привести адреса к формату "GET /index.html</li>
+                          <li>
+                            указать путь к файлу в jMeter: Add - Sampler -
+                            Access Log Sampler
+                          </li>
+                          <li>
+                            добавить ожидание: Add - Timer - Uniform Random
+                            Timer
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Recoder devTools (для api)</h4>
+                        <ul>
+                          <li>открыть Chrome - devTools - network</li>
+                          <li>выполнить пользовательский сценарий</li>
+                          <li>
+                            правый клик мышки - выбрать "Save all as HAR with
+                            content"
+                          </li>
+                          <li>
+                            конвертировать файл в .jmx (<a
+                              href="https://converter.blazemeter.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >конвертер</a
+                            >)
+                          </li>
+                          <li>открыть файл в jMeter</li>
+                          <li>
+                            добавить ожидание: Add - Timer - Uniform Random
+                            Timer
+                          </li>
+                        </ul>
+
+                        <br />
+                        <h4 class="fs-5">Recoder BlazeMeter</h4>
+                        <ul>
+                          <li>
+                            установить BlazeMeter Chrome Extension (<a
+                              href="hhttps://chrome.google.com/webstore/detail/blazemeter-the-continuous/mbopgmdnpcbohhpnfglgohlbhfongabi?hl=ru"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >скачать</a
+                            >)
+                          </li>
+                          <li>залогиниться в программу</li>
+                          <li>записать пользовательский сценарий</li>
+                          <li>сохранить сценарий в .jmx</li>
+                          <li>открыть файл в jMeter</li>
+                          <li>
+                            добавить ожидание: Add - Timer - Uniform Random
+                            Timer
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseTwo"
+                      >
+                        <b>Профиль нагрузки</b>
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingTwo"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <h4 class="fs-5">
+                          Непрерывно возрастающая нагрузка (поиск точки
+                          насыщения / определение максимальной
+                          производительности)
+                        </h4>
+                        <div class="mb-0">
+                          <img
+                            class="img-fluid"
+                            src="jmeter/load-1.png"
+                            alt="Поиск точки насыщения"
+                          />
+                        </div>
+                        <ul class="mb-0">
+                          <li>
+                            добавить группу: Add - Threads - Thread Group<br />(number
+                            of threads = 100, ramp-up period = 100, loop count =
+                            infinite, duration = 101)
+                          </li>
+                          <li>добавить запрос: Add - HTTP Request</li>
+                          <li>
+                            добавить отчет: Add - Listener - Summary Report<br />(filename
+                            = result.jmx / result.csv)
+                          </li>
+                          <li>
+                            добавить ожидание: Add - Timer - Constant Throughput
+                            Timer<br />(target throughput = 60, calculate = this
+                            thread only)
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">
+                          Постоянная нагрузка (подтверждение максимальной
+                          производительности)
+                        </h4>
+                        <div class="mb-0">
+                          <img
+                            class="img-fluid"
+                            src="jmeter/load-2.png"
+                            alt="Подтверждение максимальной производительности"
+                          />
+                        </div>
+                        <ul class="mb-0">
+                          <li>
+                            добавить группу: Add - Threads - Thread Group<br />(number
+                            of threads = 80% от максимума, ramp-up period = 80%
+                            от максимума, loop count = infinite, duration = 600)
+                          </li>
+                          <li>добавить запрос: Add - HTTP Request</li>
+                          <li>
+                            добавить отчет: Add - Listener - Summary Report<br />(filename
+                            = result.jmx / result.csv)
+                          </li>
+                          <li>
+                            добавить ожидание: Add - Timer - Constant Throughput
+                            Timer<br />(target throughput = 60, calculate = this
+                            thread only)
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">
+                          Постоянная длительная нагрузка (проверка надежности)
+                        </h4>
+                        <div class="mb-0">
+                          <img
+                            class="img-fluid"
+                            src="jmeter/load-3.png"
+                            alt="Проверка надежности"
+                          />
+                        </div>
+                        <ul class="mb-0">
+                          <li>
+                            добавить группу: Add - Threads - Thread Group<br />(number
+                            of threads = 80% от максимума, ramp-up period = 80%
+                            от максимума, loop count = infinite, duration = 3600
+                            час / 28800 8-часов / 86400 сутки / 259200 3-суток /
+                            432000 5-суток)
+                          </li>
+                          <li>добавить запрос: Add - HTTP Request</li>
+                          <li>
+                            добавить отчет: Add - Listener - Summary Report<br />(filename
+                            = result.jmx / result.csv)
+                          </li>
+                          <li>
+                            добавить ожидание: Add - Timer - Constant Throughput
+                            Timer<br />(target throughput = 60, calculate = this
+                            thread only)
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">
+                          Нагрузка всплесками (проверка отказоустойчивости)
+                        </h4>
+                        <div class="mb-0">
+                          <img
+                            class="img-fluid"
+                            src="jmeter/load-4.png"
+                            alt="Проверка отказоустойчивости"
+                          />
+                        </div>
+                        <ul class="mb-0">
+                          <li>
+                            добавить в тест-план отчеты:
+                            <ul>
+                              <li>
+                                Add - Listener - Summary Report (filename =
+                                result.jmx / result.csv)
+                              </li>
+                              <li>Add - Listener - Active Threads Over Time</li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            создать первую группу:
+                            <ul>
+                              <li>
+                                Add - Threads - Thread Group (number of threads
+                                = 80% от максимума, ramp-up period = 5, loop
+                                count = infinite, duration = 300)
+                              </li>
+                              <li>добавить запрос: Add - HTTP Request</li>
+                              <li>
+                                добавить ожидание: Add - Timer - Constant
+                                Throughput Timer (target throughput = 60,
+                                calculate = this thread only)
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li>
+                            создать вторую группу:
+                            <ul>
+                              <li>
+                                Add - Threads - Thread Group (number of threads
+                                = 150% от максимума, ramp-up period = 3, loop
+                                count = infinite, duration = 300)
+                              </li>
+                              <li>добавить запрос: Add - HTTP Request</li>
+                              <li>
+                                добавить ожидание: Add - Timer - Constant
+                                Throughput Timer (target throughput = 60,
+                                calculate = this thread only)
+                              </li>
+                              <li>
+                                добавить ожидание: Add - Timer - Constant Timer
+                                (thread delay = 30000)
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseThree"
+                      >
+                        <b>Запуск</b>
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <h4 class="fs-5">Интерфейс jMeter</h4>
+                        <ul>
+                          <li>Run - Clear All</li>
+                          <li>Run - Start</li>
+                        </ul>
+
+                        <br />
+                        <h4 class="fs-5">Командная строка</h4>
+                        <ul>
+                          <li>run cmd for Windows OS</li>
+                          <li>cd (path to jmeter\bin)</li>
+                          <li>
+                            jmeter -n -t pathToScenarioFile.jmx -l
+                            pathToResultFile.csv (pathToResultFile.jtl)
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading4">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse4"
+                        aria-expanded="false"
+                        aria-controls="flush-collapse4"
+                      >
+                        <b>Отчетность</b>
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapse4"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="flush-heading4"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <h4 class="fs-5">Интерфейс jMeter</h4>
+                        <ul class="mb-0">
+                          <li>
+                            добавить отчеты: Add - Listener - someReport<br />(filename
+                            = result.jmx / result.csv)
+                          </li>
+                          <li>Summary Report</li>
+                          <li>jp@gc - Active Threads Over Time</li>
+                          <li>Graph Results</li>
+                          <li>jp@gc - Response Times Distribution</li>
+                          <li>jp@gc - Response Times Percentiles</li>
+                        </ul>
+                        <p class="pt-0">
+                          <a href="jmeter/template.jmx">скачать</a> шаблон
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">HTML отчет (командная строка)</h4>
+                        <ul>
+                          <li>run cmd for Windows OS</li>
+                          <li>cd (path to jmeter\bin)</li>
+                          <li>
+                            jmeter -g pathToResultFile.csv -o
+                            pathToHtmlResultFolder<br />
+                            jmeter -g pathToResultFile.jtl -o
+                            pathToHtmlResultFolder
+                          </li>
+                        </ul>
+
+                        <br />
+                        <h4 class="fs-5">Интерфейс Grafana</h4>
+                        <ol>
+                          <li>
+                            Установить Grafana (<a
+                              href="https://vikasponnusamy0913.medium.com/grafana-and-influx-db-setup-for-windows-9e1b7eba34bf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >инструкция</a
+                            >)
+                            <ul>
+                              <li>
+                                <a
+                                  href="https://grafana.com/grafana/download?platform=windows"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >скачать</a
+                                >
+                                и запустить инсталятор
+                              </li>
+                              <li>
+                                перейти
+                                <a
+                                  href="http://localhost:3000/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >http://localhost:3000</a
+                                >, login=admin, password=admin
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="mt-3">
+                            Установить InfluxDB (<a
+                              href="https://technixleo.com/how-to-install-influxdb-on-windows/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >инструкция</a
+                            >)
+                            <ul>
+                              <li>
+                                <a
+                                  href="https://docs.influxdata.com/influxdb/v2.4/install/?t=Windows"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >скачать</a
+                                >
+                                и разархивировать в папку C:\Program
+                                Files\InfluxData\influxdb
+                              </li>
+                              <li>
+                                открыть cmd, выполнить &quot;C:\Program
+                                Files\InfluxData\influxdb&quot;>influxd.exe
+                              </li>
+                              <li>
+                                перейти
+                                <a
+                                  href="http://localhost:8086/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >http://localhost:8086</a
+                                >, login=admin, password=12345678
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="mt-3">
+                            Установить Telegraf (<a
+                              hhref="https://www.dmosk.ru/miniinstruktions.php?mini=telegraf-influxdb"
+                              href="https://youtu.be/PBmqU-aCc9U"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >инструкция</a
+                            >)
+                            <ul>
+                              <li>
+                                <a
+                                  href="https://portal.influxdata.com/downloads/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >скачать</a
+                                >
+                                и разархивировать в папку C:\Program
+                                Files\Telegraf
+                              </li>
+                              <li>создать Bucket в InfluxDB</li>
+                              <li>
+                                сгенерировать API Token к созданному Bucket
+                                (write)
+                              </li>
+                              <li>
+                                создать TelegrafOutputConfiguration к созданному
+                                Bucket
+                              </li>
+                              <li>
+                                заменить раздел <b>outputs.influxdb_v2</b> в
+                                influxdb.conf на созданную конфигурацию +
+                                изменить значение
+                                token=&quot;$INFLUX_TOKEN&quot; на
+                                сгенерированный API Token
+                              </li>
+                              <li>
+                                запустить Telegraf через cmd:
+                                <ul>
+                                  <li>
+                                    перейти cd &quot;C:\Program Files\Telegraf&quot;
+                                  </li>
+                                  <li>выполнить telegraf.exe -config &quot;C:\Program Files\Telegraf\telegraf.conf&quot;</li>
+                                </ul>
+                              </li>
+                              <li>проверить запись данных = DataExplorer - Query - Submit</li>
+                            </ul>
+                          </li>
+
+                          <li class="mt-3">
+                            Подключить InfluxDB в jMeter (<a
+                              href="https://jmeter.apache.org/usermanual/realtime-results.html#influxdb_v2"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >инструкция 15.3.2</a
+                            >). Установить параметры Backend Listener:
+                            <ul>
+                              <li>
+                                Backend Listener implementation =
+                                org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient
+                              </li>
+                              <li>
+                                influxdbMetricsSender =
+                                org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender
+                              </li>
+                              <li>
+                                influxdbUrl =
+                                http://localhost:8086/api/v2/write?org=<b>ogrNameInfluxDB</b>&bucket=<b
+                                  >dbNameInfluxDB</b
+                                >
+                              </li>
+                              <li>application = InfluxDB2</li>
+                              <li>measurement = jmeter</li>
+                              <li>summaryOnly = false</li>
+                              <li>samplersRegex = .*</li>
+                              <li>percentiles = 90;95;99</li>
+                              <li>testTitle = <b>testName</b></li>
+                              <li>eventTags = оставить пустым</li>
+                              <li>
+                                influxdbToken = <b>admin’sTokenInfluxDB</b>
+                              </li>
+                              <li>samplersList = metrics</li>
+                            </ul>
+                          </li>
+
+                          <li class="mt-3">
+                            Подключить InfluxDB в Grafana (<a
+                              href="https://grafana.com/docs/grafana/v9.0/datasources/influxdb/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >инструкция</a
+                            >). Установить параметры:
+                            <ul>
+                              <li>Query Language = Flux</li>
+                              <li>URL = http://localhost:8086</li>
+                              <li>Basic auth = in</li>
+                              <li>
+                                Basic Auth Details:
+                                <ul>
+                                  <li>user = admin</li>
+                                  <li>password = 12345678</li>
+                                </ul>
+                              </li>
+                              <li>
+                                InfluxDB Details:
+                                <ul>
+                                  <li>organization = ogrNameInfluxDB</li>
+                                  <li>token = admin’sTokenInfluxDB</li>
+                                  <li>default bucket = dbIdInfluxDB</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li class="mt-3">
+                            Подключить дашборды в Grafana:
+                            <ul>
+                              <li>
+                                скачать
+                                <a
+                                  href="https://grafana.com/grafana/dashboards/5496-apache-jmeter-dashboard-by-ubikloadpack/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >json 5496</a
+                                >,
+                                <a
+                                  href="https://grafana.com/grafana/dashboards/4026-jmeter-dashboard/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >json 4026</a
+                                >
+                              </li>
+                              <li>подключить = Дашборды - Импорт</li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading5">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse5"
+                        aria-expanded="false"
+                        aria-controls="flush-collapse5"
+                      >
+                        <b>Анализ результатов</b>
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapse5"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-heading5"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div class="accordion-body">
+                        <h4 class="fs-5">Время отклика (агрегат)</h4>
+                        <p class="pt-0">
+                          Отчеты: Aggregate Report, jp@gc - Response Times
+                          Percentiles, jp@gc - Response Times Distribution<br />
+                          Показывает количественное и процентное распределение
+                          времени отклика запросов по группам: минимальное,
+                          среднее, максимальное время отклика, ошибки.
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Количество пользователей</h4>
+                        <p class="pt-0">
+                          Отчеты: jp@gc - Active Threads Over Time<br />
+                          Показывает, как пользователи заходят в приложение
+                          (количество потоков) и используется для контроля
+                          правильности подачи нагрузки.
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Время отклика (детально)</h4>
+                        <p class="pt-0">
+                          Отчеты: Response Time Graph, jp@gc - Response Times
+                          Over Time, jp@gc - Connect Times Over Time, jp@gc -
+                          Response Times vs Threads<br />
+                          Показывает время ответа на запросы к приложению. Время
+                          отклика должно быть равномерным, без пиков для всех
+                          операций на протяжении всей ступени нагрузки, а также
+                          коррелировать с увлечением нагрузки. Если на графике
+                          видны пики, значит, в этот момент приложение не
+                          отвечало по какой-то причине.
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Время задержки (детально)</h4>
+                        <p class="pt-0">
+                          Отчеты: jp@gc - Response Latencies Over Time<br />
+                          Показывает время между окончанием отправки запроса до
+                          получения первого ответного пакета от системы.
+                          Желательно, стобы параметр стремился к нулю. Если
+                          параметр растет, значит присутствуют задержки на
+                          сетевом уровне.
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Количество запросов за 1 секунду</h4>
+                        <p class="pt-0">
+                          Отчеты: jp@gc - Hits per Second, jp@gc - Transaction
+                          Throughput vs Threads<br />
+                          Показывает сколько запросов может выдержать ваша
+                          система под нагрузкой. Провал, а затем резкий рост
+                          признак скопления запросов на входе в приложение (<b
+                            >появление очереди</b
+                          >).
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Количество транзакций за 1 секунду</h4>
+                        <p class="pt-0">
+                          Отчеты: jp@gc - Transactions per Second<br />
+                          Показывает количество транзакций (в рамках транзакции
+                          может быть множество запросов) за 1 секунду в разрезе:
+                          <b>успешные / завершены с ошибкой</b>.
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Статус ответов</h4>
+                        <p class="pt-0">
+                          Отчеты: jp@gc - Response Codes per Second<br />
+                          Показывает распределения количества ошибок по кодам
+                          ответа приложения — удобно использовать
+                          <b>для классификации ошибок</b>.
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Пропускная способность приложения</h4>
+                        <p class="pt-0">
+                          Отчеты: jp@gc - Bytes Throughput Over Time<br />
+                          Показывает пропускную способность приложения: какой
+                          объем данных был отправлен и обработан приложением в
+                          единицу времени (бит в секунду).
+                        </p>
+
+                        <br />
+                        <h4 class="fs-5">Graph Results (агрегат)</h4>
+                        <p class="pt-0 pb-0">
+                          Отчеты: Graph Results (отзывчивость сервера)<br />
+                          (1) Average синий - среднее время выполнения
+                          запроса.<br />
+                          (2) Data черный - время отклика на запрос.<br />
+                          (3) Throughput зеленый - пропускная способность
+                          (количество запросов, которые обрабатывает сервер).<br />
+                          (4) Deviation красный - стандартное отклонение.
+                        </p>
+                        <ul>
+                          <li class="mt-2">
+                            чем выше 3 и ниже 2, тем сервер производительнее;
+                          </li>
+                          <li>
+                            если 2 больше 3, тогда сервер не может справиться с
+                            нагрузкой;
+                          </li>
+                          <li>
+                            если 1 растет, а 3 нет, тогда запросы становятся в
+                            очередь,наступила перегруженность сервера;
+                          </li>
+                          <li>
+                            если 1 не растет, тогда сервер выдерживает нагрузку.
+                          </li>
+                        </ul>
+
+                        <br />
+                        <h4 class="fs-5">НАЛОЖЕНИЕ ГРАФИКОВ</h4>
+                        <p class="pt-0 pb-0">
+                          Отчеты: jp@gc - Composite Graph<br />
+                          (1) jp@gc - Active Threads Over Time = количество
+                          пользователей. Позволяет сравнить планируемую нагрузку
+                          с реальной.<br />
+                          (2) jp@gc - Response Times Over Time = среднее время
+                          обработки запроса. Показывает скорость ответа сервера
+                          на запросы.<br />
+                          (3) jp@gc - Hits per Second = количество запросов.
+                          Показывает, сколько запросов выдерживает система.<br />
+                          (4) jp@gc - Transactions per Second = количество
+                          запросов, завершившихся ошибкой. Показывает число и
+                          тип ошибок.<br />
+                          (5) jp@gc - Bytes Throughput Over Time = количество
+                          отправляемых данных. Показывает объем данных, который
+                          система может прокачать в заданный интервал времени.
+                        </p>
+                        <ul>
+                          <li class="mt-4">
+                            1+2 = показывает зависимость количества
+                            пользователей и среднего времени обработки запроса;
+                          </li>
+                          <li class="mt-2">
+                            1+3 = показывает зависимость количества
+                            пользователей и количества запроса;
+                          </li>
+                          <li class="mt-2">
+                            1+4 = показывает зависимость количества
+                            пользователей и количества запросов, завершившихся
+                            ошибкой;
+                          </li>
+                          <li class="mt-2">
+                            1+5 = показывает зависимость количества
+                            пользователей и количества отправляемых данных. Рост
+                            нагрузки должен приводить к планомерному росту
+                            объема данных, графики должны коррелировать.
+                            Расхождения или резкие выбросы указывают на проблемы
+                            с сетью и очередью запросов;
+                          </li>
+
+                          <li class="mt-4">
+                            2+3 = показывает зависимость среднего времени
+                            обработки запроса и количества запросов;
+                          </li>
+                          <li class="mt-2">
+                            2+4 = показывает зависимость среднего времени
+                            обработки запроса и количества запросов,
+                            завершившихся ошибкой;
+                          </li>
+                          <li class="mt-2">
+                            2+5 = показывает зависимость среднего времени
+                            обработки запроса и количества отправляемых данных.
+                            Всплески указывают на проблемы с сетью и очередью
+                            запросов;
+                          </li>
+
+                          <li class="mt-4">
+                            3+4 = показывает зависимость количества запросов и
+                            количества запросов, завершившихся ошибкой;
+                          </li>
+                          <li class="mt-2">
+                            3+5 = показывает зависимость количества запросов и
+                            количества отправляемых данных. Графики должны
+                            коррелировать. Всплески указывают на отправку
+                            неправильных запросов;
+                          </li>
+
+                          <li class="mt-4">
+                            4+5 = показывает зависимость количества запросов,
+                            завершившихся ошибкой и количества отправляемых
+                            данных. Позволяет найти объем данных при котором
+                            система начинает генерировать ошибки.
+                          </li>
+                        </ul>
+
+                        <p>
+                          статья
+                          <a
+                            href="https://habr.com/ru/company/tinkoff/blog/514314/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Анализ результатов нагрузочного тестирования</a
+                          >
+                        </p>
                       </div>
                     </div>
                   </div>
