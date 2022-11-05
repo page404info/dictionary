@@ -73,21 +73,69 @@
                   <div class="col">
                     <ul class="nav nav-pills flex-column">
                       <li class="nav-item">
-                        <a class="nav-link" href="ta-git.html">Git</a>
+                        <a class="nav-link" href="ta-settings.html">Настройка среды разработки</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="ta-projectinit.html"
-                          >Project init</a
+                        <a class="nav-link" href="ta-architecture.html">Архитектура проекта</a>
+                      </li>                       
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-patterns.html">Паттерны ТА</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-init.html"
+                          >Инициализация проекта</a
                         >
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-log.html">Логирование</a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-run.html">Выполнение проекта</a>
+                      </li>                  
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-report.html">Отчетность проекта</a>
+                      </li>    
                     </ul>
+                    <hr />
+                    <div class="row">                      
+                      <div class="col-7">
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-hibernate.html">Hibernate</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-restassured.html">REST Assured</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-selenium.html">Selenium</a>
+                          </li> 
+                        </ul>
+                      </div>
+
+                      <div class="col-5">
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-library.html"
+                            ><b>Библиотеки</b></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-git.html">Git</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-testng.html"
+                              >TestNG</a>
+                          </li>                           
+                        </ul>
+                      </div>
+                    </div>   
                   </div>
                 </nav>
               </div>
             </div>
             <div class="col">
-              <h1 class="fs-3">Test Automation</h1>
-              <p>
+              <h1 class="fs-3">Test Automation<br>(автоматизация тестирования продукта)</h1>
+              <p class="mt-4">
                 <b>Хороший тест</b> отвечает на вопрос: "Верен ли конечный
                 результат?".<br />
                 <b>Плохой тест</b> отвечает на вопрос: "Верен ли процесс?".<br />
@@ -110,7 +158,8 @@
                   <thead>
                     <tr>
                       <th scope="col"></th>
-                      <th scope="col">Просто (Unit test)</th>
+                      <th scope="col" class="text-secondary">Origin</th>
+                      <th scope="col">Просто (Module test)</th>
                       <th scope="col">Integration test</th>
                       <th scope="col">Сложно (e2e test)</th>
                     </tr>
@@ -118,24 +167,28 @@
                   <tbody>
                     <tr>
                       <th scope="row">Важно</th>
-                      <td>1</td>
+                      <td class="text-secondary">1</td>
                       <td>2</td>
                       <td>3</td>
+                      <td>4</td>
                     </tr>
                     <tr>
                       <th scope="row">Не важно</th>
-                      <td>4</td>
+                      <td class="text-secondary">-</td>
+                      <td>6</td>
                       <td>5</td>
-                      <td>x</td>
+                      <td>7</td>
                     </tr>
                     <tr>
                       <th scope="row">Скорость обратной связи</th>
+                      <td class="text-secondary">-</td>
                       <td>hight</td>
                       <td>middle</td>
                       <td>low</td>
                     </tr>
                     <tr>
                       <th scope="row">Стоимость поддержки</th>
+                      <td class="text-secondary">-</td>
                       <td>low</td>
                       <td>middle</td>
                       <td>hight</td>
@@ -145,16 +198,36 @@
               </div>
 
               <p class="mb-3">
-                <b>e2e test</b> - наилучшая защита от багов, наилучшая
+                (Level 3) <b>e2e test</b> - наилучшая защита от багов, наилучшая
                 устойчивость к рефакторингу, максимальный охват модулей системы,
                 медленная обратная связь, большая стоимость поддержки.<br />
-                <b>Integration test</b> - проверяет контроллеры.<br />
-                <b>Unit test</b> - проверяет алгоритмы, доменную модель. Высокая
+                (Level 2) <b>integration test</b> - проверяет контроллеры, взаимодействие модулей системы.<br />
+                (Level 1) <b>module test</b> - проверяет валидацию, алгоритм, доменную модель. Высокая
                 скорость обратной связи, простота поддержки.
               </p>
 
               <div class="row">
-                <div class="mb-md-0 mb-5 col-md-6 col-12">
+                <div class="col-md-2 col-3">
+                  <table class="table text-center text-secondary">
+                    <tbody>
+                      <tr>
+                        <td>.<br>.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <b>Origin-DB</b><br />integration
+                        </td>
+                      </tr>
+                      <tr>                        
+                        <td>
+                          <b>OriginApi</b><br />data
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="mb-md-0 mb-5 col-md-5 col-9">
                   <table class="table text-center">
                     <tbody>
                       <tr>
@@ -175,13 +248,14 @@
                         <td class="col-2"></td>
                       </tr>
                       <tr>
-                        <td class="col-4" colspan="2"><b>DB</b><br />unit</td>
-                        <td class="col-4" colspan="2"><b>API</b><br />unit</td>
-                        <td class="col-4" colspan="2"><b>GUI</b><br />unit</td>
+                        <td class="col-4" colspan="2"><b>DB</b><br />table</td>
+                        <td class="col-4" colspan="2"><b>API</b><br />end point</td>
+                        <td class="col-4" colspan="2"><b>GUI</b><br />page</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+
                 <div class="col">
                   <table class="table text-center">
                     <tbody>
@@ -221,6 +295,12 @@
                 общее количество тестов.<br />
                 Создание объектов >> Фильтрация >> Выполнение >> Формирование
                 отчета
+              </p><hr>
+              <p class="mt-0 pt-0 mb-4">
+                OriginApi - источник данных (третья система)<br>
+                DB - база данных<br>
+                API - прикладной программный интерфейс<br>
+                GUI - графический интерфейс пользователя
               </p>
             </div>
           </div>
