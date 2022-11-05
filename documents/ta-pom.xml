@@ -4,93 +4,167 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.update_name</groupId>
-    <artifactId>update_name</artifactId>
+    <groupId>organization site name replace</groupId>
+    <artifactId>project name short</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Program name.</name>
+
+    <name>project name full</name>
     <description>
-        This program can:
-        - can 1;
-        - can 2.
+		About project: 
+        Customer: name, site
+        Owner: name, site
+        Executor: name, site
+		Origin: system name, files
+		
+		Project modules: 
+		
+		origin api
+			|
+		database - portal api - gui
+						|
+					public api
+		
+		
+		Project function:
+		- GET
+		- search
+		- export: pdf, csv, xlsx
+		- data
     </description>
+    <url>project site</url>
+    <organization>
+        <name>organization name</name>
+        <url>organization site</url>
+    </organization>
+    <developers>
+        <developer>
+            <name>dev name</name>
+            <email>dev email</email>
+            <roles>
+                <role>dev role</role>
+            </roles>
+            <timezone>GMT+2, Ukraine</timezone>
+        </developer>
+    </developers>
+
+	<!--if organization has a inside repository-->
+    <repositories>
+        <repository>
+            <id>org repo</id>
+            <name></name>
+            <url>org repo site</url>
+        </repository>
+		<repository>
+            <id>mvnrepository.com</id>
+            <url>http://mvnrepository.com/</url>
+        </repository>
+    </repositories>
+
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>		
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+		<maven-surefire-report-plugin.version>3.0.0-M7</maven-surefire-report-plugin.version>
 
-        <version.lombok>1.18.20</version.lombok>
-        <version.log4j>2.12.1</version.log4j>
-        <version.testng>6.14.3</version.testng>
-        <version.rest-assured>3.2.0</version.rest-assured>
-        <version.selenide>5.20.4</version.selenide>
-        <version.webdrivermanager>5.0.3</version.webdrivermanager>
-        <version.openCsv>5.3</version.openCsv>
-        <version.jsoup>1.14.3</version.jsoup>
+        <lombok.version>1.18.20</lombok.version>
+        <testng.version>6.14.3</testng.version>
     </properties>
 
 
     <dependencies>
-        <dependency>
+	    <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${version.lombok}</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${version.log4j}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${version.log4j}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>${version.testng}</version>
-            <!--            <scope>test</scope>-->
+            <version>${testng.version}</version>
+            <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${version.rest-assured}</version>
-            <!--            <scope>test</scope>-->
-        </dependency>
-
-        <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>selenide</artifactId>
-            <version>${version.selenide}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${version.webdrivermanager}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>${version.openCsv}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>${version.jsoup}</version>
-        </dependency>
-
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <forkCount>0</forkCount>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/runners/sessionDate.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+	
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>${maven-surefire-report-plugin.version}</version>
+				<configuration>
+					<showSuccess>false</showSuccess>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+    <profiles>
+        <profile>
+            <id>sessionDate</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven-surefire-plugin.version}</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/runners/sessionDate.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>runAll</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven-surefire-plugin.version}</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/runners/runAll.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
