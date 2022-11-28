@@ -183,10 +183,7 @@
             <div class="col">
               <h1 class="fs-3">План тестирования продукта</h1>
               <p class="d-none d-print-block mb-3 p-0" style="font-size: 12px">
-                создано <span id="currentDate"></span> на сайте
-                <a href="../index.html"
-                  >https://page404info.github.io/dictionary/</a
-                >
+                создано <span id="currentDate"></span>
               </p>
 
               <div class="row">
@@ -267,9 +264,16 @@
                 <div class="row">
                   <div class="col-lg-6 col-12">
                     <p>
-                      <label><input type="checkbox" /> Требования</label
+                      <label><input type="checkbox" checked="yes"/> Требования</label
                       >&emsp;&emsp;
                       <label><input type="checkbox" /> Прототип</label>
+                    </p>
+                    <p>
+                      <label
+                        ><input type="checkbox" />
+                        Установка</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" checked="yes"/> Логирование</label>
                     </p>
 
                     <ul class="mt-1 mb-2">
@@ -300,7 +304,13 @@
                       >&emsp;&emsp;
                       <label><input type="checkbox" /> Типографика</label>
                     </p>
-
+                    <p>
+                      Обновление:&emsp;
+                      <label
+                        ><input type="checkbox" checked="yes" /> данных</label
+                      >&emsp;
+                      <label><input type="checkbox" /> библиотек</label>
+                    </p>
                     <p>
                       Валидация:&emsp;
                       <label
@@ -308,7 +318,8 @@
                         css</label
                       >&emsp;&emsp;
                       <label><input type="checkbox" checked="yes" /> SEO</label>
-                    </p>
+                    </p>                    
+                    <hr class="d-print-none"/>
                   </div>
 
                   <div class="col">
@@ -316,8 +327,7 @@
                       <label
                         ><input type="checkbox" checked="yes" />
                         Защищенность</label
-                      >&emsp;&emsp;
-                      <label><input type="checkbox" /> Установка</label>
+                      >
                     </p>
                     <p>
                       Нагрузка:&emsp;
@@ -348,20 +358,26 @@
                       >&emsp;&emsp;
                       <label><input type="checkbox" /> Локализация</label>
                     </p>
-                    <p>
-                      <label
-                        ><input type="checkbox" checked="yes" />
-                        Логирование</label
-                      >&emsp;&emsp;
-                      <label><input type="checkbox" /> Лицензирование</label>
-                    </p>
-                    <p>
-                      Обновление:&emsp;
-                      <label
-                        ><input type="checkbox" checked="yes" /> данных</label
-                      >&emsp;
-                      <label><input type="checkbox" /> библиотек</label>
-                    </p>
+                    <hr class="d-print-none"/>
+                    <div style="border: 2px gray solid">
+                      <p>
+                        <label><input type="checkbox" checked="yes"/> Лицензирование</label>
+                      </p>
+
+                      <p>
+                        <label
+                          ><input type="checkbox" checked="yes" />
+                          Пользовательское соглашение (согласие на обработку
+                          персональных данных)</label
+                        >
+                      </p>
+                      <p>
+                        <label
+                          ><input type="checkbox" checked="yes" /> Инструкция
+                          пользователя</label
+                        >
+                      </p>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -373,15 +389,15 @@
                 </p>
                 <p>
                   <label
-                  ><input
-                    type="checkbox"
-                    name="checkall"
-                    onclick="checkedAll();"
-                  />
-                  выбрать/снять все чекбоксы</label
-                >&emsp;&emsp;&emsp;
-                <a href="#" onclick="window.print()">Распечатать</a>
-                </p>                
+                    ><input
+                      type="checkbox"
+                      name="checkall"
+                      onclick="checkedAll();"
+                    />
+                    выбрать/снять все чекбоксы</label
+                  >&emsp;&emsp;&emsp;
+                  <a href="#" onclick="window.print()">Распечатать</a>
+                </p>
               </div>
             </div>
           </div>
