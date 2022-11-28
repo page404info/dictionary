@@ -159,7 +159,7 @@
                           >Качество продукта</a
                         >
                       </li>
-                        <hr />
+                      <hr />
                       <li class="nav-item">
                         <a class="nav-link" href="qa-security.html"
                           ><b>Защищенность</b></a
@@ -181,16 +181,13 @@
               </nav>
             </div>
             <div class="col">
-              <h1 class="fs-3">
-                План тестирования продукта
-              </h1>
-              <p
-              class="d-none d-print-block mb-3 p-0"
-              style="font-size: 12px"
-            >
-              создано <span id="currentDate"></span> на сайте
-              <a href="../index.html">https://page404info.github.io/dictionary/</a>
-            </p>
+              <h1 class="fs-3">План тестирования продукта</h1>
+              <p class="d-none d-print-block mb-3 p-0" style="font-size: 12px">
+                создано <span id="currentDate"></span> на сайте
+                <a href="../index.html"
+                  >https://page404info.github.io/dictionary/</a
+                >
+              </p>
 
               <div class="row">
                 <div class="col-12">
@@ -204,159 +201,187 @@
                   </form>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <p class="pb-0">
-                    <strong>Источник:</strong>&ensp;
-                    <input type="checkbox" /> api&ensp;
-                    <input type="checkbox" /> file&emsp;&emsp;&emsp;
-                    <strong>DB:</strong>
-                    <label title="Data base (база данных)"
-                      ><input type="checkbox" /></label>
-                  </p>
+              <form id="frm1">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <p class="pb-0">
+                      <strong>Источник:</strong>&ensp;
+                      <input type="checkbox" /> api&ensp;
+                      <input type="checkbox" /> file&emsp;&emsp;&emsp;
+                      <strong>DB:</strong>
+                      <label title="Data base (база данных)"
+                        ><input type="checkbox"
+                      /></label>
+                    </p>
 
-                  <p class="pb-0">
-                    <strong>API:</strong>&ensp;
-                    <label title="Внешний программный интерфейс (общедоступный)"
-                      ><input type="checkbox" /> public</label
-                    >&ensp;
-                    <label
-                      title="Внешний программный интерфейс с ограниченным доступом"
-                      ><input type="checkbox" /> private</label
-                    >&ensp;
-                    <label title="Программный интерфейс приложения"
-                      ><input type="checkbox" /> portal</label
-                    >
-                  </p>
+                    <p class="pb-0">
+                      <strong>API:</strong>&ensp;
+                      <label
+                        title="Внешний программный интерфейс (общедоступный)"
+                        ><input type="checkbox" /> public</label
+                      >&ensp;
+                      <label
+                        title="Внешний программный интерфейс с ограниченным доступом"
+                        ><input type="checkbox" /> private</label
+                      >&ensp;
+                      <label title="Программный интерфейс приложения"
+                        ><input type="checkbox" /> portal</label
+                      >
+                    </p>
+                  </div>
+
+                  <div class="col">
+                    <p class="pb-0">
+                      <strong>UI:</strong>&ensp;
+                      <label
+                        title="Command Line Interface (интерфейс командной строки)"
+                        ><input type="checkbox" /> CLI</label
+                      >&ensp;
+                      <label
+                        title="Graphical User Interface (графический интерфейс)"
+                        ><input type="checkbox" checked="yes" /> GUI</label
+                      >&ensp;
+                      <label title="Gesture Interface (интерфейс жестов)"
+                        ><input type="checkbox" /> GI</label
+                      >&ensp;
+                      <label
+                        title="Voice User Interface (интерфейс голосовых команд)"
+                        ><input type="checkbox" /> VUI</label
+                      >&ensp;
+                      <label
+                        title="Bio Interface (интерфейс считывания биометрических параметров)"
+                        ><input type="checkbox" /> Bio</label
+                      >
+                    </p>
+
+                    <p class="mb-3">
+                      <strong>Export:</strong>&ensp;
+                      <input type="checkbox" /> .csv&ensp;
+                      <input type="checkbox" /> .json&ensp;
+                      <input type="checkbox" /> .xlsx&ensp;
+                      <input type="checkbox" /> .pdf
+                    </p>
+                  </div>
                 </div>
 
-                <div class="col">
-                  <p class="pb-0">
-                    <strong>UI:</strong>&ensp;
-                    <label
-                      title="Command Line Interface (интерфейс командной строки)"
-                      ><input type="checkbox" /> CLI</label
-                    >&ensp;
-                    <label
-                      title="Graphical User Interface (графический интерфейс)"
-                      ><input type="checkbox" checked="yes"/> GUI</label
-                    >&ensp;
-                    <label title="Gesture Interface (интерфейс жестов)"
-                      ><input type="checkbox" /> GI</label
-                    >&ensp;
-                    <label
-                      title="Voice User Interface (интерфейс голосовых команд)"
-                      ><input type="checkbox" /> VUI</label
-                    >&ensp;
-                    <label
-                      title="Bio Interface (интерфейс считывания биометрических параметров)"
-                      ><input type="checkbox" /> Bio</label
-                    >
-                  </p>
-                  
-                  <p class="mb-3">
-                    <strong>Export:</strong>&ensp;
-                    <input type="checkbox" /> .csv</label
-                    >&ensp;
-                   <input type="checkbox" /> .json</label
-                    >&ensp;
-                    <input type="checkbox" /> .xlsx</label
-                    >&ensp;
-                    <input type="checkbox" /> .pdf</label
-                    >
-                  </p>                  
-                </div>
-              </div>
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <p>
+                      <label><input type="checkbox" /> Требования</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" /> Прототип</label>
+                    </p>
 
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <p>
-                    <label
-                      ><input type="checkbox" /> Требования</label
-                    >&emsp;&emsp;
-                    <label
-                      ><input type="checkbox" /> Прототип</label
-                    >
-                  </p>
-
-                  <ul class="mt-1 mb-2">
-                    <li><b>Критическая</b> функциональность
-                    <ul>
-                      <li>справочники</li>
-                      <li>факты</li>
+                    <ul class="mt-1 mb-2">
+                      <li>
+                        <b>Критическая</b> функциональность
+                        <ul>
+                          <li>справочники</li>
+                          <li>факты</li>
+                        </ul>
+                      </li>
+                      <li><b>Важная</b> функциональность</li>
+                      <li><b>Необязательная</b> функциональность</li>
                     </ul>
-                    </li>
-                    <li><b>Важная</b> функциональность</li>
-                    <li><b>Необязательная</b> функциональность</li>
-                  </ul>
 
-                  <p>
-                    <label><input type="checkbox" checked="yes"/> Структура</label>&emsp;&emsp;&emsp;
-                    <label><input type="checkbox" checked="yes"/> Ссылки</label>
-                  </p>
-                  <p>
-                    <label><input type="checkbox" checked="yes"/> Орфография</label>&emsp;&emsp;
-                    <label><input type="checkbox" /> Типографика</label>
-                  </p>
+                    <p>
+                      <label
+                        ><input type="checkbox" checked="yes" />
+                        Структура</label
+                      >&emsp;&emsp;&emsp;
+                      <label
+                        ><input type="checkbox" checked="yes" /> Ссылки</label
+                      >
+                    </p>
+                    <p>
+                      <label
+                        ><input type="checkbox" checked="yes" />
+                        Орфография</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" /> Типографика</label>
+                    </p>
 
-                  <p>Валидация:&emsp;
-                    <label><input type="checkbox" checked="yes"/> html, css</label>&emsp;&emsp;
-                    <label><input type="checkbox" checked="yes"/> SEO</label>
-                  </p>
-                  
+                    <p>
+                      Валидация:&emsp;
+                      <label
+                        ><input type="checkbox" checked="yes" /> html,
+                        css</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" checked="yes" /> SEO</label>
+                    </p>
+                  </div>
+
+                  <div class="col">
+                    <p>
+                      <label
+                        ><input type="checkbox" checked="yes" />
+                        Защищенность</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" /> Установка</label>
+                    </p>
+                    <p>
+                      Нагрузка:&emsp;
+                      <label
+                        ><input type="checkbox" checked="yes" /> на
+                        клиента</label
+                      >&emsp;
+                      <label
+                        ><input type="checkbox" checked="yes" /> на
+                        сервер</label
+                      >
+                    </p>
+                    <p>
+                      <label
+                        ><input type="checkbox" checked="yes" /> Адаптивность +
+                        Zoom (75-200%)</label
+                      >
+                    </p>
+                    <p>
+                      <label
+                        ><input type="checkbox" checked="yes" /> Кросс (ОС +
+                        браузер + версия)</label
+                      >
+                    </p>
+
+                    <p>
+                      <label><input type="checkbox" /> Доступность</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" /> Локализация</label>
+                    </p>
+                    <p>
+                      <label
+                        ><input type="checkbox" checked="yes" />
+                        Логирование</label
+                      >&emsp;&emsp;
+                      <label><input type="checkbox" /> Лицензирование</label>
+                    </p>
+                    <p>
+                      Обновление:&emsp;
+                      <label
+                        ><input type="checkbox" checked="yes" /> данных</label
+                      >&emsp;
+                      <label><input type="checkbox" /> библиотек</label>
+                    </p>
+                  </div>
                 </div>
+              </form>
 
-                <div class="col">
-                  <p>
-                    <label><input type="checkbox" /> Защищенность</label
-                    >
-                  </p>
-                  <p>Нагрузка:&emsp;
-                    <label><input type="checkbox" checked="yes"/> на клиента</label
-                    >&emsp;
-                    <label><input type="checkbox" checked="yes"/> на сервер</label
-                    >
-                  </p>
-                  <p>
-                    <label><input type="checkbox" checked="yes"/> Адаптивность +
-                      Zoom (75-200%)</label
-                    >
-                  </p>
-                  <p>
-                    <label><input type="checkbox" checked="yes"/> Кросс (ОС +
-                      браузер + версия)</label
-                    >
-                  </p>
-                  
-                  <p>
-                    <label><input type="checkbox" /> Доступность</label
-                    >&emsp;&emsp;
-                    <label><input type="checkbox" /> Локализация</label
-                    >
-                  </p>
-                  <p>
-                    <label><input type="checkbox" checked="yes"/> Логирование</label
-                    >&emsp;&emsp;
-                    <label><input type="checkbox" /> Лицензирование</label
-                    >
-                  </p>
-                  <p>
-                    <label><input type="checkbox" /> Установка</label
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <div class="d-print-none mt-3 mb-0">
+              <div class="d-print-none mt-3 mb-lg-0 mb-4 pb-0">
                 <p>
                   <strong>!!! Внимание адаптивность:</strong> меню, графики,
                   диаграммы, картинки, таблицы, формы.
                 </p>
-              </div>
-              <div class="d-print-none mb-lg-0 mb-4 pb-0">
                 <p>
-                  <a href="#" onclick="window.print()">Распечатать</a>
-                </p>
+                  <label
+                  ><input
+                    type="checkbox"
+                    name="checkall"
+                    onclick="checkedAll();"
+                  />
+                  выбрать/снять все чекбоксы</label
+                >&emsp;&emsp;&emsp;
+                <a href="#" onclick="window.print()">Распечатать</a>
+                </p>                
               </div>
             </div>
           </div>
@@ -402,6 +427,20 @@
         currentDate.getHours() +
         ":" +
         currentDate.getMinutes();
+    </script>
+    <script>
+      checked = false;
+      function checkedAll(frm1) {
+        var aa = document.getElementById("frm1");
+        if (checked == false) {
+          checked = true;
+        } else {
+          checked = false;
+        }
+        for (var i = 0; i < aa.elements.length; i++) {
+          aa.elements[i].checked = checked;
+        }
+      }
     </script>
   </body>
 </html>
