@@ -181,21 +181,55 @@
               </nav>
             </div>
             <div class="col">
-              <h1 class="d-print-none fs-3 mb-4">
-                Планирование тестирования продукта
+              <h1 class="fs-3">
+                План тестирования продукта
               </h1>
+              <p
+              class="d-none d-print-block mb-3 p-0"
+              style="font-size: 12px"
+            >
+              создано <span id="currentDate"></span> на сайте
+              <a href="../index.html">https://page404info.github.io/dictionary/</a>
+            </p>
 
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-12">
                   <form>
                     <p class="pb-0">
-                      <strong>Объект тестирования:</strong><br /><textarea
-                        rows="2"
-                        cols="40"
+                      <strong>Продукт:</strong>&ensp;<textarea
+                        rows="1"
+                        cols="50"
                       ></textarea>
                     </p>
                   </form>
                 </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <p class="pb-0">
+                    <strong>Источник:</strong>&ensp;
+                    <input type="checkbox" /> api&ensp;
+                    <input type="checkbox" /> file&emsp;&emsp;&emsp;
+                    <strong>DB:</strong>
+                    <label title="Data base (база данных)"
+                      ><input type="checkbox" /></label>
+                  </p>
+
+                  <p class="pb-0">
+                    <strong>API:</strong>&ensp;
+                    <label title="Внешний программный интерфейс (общедоступный)"
+                      ><input type="checkbox" /> public</label
+                    >&ensp;
+                    <label
+                      title="Внешний программный интерфейс с ограниченным доступом"
+                      ><input type="checkbox" /> private</label
+                    >&ensp;
+                    <label title="Программный интерфейс приложения"
+                      ><input type="checkbox" /> portal</label
+                    >
+                  </p>
+                </div>
+
                 <div class="col">
                   <p class="pb-0">
                     <strong>UI:</strong>&ensp;
@@ -205,7 +239,7 @@
                     >&ensp;
                     <label
                       title="Graphical User Interface (графический интерфейс)"
-                      ><input type="checkbox" /> GUI</label
+                      ><input type="checkbox" checked="yes"/> GUI</label
                     >&ensp;
                     <label title="Gesture Interface (интерфейс жестов)"
                       ><input type="checkbox" /> GI</label
@@ -219,127 +253,95 @@
                       ><input type="checkbox" /> Bio</label
                     >
                   </p>
-                  <p class="pb-0">
-                    <strong>API:</strong>&ensp;
-                    <label title="Внешний программный интерфейс (общедоступный)"
-                      ><input type="checkbox" /> public</label
+                  
+                  <p class="mb-3">
+                    <strong>Export:</strong>&ensp;
+                    <input type="checkbox" /> .csv</label
                     >&ensp;
-                    <label
-                      title="Внешний программный интерфейс с ограниченным доступом"
-                      ><input type="checkbox" /> private</label
+                   <input type="checkbox" /> .json</label
                     >&ensp;
-                    <label title="Программный интерфейс приложения"
-                      ><input type="checkbox" /> portal</label
+                    <input type="checkbox" /> .xlsx</label
                     >&ensp;
-                  </p>
-                  <p class="mb-lg-0 mb-3">
-                    <strong>Data base:</strong>&ensp;
-                    <input type="checkbox" />
-                  </p>
+                    <input type="checkbox" /> .pdf</label
+                    >
+                  </p>                  
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-6 col-12">
                   <p>
                     <label
-                      ><input type="checkbox" /> Тестирование требований</label
-                    >
-                  </p>
-                  <p>
+                      ><input type="checkbox" /> Требования</label
+                    >&emsp;&emsp;
                     <label
-                      ><input type="checkbox" /> Тестирование прототипа</label
+                      ><input type="checkbox" /> Прототип</label
                     >
                   </p>
+
+                  <ul class="mt-1 mb-2">
+                    <li><b>Критическая</b> функциональность
+                    <ul>
+                      <li>справочники</li>
+                      <li>факты</li>
+                    </ul>
+                    </li>
+                    <li><b>Важная</b> функциональность</li>
+                    <li><b>Необязательная</b> функциональность</li>
+                  </ul>
+
                   <p>
-                    <label><input type="checkbox" /> Валидация html, css</label>
+                    <label><input type="checkbox" checked="yes"/> Структура</label>&emsp;&emsp;&emsp;
+                    <label><input type="checkbox" checked="yes"/> Ссылки</label>
                   </p>
                   <p>
-                    <label><input type="checkbox" /> SEO проверка</label>
+                    <label><input type="checkbox" checked="yes"/> Орфография</label>&emsp;&emsp;
+                    <label><input type="checkbox" /> Типографика</label>
                   </p>
-                  <p>
-                    <label><input type="checkbox" /> Проверка ссылок</label>
+
+                  <p>Валидация:&emsp;
+                    <label><input type="checkbox" checked="yes"/> html, css</label>&emsp;&emsp;
+                    <label><input type="checkbox" checked="yes"/> SEO</label>
                   </p>
-                  <p>
-                    <label><input type="checkbox" /> Проверка орфографии</label>
-                  </p>
-                  <p>
-                    <label
-                      ><input type="checkbox" /> Проверка типографики</label
-                    >
-                  </p>
-                  <p>
-                    <label
-                      ><input type="checkbox" /> Тестирование удобства
-                      использования</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: yellow"
-                      ><input type="checkbox" /> Проверка структуры</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: yellow"
-                      ><input type="checkbox" /> Функциональное
-                      тестирование</label
-                    >
-                  </p>
+                  
                 </div>
 
-                <div class="col-md-6 col-12">
+                <div class="col">
                   <p>
-                    <label style="background-color: yellow"
-                      ><input type="checkbox" /> Тестирование
-                      защищенности</label
+                    <label><input type="checkbox" /> Защищенность</label
+                    >
+                  </p>
+                  <p>Нагрузка:&emsp;
+                    <label><input type="checkbox" checked="yes"/> на клиента</label
+                    >&emsp;
+                    <label><input type="checkbox" checked="yes"/> на сервер</label
                     >
                   </p>
                   <p>
-                    <label style="background-color: yellow"
-                      ><input type="checkbox" /> Нагрузка на клиента</label
+                    <label><input type="checkbox" checked="yes"/> Адаптивность +
+                      Zoom (75-200%)</label
                     >
                   </p>
                   <p>
-                    <label style="background-color: yellow"
-                      ><input type="checkbox" /> Нагрузка на сервер</label
+                    <label><input type="checkbox" checked="yes"/> Кросс (ОС +
+                      браузер + версия)</label
+                    >
+                  </p>
+                  
+                  <p>
+                    <label><input type="checkbox" /> Доступность</label
+                    >&emsp;&emsp;
+                    <label><input type="checkbox" /> Локализация</label
                     >
                   </p>
                   <p>
-                    <label style="background-color: yellow"
-                      ><input type="checkbox" /> Тестирование ДАННЫХ</label
+                    <label><input type="checkbox" checked="yes"/> Логирование</label
+                    >&emsp;&emsp;
+                    <label><input type="checkbox" /> Лицензирование</label
                     >
                   </p>
                   <p>
-                    <label style="background-color: aquamarine"
-                      ><input type="checkbox" /> Кросс проверки (ОС +
-                      браузер)</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: aquamarine"
-                      ><input type="checkbox" /> Тестирование адаптивности +
-                      Zoom</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: yellowgreen"
-                      ><input type="checkbox" /> Тестирование доступности</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: yellowgreen"
-                      ><input type="checkbox" /> Тестирование локализации</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: yellowgreen"
-                      ><input type="checkbox" /> Проверка логирования</label
-                    >
-                  </p>
-                  <p>
-                    <label style="background-color: yellowgreen"
-                      ><input type="checkbox" /> Тестирование установки и
-                      лицензирования</label
+                    <label><input type="checkbox" /> Установка</label
                     >
                   </p>
                 </div>
@@ -359,14 +361,6 @@
             </div>
           </div>
         </div>
-
-        <p
-          class="d-none d-print-block text-center m-0 p-0"
-          style="font-size: 12px"
-        >
-          создано <span id="currentDate"></span> на сайте
-          <a href="../index.html">https://page404info.github.io/dictionary/</a>
-        </p>
       </main>
 
       <footer class="d-print-none customer-bg border-top border-3">
