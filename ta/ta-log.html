@@ -105,8 +105,13 @@
                     </ul>
                     <hr />
                     <div class="row">                      
-                      <div class="col-7">
+                      <div class="col-xl-7 col-12">
                         <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-library.html"
+                            ><b>Библиотеки</b></a
+                            >
+                          </li>
                           <li class="nav-item">
                             <a class="nav-link" href="ta-hibernate.html">Hibernate</a>
                           </li>
@@ -120,12 +125,7 @@
                       </div>
 
                       <div class="col-5">
-                        <ul class="nav nav-pills flex-column">
-                          <li class="nav-item">
-                            <a class="nav-link" href="ta-library.html"
-                            ><b>Библиотеки</b></a
-                            >
-                          </li>
+                        <ul class="nav nav-pills flex-column">                          
                           <li class="nav-item">
                             <a class="nav-link" href="ta-git.html">Git</a>
                           </li>
@@ -134,10 +134,15 @@
                               >TestNG</a>
                           </li>  
                           <li class="nav-item">
+                            <a class="nav-link" href="ta-maven.html"
+                              >Maven</a
+                            >
+                          </li>    
+                          <li class="nav-item">
                             <a class="nav-link" href="ta-java.html"
                               >Java</a
                             >
-                          </li>                         
+                          </li>                       
                         </ul>
                       </div>
                     </div>   
@@ -188,10 +193,32 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <b>ELK</b>
+                      <b>Уровни логирования</b>
                     </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li class="mb-2"><b>OFF</b> - игнорировать все</li>
+                        <li class="mb-2"><b>FATAL</b> - приложение не может работать (например, нет памяти)</li>
+                        <li class="mb-2"><b>ERROR</b> - ошибки, которые нужно решить. Приложение продолжает работать</li>
+                        <li class="mb-2"><b>WARN</b> - предостережения</li>
+                        <li class="mb-2"><b>INFO</b> - важные события (вход в кабинет, подпись)</li>
+                        <li class="mb-2"><b>DEBUG</b> - события для отладки</li>
+                        <li class="mb-2"><b>TRACE</b> - события для отладки (наиболее подробная информация)</li>
+                        <li><b>ALL</b> - записывать все</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                      <b>ELK</b>
+                    </button>
+                  </h2>
+                  <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       some text
                     </div>
