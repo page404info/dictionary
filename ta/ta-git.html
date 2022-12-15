@@ -95,8 +95,13 @@
                     </ul>
                     <hr />
                     <div class="row">                      
-                      <div class="col-7">
+                      <div class="col-xl-7 col-12">
                         <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-library.html"
+                            ><b>Библиотеки</b></a
+                            >
+                          </li>
                           <li class="nav-item">
                             <a class="nav-link" href="ta-hibernate.html">Hibernate</a>
                           </li>
@@ -110,24 +115,24 @@
                       </div>
 
                       <div class="col-5">
-                        <ul class="nav nav-pills flex-column">
-                          <li class="nav-item">
-                            <a class="nav-link" href="ta-library.html"
-                            ><b>Библиотеки</b></a
-                            >
-                          </li>
+                        <ul class="nav nav-pills flex-column">                          
                           <li class="nav-item">
                             <a class="nav-link active" href="javascript:void(0)">Git</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="ta-testng.html"
                               >TestNG</a>
-                          </li>   
+                          </li>  
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-maven.html"
+                              >Maven</a
+                            >
+                          </li>    
                           <li class="nav-item">
                             <a class="nav-link" href="ta-java.html"
                               >Java</a
                             >
-                          </li>                        
+                          </li>                       
                         </ul>
                       </div>
                     </div>   
@@ -182,6 +187,21 @@
                           </p>
                           <p>git rm --cached "somePath"</p>
                         </div>
+                      </div>
+                      <hr>
+                      <div>
+                        <p>
+                          Branches = <b>master</b> + <b>develop</b> (collect <b>feature</b> & <b>bugfix</b>). Только <b>master</b> branch использовать для <b>CI/CD</b>.
+                        </p>
+                        <p>
+                          Запись локальной ветки в удаленный репозиторий:<br>
+                          git push --set-upstream origin feature/database-connection<br>
+                          git push --set-upstream origin bugfix/database-connection
+                        </p>
+                        <p>
+                          Удаление локальной ветки<br>
+                          git branch -d bugfix/database-connection
+                        </p>
                       </div>
                     </div>
                   </div>
