@@ -162,7 +162,7 @@
                           >Качество продукта</a
                         >
                       </li>
-                        <hr />
+                      <hr />
                       <li class="nav-item">
                         <a class="nav-link" href="qa-security.html"
                           ><b>Защищенность</b></a
@@ -583,20 +583,26 @@
                   >
                     <div class="accordion-body">
                       <p>
-                        <b>Интернационализация (18n)</b> - программное и аппратное
-                        обеспечение для упрощения адаптации продукта к
+                        <b>Интернационализация (18n)</b> - программное и
+                        аппратное обеспечение для упрощения адаптации продукта к
                         использованию в других языковых и культурных регионах.
                         Производится на начальных этапах разработки.
                       </p>
                       <p class="pb-0">
-                        <b>Локализация (L10n)</b> - добавление специальных функций для
-                        использования в определенном регионе. Производится для
-                        каждого целевого языка.
+                        <b>Локализация (L10n)</b> - добавление специальных
+                        функций для использования в определенном регионе.
+                        Производится для каждого целевого языка.
                       </p>
                       <ul>
-                        <li>название элементов, сообщений, мета-информации, инструкций</li>
+                        <li>
+                          название элементов, сообщений, мета-информации,
+                          инструкций
+                        </li>
                         <li>формат даты, времени, адреса, телефона</li>
-                        <li>разделитель разрядности числа, копеек, отрицательные числа</li>
+                        <li>
+                          разделитель разрядности числа, копеек, отрицательные
+                          числа
+                        </li>
                         <li>валюта, мера, шрифт</li>
                         <li>ограничения цветов, чисел, музыки, фото, видео</li>
                         <li>культурные особенности</li>
@@ -1076,6 +1082,137 @@
                           следует использовать конструкцию [noindex]Текст или
                           код, который нужно исключить из индексации[/noindex].
                         </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4bot">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4bot"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4bot"
+                    >
+                      Бот
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4bot"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4bot"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0">
+                        <strong><em>Telegram-bot</em></strong>
+                      </p>
+                      <ul>
+                        <li>мобильная версия = Android, iOS;</li>
+                        <li>web версия;</li>
+                        <li>desktop версия.</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Что проверять</em></strong>
+                      </p>
+                      <ul>
+                        <li>подключение-удаление бота</li>
+                        <li>что умеет бот, описание</li>
+                        <li>
+                          команды: через бот-меню, через бот-клавиатуру, через
+                          бот-строку
+                        </li>
+                        <li>бот-ответ на неправильно введенную команду</li>
+                        <li>
+                          рассылка при блокирующем пользователе (удалил бот)
+                        </li>
+                        <li>
+                          контент: текст, картинки, видео, даты, суммы,
+                          разделители
+                        </li>
+                        <li>
+                          функциональность
+                          <ul>
+                            <li>
+                              логика переходов-возвратов (отсутствие тупиков)
+                            </li>
+                            <li>корректность расчетов</li>
+                            <li>база пользователей, рассылка по шедулеру</li>
+                          </ul>
+                        </li>
+                        <li>
+                          защищенность
+                          <ul>
+                            <li>разделение контента по ролям</li>
+                          </ul>
+                        </li>
+                        <li>
+                          нагрузка
+                          <ul>
+                            <li>рассылка 10_000 пользователям</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4os">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse4os"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse4os"
+                    >
+                      Операционные системы
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse4os"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading4os"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0">
+                        <strong><em>Windows</em></strong>
+                      </p>
+                      <ul>
+                        <li>XP, 7, 8</li>
+                        <li>*10, 11</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Linux Kernel</em></strong>
+                      </p>
+                      <ul>
+                        <li>*Ubuntu 18, 20</li>
+                        <li>CentOS, Mint, Debian</li>
+                        <li>*Android (for mobile)</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>Darwin</em></strong>
+                      </p>
+                      <ul>
+                        <li>*macOS (for leptop, desktop)</li>
+                        <li>*iOS (for mobile)</li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong><em>virtualization</em></strong>
+                      </p>
+                      <ul>
+                        <li>VirtualBox (for OS)</li>
+                        <li>Selenium Hub (for browsers)</li>
+                        <li>Docker (virtualMachineImage)</li>
                       </ul>
                     </div>
                   </div>
