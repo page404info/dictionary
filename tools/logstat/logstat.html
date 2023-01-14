@@ -32,14 +32,16 @@
         <div class="col-md-6 col-12 mt-0">
           <p class="mb-0"><b>Customer search:</b></p>
           <ul>
-            <li>copy this code to stat-customer.sh</li>
-            <li>put stat-customer.sh to server</li>
-            <li>run: bash stat-customer.sh $searchWord $date $pathToLogPackage</li>
-            <li>open stat-customer.csv</li>
+            <li><b>copy</b> this code to stat-customer.sh</li>
+            <li><b>put</b> stat-customer.sh to server</li>
+            <li><b>run</b> [ bash stat-customer.sh $'<u>searchWord</u>' $'<u>date</u>' $'<u>pathToLogPackage</u>' ]</li>
+            <li><b>open</b> stat-customer.csv</li>
           </ul>
 
           <code>
             #!/bin/bash<br>
+            #params = word*, date*, path*<br>
+            #<br>
             WORD=$1; #search word: error<br>
             LIST=$2; #date: *, *2022*, *2022-02*<br>
             LOGPATH=$3; #/pathToLogPackage<br>
@@ -66,14 +68,16 @@
         <div class="col-md-6 col-12 mt-md-0 mt-4">
           <p class="mb-0"><b>Stat search:</b></p>
           <ul>
-            <li>copy this code to stat.sh</li>
-            <li>change value for $WORD (if need)</li>
-            <li>set pathToLogPackage for $PATHS & put stat.sh to server</li>
-            <li>run: bash stat.sh $date & open stat-*.csv</li>
+            <li><b>copy</b> this code to stat.sh</li>
+            <li><b>change</b> value for $WORD (if need)</li>
+            <li><b>set</b> pathToLogPackage for $PATHS & put stat.sh to server</li>
+            <li><b>run</b> [ bash stat.sh $'<u>date</u>' ] & <b>open</b> stat-*.csv</li>
           </ul>
 
           <code>
             #!/bin/bash<br>
+            #params = date*, word<br>
+            #<br>
             LIST=$1; #date: *, *2022*, *2022-02*<br>
             WORD="unexpected api";<br>
             PATHS=(<br>
