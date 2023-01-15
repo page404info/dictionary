@@ -70,6 +70,119 @@ a:hover {
 }
 /*end background*/
 
-@media print{
-  body {border: none !important;}
+@media print {
+  body {
+    border: none !important;
+  }
 }
+
+/*table border*/
+.table th,
+.table td {
+  position: relative;
+}
+.table .active:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 105%;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+/* Рамка сверху у первой ячейки */
+.table tbody tr:first-child .active:after {
+  border-top: 5px solid black;
+}
+/* Рамка снизу у последней ячейки */
+.table tbody tr:nth-last-child(-n + 3) .active:after {
+  border-bottom: 5px solid black;
+  height: auto;
+}
+
+.table .activeC:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 105%;
+  border-left: 2px solid #6c757d;
+  border-right: 2px solid #6c757d;
+}
+/* Рамка сверху у первой ячейки */
+.table tbody tr:nth-child(-n + 6) .activeC:after {
+  border-top: 2px solid #6c757d;
+}
+/* Рамка снизу у последней ячейки */
+.table tbody tr:last-child .activeC:after {
+  border-bottom: 2px solid #6c757d;
+  height: auto;
+}
+
+.table .active1 td:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 105%;
+  border-top: 2px solid #6c757d;
+  border-bottom: 2px solid #6c757d;
+}
+/* Рамка слева у первой ячейки */
+.table .active1 td:first-child:after {
+  border-left: 2px solid #6c757d;
+}
+/* Рамка справа у последний ячейки */
+.table .active1 td:last-child:after {
+  /*border-right: 3px solid orange;*/
+  width: auto;
+}
+
+.table .active2 td:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 105%;
+  border-top: 1px solid #198754;
+  border-bottom: 1px solid #198754;
+}
+/* Рамка слева у первой ячейки */
+.table .active2 td:first-child:after {
+  border-left: 1px solid #198754;
+}
+/* Рамка справа у последний ячейки */
+.table .active2 td:last-child:after {
+  /*border-right: 3px solid orange;*/
+  width: auto;
+}
+
+.table .active3 td:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 105%;
+  border-top: 1px solid #ffc107;
+  border-bottom: 1px solid #ffc107;
+}
+/* Рамка слева у первой ячейки */
+.table .active3 td:first-child:after {
+  border-left: 1px solid #ffc107;
+}
+/* Рамка справа у последний ячейки */
+.table .active3 td:last-child:after {
+  /*border-right: 3px solid orange;*/
+  width: auto;
+}
+/*end table border*/
