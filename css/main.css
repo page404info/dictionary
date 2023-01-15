@@ -110,16 +110,16 @@ a:hover {
   bottom: 0px;
   left: 0px;
   height: 105%;
-  border-left: 2px solid #198754;
-  border-right: 2px solid #198754;
+  border-left: 2px solid #6c757d;
+  border-right: 2px solid #6c757d;
 }
 /* Рамка сверху у первой ячейки */
-.table tbody tr:first-child .activeC:after {
-  border-top: 2px solid #198754;
+.table tbody tr:nth-child(-n + 6) .activeC:after {
+  border-top: 2px solid #6c757d;
 }
 /* Рамка снизу у последней ячейки */
 .table tbody tr:last-child .activeC:after {
-  border-bottom: 2px solid #198754;
+  border-bottom: 2px solid #6c757d;
   height: auto;
 }
 
@@ -131,12 +131,12 @@ a:hover {
   bottom: 0px;
   left: 0px;
   width: 105%;
-  border-top: 2px solid #198754;
-  border-bottom: 2px solid #198754;
+  border-top: 2px solid #6c757d;
+  border-bottom: 2px solid #6c757d;
 }
 /* Рамка слева у первой ячейки */
 .table .active1 td:first-child:after {
-  border-left: 2px solid #198754;
+  border-left: 2px solid #6c757d;
 }
 /* Рамка справа у последний ячейки */
 .table .active1 td:last-child:after {
@@ -152,12 +152,12 @@ a:hover {
   bottom: 0px;
   left: 0px;
   width: 105%;
-  border-top: 1px solid #0dcaf0;
-  border-bottom: 1px solid #0dcaf0;
+  border-top: 1px solid #198754;
+  border-bottom: 1px solid #198754;
 }
 /* Рамка слева у первой ячейки */
 .table .active2 td:first-child:after {
-  border-left: 1px solid #0dcaf0;
+  border-left: 1px solid #198754;
 }
 /* Рамка справа у последний ячейки */
 .table .active2 td:last-child:after {
