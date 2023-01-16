@@ -114,7 +114,7 @@ a:hover {
   border-right: 2px solid #6c757d;
 }
 /* Рамка сверху у первой ячейки */
-.table tbody tr:nth-child(-n + 6) .activeC:after {
+.table tbody tr:nth-child(-n + 7) .activeC:after {
   border-top: 2px solid #6c757d;
 }
 /* Рамка снизу у последней ячейки */
@@ -123,6 +123,17 @@ a:hover {
   height: auto;
 }
 
+.table .active1 td:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
+}
 .table .active1 td:after {
   content: "";
   position: absolute;
@@ -130,13 +141,13 @@ a:hover {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  width: 105%;
-  border-top: 2px solid #6c757d;
-  border-bottom: 2px solid #6c757d;
+  width: 100%;
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
 }
 /* Рамка слева у первой ячейки */
 .table .active1 td:first-child:after {
-  border-left: 2px solid #6c757d;
+  border-left: 1px solid #6c757d;
 }
 /* Рамка справа у последний ячейки */
 .table .active1 td:last-child:after {
@@ -144,6 +155,17 @@ a:hover {
   width: auto;
 }
 
+.table .active2 td:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-top: 1px solid #198754;
+  border-bottom: 1px solid #198754;
+}
 .table .active2 td:after {
   content: "";
   position: absolute;
@@ -151,7 +173,7 @@ a:hover {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  width: 105%;
+  width: 100%;
   border-top: 1px solid #198754;
   border-bottom: 1px solid #198754;
 }
@@ -165,14 +187,25 @@ a:hover {
   width: auto;
 }
 
-.table .active3 td:after {
+.table .active3 td::before {
   content: "";
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  width: 105%;
+  width: 100%;
+  border-top: 1px solid #ffc107;
+  border-bottom: 1px solid #ffc107;
+}
+.table .active3 td::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
   border-top: 1px solid #ffc107;
   border-bottom: 1px solid #ffc107;
 }
