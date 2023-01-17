@@ -1,425 +1,702 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>Паттерны и принципы проектирования - page404.info</title>
+    <meta
+      name="description"
+      content="Паттерны проектирования Gof, GRASP. Принципы проектирования SOLID."
+    />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <title>Паттерны и принципы проектирования - page404.info</title>
-  <meta name="description" content="Паттерны проектирования Gof, GRASP. Принципы проектирования SOLID.">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-ZM3H1R52G7");
+    </script>
+  </head>
 
-    gtag('config', 'G-ZM3H1R52G7');
-  </script>
-</head>
-
-<body>
-  <div class="main-bg">
-    <header class="customer-bg ps-1 border-bottom border-3">
-      <div class="container">
-        <div class="row align-items-center pt-2 pb-2">
-          <div class="col-3">
-            <a href="../index.html">main page</a>
-          </div>
-          <div class="col text-end">
-            <nav>
-              <ul class="nav nav-pills justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="../tools/tools-main.html">Tools</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../ta/ta-main.html">TA</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../qa/qa-main.html">QA</a>
-                </li>
-              </ul>
-            </nav>
+  <body>
+    <div class="main-bg">
+      <header class="customer-bg ps-1 border-bottom border-3">
+        <div class="container">
+          <div class="row align-items-center pt-2 pb-2">
+            <div class="col-3">
+              <a href="../index.html">main page</a>
+            </div>
+            <div class="col text-end">
+              <nav>
+                <ul class="nav nav-pills justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../tools/tools-main.html"
+                      >Tools</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ta/ta-main.html">TA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../qa/qa-main.html">QA</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="customer-bg-body">
-      <div class="container pt-4 pb-3">
-        <div class="row">
-          <div class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded">
-            <nav>
-              <div class="row">
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-5-data-analysis.html">Анализ данных</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-5-support.html">Тех поддержка</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-3-code-testing.html">Тестирование кода</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-3-code-writing.html">Написание кода</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="javascript:void(0)">Архитектура</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-2-prototype.html">Прототипирование</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-1-requirements.html">Требования</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="level-1-users.html">Целевая аудитория</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-          <div class="col">
-            <h1 class="fs-3">Архитектура</h1>
-
-            <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
-                    Общее
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingOne">
-                  <div class="accordion-body">
-
-                    <p class="pb-0">
-                      <strong>Слои архитектуры</strong>:
-                    </p>
-                    <ul>
-                      <li>view - слой представления;</li>
-                      <li>controller - слой управления;</li>
-                      <li>service - слой бизнес-логики;</li>
-                      <li>repository - слой хранения данных.</li>
-                    </ul>
-
-                    <p class="pb-0">
-                      <strong>Пакеты</strong>:
-                    </p>
-                    <ul>
-                      <li>model - классы, описывающие данные (например, игровое поле);</li>
-                      <li>component - классы, описывающие бизнес-логику.</li>
-                    </ul>
-
-                    <p class="pb-0">
-                      <strong>Виды интеграции</strong>:
-                    </p>
-                    <ul>
-                      <li>шаринг файловой системы (отчеты, выгрузки, Big data);</li>
-                      <li>шаринг базы данных;</li>
-                      <li>вызов процедур;</li>
-                      <li>вызов методов;</li>
-                      <li>мессенджер (очередь сообщений).</li>
-                    </ul>
-
-
-                    <p><a href="https://itanddigital.ru/webapplications" target="_blank"
-                        rel="noopener noreferrer">Архитектура
-                        веб-приложения</a><br>
-                      <a href="https://habr.com/ru/post/493430/" target="_blank" rel="noopener noreferrer">Чистая
-                        архитектура для веб-приложения</a><br>
-                      <a href="https://habr.com/ru/post/276593/" target="_blank" rel="noopener noreferrer">Создание
-                        архитектуры программы</a>
-                    </p>
-
-                    <p class="pb-0">
-                      <strong>Объекты проектирования</strong>:
-                    </p>
-                    <ul>
-                      <li>Entity - реальные объекты;</li>
-                      <li>Boundary - граничные объекты = интерфейсы;</li>
-                      <li>Control - координаторы.</li>
-                    </ul>
-
-                    <p class="pb-0">
-                      <strong>Парадигмы ООП</strong>:
-                    </p>
-                    <ul>
-                      <li>инкапсуляция - сокрытие типов данных, сокрытие реализации, сокрытие частей программы;</li>
-                      <li>наследование - отношение "is a";</li>
-                      <li>полиморфизм;</li>
-                      <li>композиция - отношение "has a";</li>
-                      <li>абстракция - каркас;</li>
-                      <li>посылка сообщений - информационные потоки;</li>
-                      <li>повторное использование.</li>
-                    </ul>
-
-                    <p class="pb-0">
-                      <strong>Виды отношений</strong>:
-                    </p>
-                    <ul>
-                      <li>ассоциация - свободное партнерство между объектами (вызов передается через параметр метода);
+      <main class="customer-bg-body">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div
+              class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded"
+            >
+              <nav>
+                <div class="row">
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-5-data-analysis.html"
+                          >Анализ данных</a
+                        >
                       </li>
-                      <li>агрегация - объект может содержать другой объект (объявляется поле + метод добавления);</li>
-                      <li>композиция - объект не может существовать без другого объекта (объявляется поле +
-                        инициализация через конструктор).</li>
-                    </ul>
-
-                    <p class="pb-0">
-                      <strong>Порядок решения задачи</strong>:
-                    </p>
-                    <ul>
-                      <li>чтение исходных данных задачи;</li>
-                      <li>алгоритм обработки исходных данных для получения результата (последовательность действий);
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-5-support.html"
+                          >Тех поддержка</a
+                        >
                       </li>
-                      <li>отображение результата.</li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-3-code-testing.html"
+                          >Тестирование кода</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-3-code-writing.html"
+                          >Написание кода</a
+                        >
+                      </li>
                     </ul>
-
                   </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseTwo">
-                    Паттерны GoF
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingTwo">
-                  <div class="accordion-body">
-                    <p><a
-                        href="https://coderlessons.com/tutorials/java-tekhnologii/izuchite-shablony-proektirovaniia-na-java/shablon-dizaina-fabrichnyi-shablon"
-                        target="_blank" rel="noopener noreferrer">CoderLessons.com</a>&emsp;
-                      <a href="https://refactoring.guru/ru/design-patterns/catalog" target="_blank"
-                        rel="noopener noreferrer">Refactoring.guru</a>
-                    </p>
-
-                    <p class="mt-4 pb-0">
-                      <strong class="text-uppercase">Порождающие</strong><br>(отвечают за создание объектов)
-                    </p>
-                    <hr class="mt-0">
-                    <p><strong>Фабричный метод</strong> (виртуальный конструктор)<br>создание объекта через метод.</p>
-                    <p><strong>Фабрика</strong><br>создание семейства объектов объединенных общим признаком (набор
-                      мебели в стиле борокко, в стиле рококо, в современном стиле).</p>
-                    <p><strong>Одиночка</strong><br>создание объекта в единственном экземпляре.</p>
-                    <p><strong>Прототип</strong><br>создание копии объекта (клонирование). Используется для сложных /
-                      высокозатратных объектов.</p>
-                    <p><strong>Строитель</strong> (дополнение, как часть объекта или дополнительная опция)<br>создание
-                      объекта через цепочку
-                      вызова методов. Используется для удобства, когда объект создается с переменным
-                      количеством параметров (проверяется предлогом "с" - суп с картошкой, с морковкой, с мясом). Похож
-                      на <strong>Декоратор</strong>, отличие в моменте создания готового объекта.</p>
-
-
-                    <p class="mt-5 pb-0">
-                      <strong class="text-uppercase">Структурные</strong><br>(отвечают за построение удобных в поддержке
-                      иерархий классов)
-                    </p>
-                    <hr class="mt-0">
-                    <p><strong>Адаптер</strong><br>соединяет объекты для совместной работы через изначально
-                      несовместимые интерфейсы.</p>
-                    <p><strong>Мост</strong><br>объединяет две иерархии (фигура - цвет).</p>
-                    <p><strong>Компоновщик</strong><br>позволяет сгруппировать множество объектов в древовидную
-                      структуру, а затем работать с ней так, как будто это единичный
-                      объект (договор = доп соглашение, акт, штраф), (заказ = товар1, товар2, товар3; товар1= т1,т2).
-                    </p>
-                    <p><strong>Декоратор</strong> (дополнительная опция)<br>позволяет динамически добавлять объектам
-                      новую функциональность, оборачивая их в полезные «обёртки». Похож на <strong>Строитель</strong>,
-                      отличие в моменте создания готового объекта.
-                    </p>
-                    <p><strong>Фасад</strong><br>предоставляет простой интерфейс к сложной системе классов, библиотеке
-                      или фреймворку.</p>
-                    <p><strong>Легковес</strong> (кеширование - повышение производительности за счет повторного
-                      использования созданного объекта)<br>позволяет вместить бóльшее количество объектов в отведённую
-                      оперативную память. Легковес экономит память, разделяя общее
-                      состояние объектов между собой, вместо хранения одинаковых данных в каждом объекте.</p>
-                    <p><strong>Заместитель</strong> (proxy - оболочка / облегченная версия объекта / защита
-                      объекта)<br>позволяет подставлять вместо реальных объектов специальные объекты-заменители. Эти
-                      объекты перехватывают вызовы к
-                      оригинальному объекту, позволяя сделать что-то до или после передачи вызова оригиналу.<br>
-                      Платёжная карточка — это заместитель пачки наличных. И карточка, и наличные имеют общий интерфейс
-                      — ими можно оплачивать
-                      товары. Для покупателя польза в том, что не надо таскать с собой тонны наличных, а владелец
-                      магазина рад, что ему не
-                      нужно делать дорогостоящую инкассацию наличности в банк — деньги поступают к нему на счёт
-                      напрямую..</p>
-
-                    <p class="mt-5 pb-0">
-                      <strong class="text-uppercase">Поведенческие</strong><br>(решают задачи эффективного и безопасного
-                      взаимодействия между объектами программы)
-                    </p>
-                    <hr class="mt-0">
-                    <p><strong>Цепочка обязанностей</strong> (иерархическая обработка запросов)<br>позволяет передавать
-                      запросы последовательно по цепочке обработчиков. Каждый последующий обработчик решает, может ли он
-                      обработать запрос сам и стоит ли передавать запрос дальше по цепи (например, обработка
-                      исключений).</p>
-                    <p><strong>Команда</strong> (повтор-отмена запросов)<br>превращает запросы в объекты, позволяя
-                      передавать их как аргументы при вызове методов, ставить запросы в очередь,
-                      логировать их, а также поддерживать отмену операций.</p>
-                    <p><strong>Интерпретатор</strong> (преобразование)<br>разбирает синтаксис языка (например, генератор
-                      отчетов, компилятор, sql запросы).</p>
-                    <p><strong>Итератор</strong> (for-each)<br>даёт возможность последовательно обходить элементы
-                      составных объектов, не раскрывая их внутреннего представления.</p>
-                    <p><strong>Посредник</strong> (диспетчер / контроллер)<br>позволяет уменьшить связанность множества
-                      классов между собой, благодаря перемещению этих связей в один класс-посредник.</p>
-                    <p><strong>Снимок</strong> (хранитель внутреннего состояния объекта)<br>позволяет сохранять и
-                      восстанавливать прошлые состояния объектов, не раскрывая подробностей их реализации.</p>
-                    <p><strong>Наблюдатель</strong> (отслеживание обновлений)<br>создаёт механизм подписки, позволяющий
-                      одним объектам следить и реагировать на события, происходящие в других объектах
-                      (например, подписка на новости).</p>
-                    <p><strong>Состояние</strong> (торговый автомат)<br>позволяет объектам менять поведение в
-                      зависимости от своего состояния. Извне создаётся впечатление, что изменился класс
-                      объекта.</p>
-                    <p><strong>Стратегия</strong> (выбор алгоритма)<br>определяет семейство схожих алгоритмов и помещает
-                      каждый из них в собственный класс, после чего алгоритмы можно
-                      взаимозаменять прямо во время исполнения программы (например, сохранение файла в разных форматах,
-                      выполнение различных алгоритмов сортировки).</p>
-                    <p><strong>Шаблонный метод</strong> (описывает общий алгоритм)<br>определяет скелет алгоритма,
-                      перекладывая ответственность за некоторые его шаги на подклассы. Паттерн позволяет
-                      подклассам переопределять шаги алгоритма, не меняя его общей структуры.</p>
-                    <p><strong>Посетитель</strong><br>позволяет добавлять в программу новые операции, не изменяя классы
-                      объектов, над которыми эти операции могут выполняться.</p>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree">
-                    Паттерны GRASP
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingThree">
-                  <div class="accordion-body">
-                    <p><strong>Information Expert</strong><br>информация должна обрабатываться тем объектом, в
-                      котором эта информация находится.</p>
-                    <p><strong>Creator</strong><br>объект создается в том классе, в котором он непосредственно нужен
-                      для использования.</p>
-                    <p><strong>Controller</strong><br>преобразование многопоточного ввода в однопоточное обращение к
-                      объектам системы.</p>
-                    <p><strong>Low Coupling</strong><br>классы должны иметь минимально необходимое количество связей
-                      между собой. Чем меньше связей, тем стабильней система.</p>
-                    <p><strong>High Cohesion</strong><br>функционал объекта должен быть максимально связан между собой
-                      по смыслу. Разнородные части - отдельные объекты.</p>
-                    <p><strong>Polymorphism</strong><br>заменить условный оператор if полиморфным поведением, чтобы
-                      обеспечить легкость включения-выключения модулей.</p>
-                    <p><strong>Pure Fabrication</strong> (искусственный)<br>использовать для уменьшения связей, как
-                      фасад / посредник.</p>
-                    <p><strong>Inderection</strong> (инверсия зависимостей)<br>обращение к классу должно идти через его
-                      интерфейс. Интерфейс является принадлежностью не тех классов, которые его
-                      имплементируют, а тех классов, которые его вызывают<br>А &xrarr; B &xrArr; (A &xrarr; IB) + (B
-                      &xrarr; IB)</p>
-                    <p><strong>Protected Variations</strong> (защита от изменений)<br>следовать вышеперечисленным
-                      принципам.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFour">
-                    Принципы SOLID
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingFour">
-                  <div class="accordion-body">
-                    <p>SOLID - менеджмент зависимостей, характеризирует отношения и операции между объектами.</p>
-                    <ul>
-                      <li><strong>S</strong>&ensp;&mdash;&ensp;единственная ответственность.</li>
-                      <li><strong>O</strong>&ensp;&mdash;&ensp;открыт к расширению и закрыт к изменению.</li>
-                      <li><strong>L</strong>&ensp;&mdash;&ensp;наследник не должен изменять поведение базового класса
-                        (родителя).</li>
-                      <li><strong>I</strong>&emsp;&mdash;&ensp;множество интерфейсов лучше одного универсального.</li>
-                      <li><strong>D</strong>&ensp;&mdash;&ensp;абстракция не должна зависеть от реализации.</li>
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="javascript:void(0)"
+                          >Архитектура</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-2-prototype.html"
+                          >Прототипирование</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-1-requirements.html"
+                          >Требования</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="level-1-users.html"
+                          >Целевая аудитория</a
+                        >
+                      </li>
                     </ul>
                   </div>
                 </div>
-              </div>
+              </nav>
+            </div>
+            <div class="col">
+              <h1 class="fs-3">Архитектура</h1>
 
-              <div class="accordion-item mb-lg-0 mb-4">
-                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFive">
-                    Метапринципы
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingFive">
-                  <div class="accordion-body">
-                    <p><strong>DRY</strong> - не повторяйся.</p>
-                    <p><strong>KISS</strong> - не усложняй, пиши проще, декомпозируй.</p>
-                    <p><strong>YAGNI</strong> - не пиши прозапас. Реализовуй то, что нужно сейчас.</p>
-                    <p><strong>SoC</strong> - разделяй ответственность. Рразделяй систему на слои (UI, бизнес логика,
-                      презентационная логика, слой БД).</p>
-                    <p><strong>CQS</strong> - разделяй запросы и команды. Каждый метод должен быть либо командой, либо
-                      запросом, но не тем и другим одновременно.</p>
-                    <p><strong>LoD</strong> (закон Деметры) - каждый элемент системы должен иметь ограниченные знания о
-                      других элементах (не разговаривай с
-                      незнакомцем / принцип наименьшего знания).</p>
-                    <p class="pb-0"><strong>PoLA</strong> - компонент системы должен вести себя в соответствии с
-                      вероятными
-                      ожиданиями пользователей (принцип наименьшего
-                      удивления):</p>
-                    <ul>
-                      <li>скрывай / инкапсулируй информацию;</li>
-                      <li>используй константы вместо магических чисел;</li>
-                      <li>проектируй на уровне интерфейсов, а не реализации;</li>
-                      <li>данные обрабатывай в том классе, к которому они относятся.</li>
-                    </ul>
+              <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseOne"
+                      aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseOne"
+                    >
+                      Общее
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingOne"
+                  >
+                    <div class="accordion-body">
+                      <p class="pb-0"><strong>Проектирование</strong>:</p>
+                      <ol>
+                        <li>
+                          Концептуальная модель - концепция, диаграмма модулей.
+                        </li>
+                        <li>
+                          Интерфейсная модель - спецификация, диаграмма классов.
+                        </li>
+                        <li>Реализация.</li>
+                      </ol>
+
+                      <p class="pb-0"><strong>Слои архитектуры</strong>:</p>
+                      <ul>
+                        <li>view - слой представления;</li>
+                        <li>controller - слой управления;</li>
+                        <li>service - слой бизнес-логики;</li>
+                        <li>repository - слой хранения данных.</li>
+                      </ul>
+
+                      <p class="pb-0"><strong>Пакеты</strong>:</p>
+                      <ul>
+                        <li>
+                          model - классы, описывающие данные (например, игровое
+                          поле);
+                        </li>
+                        <li>component - классы, описывающие бизнес-логику.</li>
+                      </ul>
+
+                      <p class="pb-0"><strong>Виды интеграции</strong>:</p>
+                      <ul>
+                        <li>
+                          шаринг файловой системы (отчеты, выгрузки, Big data);
+                        </li>
+                        <li>шаринг базы данных;</li>
+                        <li>вызов процедур;</li>
+                        <li>вызов методов;</li>
+                        <li>мессенджер (очередь сообщений).</li>
+                      </ul>
+
+                      <p>
+                        <a
+                          href="https://itanddigital.ru/webapplications"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Архитектура веб-приложения</a
+                        ><br />
+                        <a
+                          href="https://habr.com/ru/post/493430/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Чистая архитектура для веб-приложения</a
+                        ><br />
+                        <a
+                          href="https://habr.com/ru/post/276593/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Создание архитектуры программы</a
+                        >
+                      </p>
+
+                      <p class="pb-0">
+                        <strong>Объекты проектирования</strong>:
+                      </p>
+                      <ul>
+                        <li>Entity - реальные объекты;</li>
+                        <li>Boundary - граничные объекты = интерфейсы;</li>
+                        <li>Control - координаторы.</li>
+                      </ul>
+
+                      <p class="pb-0"><strong>Парадигмы ООП</strong>:</p>
+                      <ul>
+                        <li>
+                          абстракция - каркас (бывает концептуальная и
+                          интерфейсная);
+                        </li>
+                        <li>
+                          инкапсуляция - сокрытие типов данных, сокрытие
+                          реализации, сокрытие частей программы;
+                        </li>
+                        <li>наследование - отношение "is a";</li>
+                        <li>полиморфизм (как следствие наследования);</li>
+                        <li>композиция - отношение "has a";</li>
+                        <li>посылка сообщений - информационные потоки;</li>
+                        <li>повторное использование.</li>
+                      </ul>
+
+                      <p class="pb-0"><strong>Виды отношений</strong>:</p>
+                      <ul>
+                        <li>
+                          ассоциация - свободное партнерство между объектами
+                          (вызов передается через параметр метода);
+                        </li>
+                        <li>
+                          агрегация - объект может содержать другой объект
+                          (объявляется поле + метод добавления);
+                        </li>
+                        <li>
+                          композиция - объект не может существовать без другого
+                          объекта (объявляется поле + инициализация через
+                          конструктор).
+                        </li>
+                      </ul>
+
+                      <p class="pb-0">
+                        <strong>Порядок решения задачи</strong>:
+                      </p>
+                      <ul>
+                        <li>чтение исходных данных задачи;</li>
+                        <li>
+                          алгоритм обработки исходных данных для получения
+                          результата (последовательность действий);
+                        </li>
+                        <li>отображение результата.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseTwo"
+                    >
+                      Паттерны GoF
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <a
+                          href="https://coderlessons.com/tutorials/java-tekhnologii/izuchite-shablony-proektirovaniia-na-java/shablon-dizaina-fabrichnyi-shablon"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >CoderLessons.com</a
+                        >&emsp;
+                        <a
+                          href="https://refactoring.guru/ru/design-patterns/catalog"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Refactoring.guru</a
+                        >
+                      </p>
+
+                      <p class="mt-4 pb-0">
+                        <strong class="text-uppercase">Порождающие</strong
+                        ><br />(отвечают за создание объектов)
+                      </p>
+                      <hr class="mt-0" />
+                      <p>
+                        <strong>Фабричный метод</strong> (виртуальный
+                        конструктор)<br />создание объекта через метод.
+                      </p>
+                      <p>
+                        <strong>Фабрика</strong><br />создание семейства
+                        объектов объединенных общим признаком (набор мебели в
+                        стиле борокко, в стиле рококо, в современном стиле).
+                      </p>
+                      <p>
+                        <strong>Одиночка</strong><br />создание объекта в
+                        единственном экземпляре.
+                      </p>
+                      <p>
+                        <strong>Прототип</strong><br />создание копии объекта
+                        (клонирование). Используется для сложных /
+                        высокозатратных объектов.
+                      </p>
+                      <p>
+                        <strong>Строитель</strong> (дополнение, как часть
+                        объекта или дополнительная опция)<br />создание объекта
+                        через цепочку вызова методов. Используется для удобства,
+                        когда объект создается с переменным количеством
+                        параметров (проверяется предлогом "с" - суп с картошкой,
+                        с морковкой, с мясом). Похож на
+                        <strong>Декоратор</strong>, отличие в моменте создания
+                        готового объекта.
+                      </p>
+
+                      <p class="mt-5 pb-0">
+                        <strong class="text-uppercase">Структурные</strong
+                        ><br />(отвечают за построение удобных в поддержке
+                        иерархий классов)
+                      </p>
+                      <hr class="mt-0" />
+                      <p>
+                        <strong>Адаптер</strong><br />соединяет объекты для
+                        совместной работы через изначально несовместимые
+                        интерфейсы.
+                      </p>
+                      <p>
+                        <strong>Мост</strong><br />объединяет две иерархии
+                        (фигура - цвет).
+                      </p>
+                      <p>
+                        <strong>Компоновщик</strong><br />позволяет
+                        сгруппировать множество объектов в древовидную
+                        структуру, а затем работать с ней так, как будто это
+                        единичный объект (договор = доп соглашение, акт, штраф),
+                        (заказ = товар1, товар2, товар3; товар1= т1,т2).
+                      </p>
+                      <p>
+                        <strong>Декоратор</strong> (дополнительная опция)<br />позволяет
+                        динамически добавлять объектам новую функциональность,
+                        оборачивая их в полезные «обёртки». Похож на
+                        <strong>Строитель</strong>, отличие в моменте создания
+                        готового объекта.
+                      </p>
+                      <p>
+                        <strong>Фасад</strong><br />предоставляет простой
+                        интерфейс к сложной системе классов, библиотеке или
+                        фреймворку.
+                      </p>
+                      <p>
+                        <strong>Легковес</strong> (кеширование - повышение
+                        производительности за счет повторного использования
+                        созданного объекта)<br />позволяет вместить бóльшее
+                        количество объектов в отведённую оперативную память.
+                        Легковес экономит память, разделяя общее состояние
+                        объектов между собой, вместо хранения одинаковых данных
+                        в каждом объекте.
+                      </p>
+                      <p>
+                        <strong>Заместитель</strong> (proxy - оболочка /
+                        облегченная версия объекта / защита объекта)<br />позволяет
+                        подставлять вместо реальных объектов специальные
+                        объекты-заменители. Эти объекты перехватывают вызовы к
+                        оригинальному объекту, позволяя сделать что-то до или
+                        после передачи вызова оригиналу.<br />
+                        Платёжная карточка — это заместитель пачки наличных. И
+                        карточка, и наличные имеют общий интерфейс — ими можно
+                        оплачивать товары. Для покупателя польза в том, что не
+                        надо таскать с собой тонны наличных, а владелец магазина
+                        рад, что ему не нужно делать дорогостоящую инкассацию
+                        наличности в банк — деньги поступают к нему на счёт
+                        напрямую..
+                      </p>
+
+                      <p class="mt-5 pb-0">
+                        <strong class="text-uppercase">Поведенческие</strong
+                        ><br />(решают задачи эффективного и безопасного
+                        взаимодействия между объектами программы)
+                      </p>
+                      <hr class="mt-0" />
+                      <p>
+                        <strong>Цепочка обязанностей</strong> (иерархическая
+                        обработка запросов)<br />позволяет передавать запросы
+                        последовательно по цепочке обработчиков. Каждый
+                        последующий обработчик решает, может ли он обработать
+                        запрос сам и стоит ли передавать запрос дальше по цепи
+                        (например, обработка исключений).
+                      </p>
+                      <p>
+                        <strong>Команда</strong> (повтор-отмена запросов)<br />превращает
+                        запросы в объекты, позволяя передавать их как аргументы
+                        при вызове методов, ставить запросы в очередь,
+                        логировать их, а также поддерживать отмену операций.
+                      </p>
+                      <p>
+                        <strong>Интерпретатор</strong>
+                        (преобразование)<br />разбирает синтаксис языка
+                        (например, генератор отчетов, компилятор, sql запросы).
+                      </p>
+                      <p>
+                        <strong>Итератор</strong> (for-each)<br />даёт
+                        возможность последовательно обходить элементы составных
+                        объектов, не раскрывая их внутреннего представления.
+                      </p>
+                      <p>
+                        <strong>Посредник</strong> (диспетчер / контроллер)<br />позволяет
+                        уменьшить связанность множества классов между собой,
+                        благодаря перемещению этих связей в один
+                        класс-посредник.
+                      </p>
+                      <p>
+                        <strong>Снимок</strong> (хранитель внутреннего состояния
+                        объекта)<br />позволяет сохранять и восстанавливать
+                        прошлые состояния объектов, не раскрывая подробностей их
+                        реализации.
+                      </p>
+                      <p>
+                        <strong>Наблюдатель</strong> (отслеживание
+                        обновлений)<br />создаёт механизм подписки, позволяющий
+                        одним объектам следить и реагировать на события,
+                        происходящие в других объектах (например, подписка на
+                        новости).
+                      </p>
+                      <p>
+                        <strong>Состояние</strong> (торговый автомат)<br />позволяет
+                        объектам менять поведение в зависимости от своего
+                        состояния. Извне создаётся впечатление, что изменился
+                        класс объекта.
+                      </p>
+                      <p>
+                        <strong>Стратегия</strong> (выбор алгоритма)<br />определяет
+                        семейство схожих алгоритмов и помещает каждый из них в
+                        собственный класс, после чего алгоритмы можно
+                        взаимозаменять прямо во время исполнения программы
+                        (например, сохранение файла в разных форматах,
+                        выполнение различных алгоритмов сортировки).
+                      </p>
+                      <p>
+                        <strong>Шаблонный метод</strong> (описывает общий
+                        алгоритм)<br />определяет скелет алгоритма, перекладывая
+                        ответственность за некоторые его шаги на подклассы.
+                        Паттерн позволяет подклассам переопределять шаги
+                        алгоритма, не меняя его общей структуры.
+                      </p>
+                      <p>
+                        <strong>Посетитель</strong><br />позволяет добавлять в
+                        программу новые операции, не изменяя классы объектов,
+                        над которыми эти операции могут выполняться.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseThree"
+                    >
+                      Паттерны GRASP
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <strong>Information Expert</strong><br />информация
+                        должна обрабатываться тем объектом, в котором эта
+                        информация находится.
+                      </p>
+                      <p>
+                        <strong>Creator</strong><br />объект создается в том
+                        классе, в котором он непосредственно нужен для
+                        использования.
+                      </p>
+                      <p>
+                        <strong>Controller</strong><br />преобразование
+                        многопоточного ввода в однопоточное обращение к объектам
+                        системы.
+                      </p>
+                      <p>
+                        <strong>Low Coupling</strong><br />классы должны иметь
+                        минимально необходимое количество связей между собой.
+                        Чем меньше связей, тем стабильней система.
+                      </p>
+                      <p>
+                        <strong>High Cohesion</strong><br />функционал объекта
+                        должен быть максимально связан между собой по смыслу.
+                        Разнородные части - отдельные объекты.
+                      </p>
+                      <p>
+                        <strong>Polymorphism</strong><br />заменить условный
+                        оператор if полиморфным поведением, чтобы обеспечить
+                        легкость включения-выключения модулей.
+                      </p>
+                      <p>
+                        <strong>Pure Fabrication</strong>
+                        (искусственный)<br />использовать для уменьшения связей,
+                        как фасад / посредник.
+                      </p>
+                      <p>
+                        <strong>Inderection</strong> (инверсия зависимостей)<br />обращение
+                        к классу должно идти через его интерфейс. Интерфейс
+                        является принадлежностью не тех классов, которые его
+                        имплементируют, а тех классов, которые его вызывают<br />А
+                        &xrarr; B &xrArr; (A &xrarr; IB) + (B &xrarr; IB)
+                      </p>
+                      <p>
+                        <strong>Protected Variations</strong> (защита от
+                        изменений)<br />следовать вышеперечисленным принципам.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseFour"
+                    >
+                      Принципы SOLID
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFour"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        SOLID - менеджмент зависимостей, характеризирует
+                        отношения и операции между объектами.
+                      </p>
+                      <ul>
+                        <li>
+                          <strong>S</strong>&ensp;&mdash;&ensp;единственная
+                          ответственность.
+                        </li>
+                        <li>
+                          <strong>O</strong>&ensp;&mdash;&ensp;открыт к
+                          расширению и закрыт к изменению.
+                        </li>
+                        <li>
+                          <strong>L</strong>&ensp;&mdash;&ensp;наследник не
+                          должен изменять поведение базового класса (родителя).
+                        </li>
+                        <li>
+                          <strong>I</strong>&emsp;&mdash;&ensp;множество
+                          интерфейсов лучше одного универсального.
+                        </li>
+                        <li>
+                          <strong>D</strong>&ensp;&mdash;&ensp;абстракция не
+                          должна зависеть от реализации.
+                        </li>
+                      </ul>
+                      <p>
+                        На объект возлагается ответственность за его собственное
+                        поведение. Объект должен быть способен ответить на все
+                        важные вопросы о себе. 
+                      </p>
+                      <p>
+                        Свойства объекта позволяют ему
+                        определять свое состояние, а программный код объекта
+                        обеспечивает его корректное функционирование (т.е.
+                        выполнение тех действий, для которых он, собственно,
+                        предназначен).
+                      </p>
+                      <p>
+                        Объекты одного типа (класса) содержат
+                        различные данные, но обладают одинаковым поведением.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-lg-0 mb-4">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseFive"
+                    >
+                      Метапринципы
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsStayOpen-collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFive"
+                  >
+                    <div class="accordion-body">
+                      <p><strong>DRY</strong> - не повторяйся.</p>
+                      <p>
+                        <strong>KISS</strong> - не усложняй, пиши проще,
+                        декомпозируй.
+                      </p>
+                      <p>
+                        <strong>YAGNI</strong> - не пиши прозапас. Реализовуй
+                        то, что нужно сейчас.
+                      </p>
+                      <p>
+                        <strong>SoC</strong> - разделяй ответственность.
+                        Рразделяй систему на слои (UI, бизнес логика,
+                        презентационная логика, слой БД).
+                      </p>
+                      <p>
+                        <strong>CQS</strong> - разделяй запросы и команды.
+                        Каждый метод должен быть либо командой, либо запросом,
+                        но не тем и другим одновременно.
+                      </p>
+                      <p>
+                        <strong>LoD</strong> (закон Деметры) - каждый элемент
+                        системы должен иметь ограниченные знания о других
+                        элементах (не разговаривай с незнакомцем / принцип
+                        наименьшего знания).
+                      </p>
+                      <p class="pb-0">
+                        <strong>PoLA</strong> - компонент системы должен вести
+                        себя в соответствии с вероятными ожиданиями
+                        пользователей (принцип наименьшего удивления):
+                      </p>
+                      <ul>
+                        <li>скрывай / инкапсулируй информацию;</li>
+                        <li>используй константы вместо магических чисел;</li>
+                        <li>
+                          проектируй на уровне интерфейсов, а не реализации;
+                        </li>
+                        <li>
+                          данные обрабатывай в том классе, к которому они
+                          относятся.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <footer class="customer-bg border-top border-3">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <p class="mt-3 pb-0">
-              &copy; Valeriy Novikov, 2021&mdash;<span id="currentYear"></span>
-            </p>
-            <nav class="mb-2">
-              <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a href="mailto:page404.info@gmail.com">support</a>
-            </nav>
+      <footer class="customer-bg border-top border-3">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="mt-3 pb-0">
+                &copy; Valeriy Novikov, 2021&mdash;<span
+                  id="currentYear"
+                ></span>
+              </p>
+              <nav class="mb-2">
+                <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a
+                  href="mailto:page404.info@gmail.com"
+                  >support</a
+                >
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="../js/current-year.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/current-year.js"></script>
+  </body>
 </html>
