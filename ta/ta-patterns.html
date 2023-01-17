@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Паттерны ТА - page404.info</title>
+    <meta name="description" content="Паттерны в автоматизации тестирования." />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM3H1R52G7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-ZM3H1R52G7");
+    </script>
+  </head>
+
+  <body>
+    <div class="main-bg">
+      <header class="customer-bg ps-1 border-bottom border-3">
+        <div class="container">
+          <div class="row align-items-center pt-2 pb-2">
+            <div class="col-3">
+              <a href="../index.html">main page</a>
+            </div>
+            <div class="col text-end">
+              <nav>
+                <ul class="nav nav-pills justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../tools/tools-main.html"
+                      >Tools</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="ta-main.html">TA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../qa/qa-main.html">QA</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="customer-bg-body">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div
+              class="col-lg-3 order-lg-0 col-12 order-1 border me-3 customer-bg rounded"
+            >
+              <div class="row">
+                <nav>
+                  <div class="col">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-settings.html"
+                          >Настройка среды разработки</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-architecture.html"
+                          >Архитектура проекта</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="javascript:void(0)"
+                          ><b>Паттерны ТА</b></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-init.html"
+                          >Инициализация проекта</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-log.html">Логирование</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-run.html"
+                          >Выполнение проекта</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ta-report.html"
+                          >Отчетность проекта</a
+                        >
+                      </li>
+                    </ul>
+                    <hr />
+                    <div class="row">
+                      <div class="col-7">
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-library.html"
+                              ><b>Библиотеки</b></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-hibernate.html"
+                              >Hibernate</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-restassured.html"
+                              >REST Assured</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-selenium.html"
+                              >Selenium</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-cypress.html"
+                              >Cypress</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-appium.html">Appium</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-5">
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-java.html"
+                              ><b>Java</b></a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-maven.html">Maven</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-testng.html">TestNG</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-git.html">Git</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-jenkins.html"
+                              >Jenkins</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-docker.html">Docker</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="col">
+              <h1 class="fs-3 mb-4">Паттерны в автоматизации тестирования</h1>
+              <p class="mb-3">
+                <a href="/main/level-2-architecture.html">GoF паттерны, SOLID принципы</a><br>
+                <a href="https://habr.com/ru/company/jugru/blog/338836/" target="_blank" rel="noopener noreferrer">Николай Алименков - паттерны проектирования</a>
+              </p>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <b>Реализация</b>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <b>Page Object</b><br />
+                        элементы страницы и логика взаимодействия с ними описаны
+                        в отдельном классе
+                      </p>
+                      <p>
+                        <b>Page Element</b><br />
+                        повторяющиеся элементы (меню, хедер, фильтр) описаны в
+                        отдельном классе. Убирает дублирование, упрощает
+                        поддержку. Связь со страницей через композицию
+                      </p>
+                      <p>
+                        <b>Page Factory</b><br />
+                        создание объекта страницы и ленивая инициализация всех
+                        элементов, которые есть на этой странице
+                      </p>
+                      <p>
+                        <b>Envorement Factory</b><br />
+                        создание среды тестирования из связанных объектов
+                        (тест/препрод/прод, источник/бд/апи/фронт)
+                      </p>
+                      <p>
+                        <b>Factory Method</b><br />
+                        создание объекта через метод, который может содержать
+                        дополнительные действия/проверки. Driver Factory Method
+                        - создание экземпляра WebDriver вынесено в отдельный
+                        класс, список браузеров приведен в Enum
+                      </p>
+                      <p>
+                        <b>Object Pool (Flyweight)</b><br />
+                        чтобы не создавать каждый раз тяжелые объекты, а
+                        использовать их пул, например, пул браузеров, пул
+                        страниц, пул БД
+                      </p>
+                      <hr />
+                      <p>
+                        <b>Steps</b><br />
+                        создание методов, которые соответствуют логическим
+                        шагам, например, открыть страницу, заполнить форму.
+                        Описание приближено к тест-кейсам, все технические
+                        подробности скрыты в реализации этих шагов
+                      </p>
+                      <p>
+                        <b>Fluent/Chain of invocations</b><br />
+                        цепочка событий. Используется вместе с шагами, помогает
+                        построить определенный поток действий (выстроить методы
+                        в цепочку, вызывая друг за другом), предоставляет
+                        подсказки
+                      </p>
+                      <p>
+                        <b>Strategy</b><br />
+                        когда нужны несколько реализаций одного и того же,
+                        например, регистрация через web/api
+                      </p>
+                      <p>
+                        <b>Builder</b><br />
+                        позволяет использовать только те поля формы, которые
+                        нужны в данный момент
+                      </p>
+                      <p>
+                        <b>Decorator</b><br />
+                        добавление новых возможностей к существующим, например,
+                        логирование
+                      </p>
+                      <p>
+                        <b>Proxy</b><br />
+                        позволяет включить/отключить ресурсы/страницы, собрать
+                        http-трафик, закешировать картинки/css
+                      </p>
+                      <p>
+                        <b>Bridge</b><br />
+                        позволяет связать иерархию абстракции с иерархией
+                        реализации
+                      </p>
+                      <p>
+                        <b>Property Reader</b><br />
+                        считывает параметры из файла
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <b>Данные</b>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <b>Value Object</b><br />
+                        передача параметров ввиде объекта, например, User user
+                        вместо String name, int age
+                      </p>
+                      <p>
+                        <b>Data Registry</b><br />
+                        позволяет генерировать уникальные данные и следить за их
+                        уникальностью
+                      </p>
+                      <p>
+                        <b>Data Provider</b><br />
+                        выполнение тестов с разными данными, которые вшиты в
+                        провайдер или подтягиваются из файла
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-lg-0 mb-4">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <b>Проверка</b>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        <b>Assert Object</b><br />
+                        размещение повторяющихся проверок в отдельном
+                        статическом методе или классе. Убирает дублирование,
+                        упрощает поддержку
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="customer-bg border-top border-3">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="mt-3 pb-0">
+                &copy; Valeriy Novikov, 2021&mdash;<span
+                  id="currentYear"
+                ></span>
+              </p>
+              <nav class="mb-2">
+                <a href="../helpers/sitemap.html">sitemap</a>&emsp;<a
+                  href="mailto:page404.info@gmail.com"
+                  >support</a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/current-year.js"></script>
+  </body>
+</html>
