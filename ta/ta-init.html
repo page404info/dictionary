@@ -104,53 +104,60 @@
                       </li>
                     </ul>
                     <hr />
-                    <div class="row">                      
+                    <div class="row">
                       <div class="col-7">
                         <ul class="nav nav-pills flex-column">
                           <li class="nav-item">
                             <a class="nav-link" href="ta-library.html"
-                            ><b>Библиотеки</b></a
+                              ><b>Библиотеки</b></a
                             >
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ta-hibernate.html">Hibernate</a>
+                            <a class="nav-link" href="ta-hibernate.html"
+                              >Hibernate</a
+                            >
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ta-restassured.html">REST Assured</a>
+                            <a class="nav-link" href="ta-restassured.html"
+                              >REST Assured</a
+                            >
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ta-selenium.html">Selenium</a>
-                          </li> 
+                            <a class="nav-link" href="ta-selenium.html"
+                              >Selenium</a
+                            >
+                          </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ta-cypress.html">Cypress</a>
-                          </li> 
+                            <a class="nav-link" href="ta-cypress.html"
+                              >Cypress</a
+                            >
+                          </li>
                           <li class="nav-item">
                             <a class="nav-link" href="ta-appium.html">Appium</a>
-                          </li> 
+                          </li>
                         </ul>
                       </div>
 
                       <div class="col-5">
-                        <ul class="nav nav-pills flex-column">    
+                        <ul class="nav nav-pills flex-column">
                           <li class="nav-item">
                             <a class="nav-link" href="ta-java.html"
                               ><b>Java</b></a
                             >
-                          </li>      
-                           <li class="nav-item">
-                            <a class="nav-link" href="ta-maven.html"
-                              >Maven</a
-                            >
-                          </li>              
+                          </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ta-testng.html"
-                              >TestNG</a>
-                          </li>                           
+                            <a class="nav-link" href="ta-maven.html">Maven</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="ta-testng.html">TestNG</a>
+                          </li>
                           <li class="nav-item">
                             <a class="nav-link" href="ta-git.html">Git</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="ta-jenkins.html">Jenkins</a>
+                            <a class="nav-link" href="ta-jenkins.html"
+                              >Jenkins</a
+                            >
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="ta-docker.html">Docker</a>
@@ -170,33 +177,28 @@
                   <p class="fs-5">Структура</p>
                   <ul>
                     <li>
-                      main
+                      main/java
                       <ul>
                         <li><b>utils</b></li>
                         <li>
                           <b>objects</b>
                           <ul>
                             <li>
-                              originapi
+                              origin
                               <ul>
-                                <li>fact</li>
-                                <li>dictionary</li>
+                                <li>database</li>
+                                <li>api</li>
+                                <li>file</li>
                               </ul>
                             </li>
-                            <li>gui</li>
+
                             <li>
-                              api
+                              system
                               <ul>
-                                <li>fact</li>
-                                <li>dictionary</li>
-                              </ul>
-                            </li>
-                            <li>
-                              database
-                              <ul>
-                                <li>view</li>
-                                <li>fact</li>
-                                <li>dictionary</li>
+                                <li>database</li>
+                                <li>api</li>
+                                <li>file</li>
+                                <li>gui</li>
                               </ul>
                             </li>
                           </ul>
@@ -204,16 +206,17 @@
                       </ul>
                     </li>
                     <li>
-                      test
+                      test/java
                       <ul>
+                        <li><b>dataprovider</b></li>
                         <li>
-                          <b>config</b>
+                          <b>configuration</b>
                           <ul>
                             <li>environment</li>
-                            <li>runner</li>
+                            
                           </ul>
                         </li>
-                        <li><b>data</b></li>
+                        
                         <li>
                           <b>testcases</b>
                           <ul>
@@ -221,47 +224,51 @@
                             <li>
                               integration
                               <ul>
-                                <li>api-gui</li>
-                                <li>database-api</li>
+                                <li>origindatabase-systemdatabase</li>
+                                <li>originapi-systemdatabase</li>
+                                <li>originapi-systemapi</li>
+                                <li>systemdatabase-systemapi</li>
+                                <li>systemapi-systemgui</li>                                
                               </ul>
                             </li>
                             <li>
                               module
                               <ul>
-                                <li>gui</li>
-                                <li>api</li>
-                                <li>database</li>
-                              </ul>
-                            </li>
-                            <li>
-                              origindata
-                              <ul>
-                                <li>
-                                  integration
+                                <li>origin
                                   <ul>
-                                    <li>originapi-database</li>
-                                    <li>originfile-database</li>
+                                    <li>database</li>
+                                    <li>api</li>
+                                    <li>file</li>
                                   </ul>
                                 </li>
-                                <li>
-                                  module
+                                <li>system
                                   <ul>
-                                    <li>originapi</li>
-                                    <li>originfile</li>
+                                    <li>database</li>
+                                    <li>api</li>
+                                    <li>file</li>
+                                    <li>gui</li>
                                   </ul>
                                 </li>
                               </ul>
                             </li>
                           </ul>
                         </li>
-                        <li>
-                          <b>resources</b>
-                          <ul>
-                            <li>webdriver</li>
-                            <li>originfile</li>
-                            <li>log4j2.xml</li>
-                          </ul>
-                        </li>
+                        <li><b>runner</b></li>
+                      </ul>
+                    </li>
+                    <li>
+                      test/<b>resources</b>
+                      <ul>
+                        <ul>
+                          <li>webdriver</li>
+                          <li>file
+                            <ul>
+                              <li>origin</li>
+                              <li>system</li>
+                            </ul>
+                          </li>
+                          <li>log4j2.xml</li>
+                        </ul>
                       </ul>
                     </li>
                     <li><b>pom.xml</b></li>
@@ -279,19 +286,23 @@
                       >
                     </li>
                     <li>
-                      <b>шаблон</b> проекта
-                      (<a href="https://github.com/page404info/ta_template" target="_blank" rel="noopener noreferrer"
+                      <b>шаблон</b> проекта (<a
+                        href="https://github.com/page404info/ta_template"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         >github</a
                       >)
-                    </li>   
+                    </li>
 
-                    <li class="mt-3">lombok</li>                    
+                    <li class="mt-3">lombok</li>
                     <li>log4j-core, log4j-api</li>
-                    <li>testNG</li>    
-                    <li>rest-assured</li>             
-                    <li>selenide, webdrivermanager</li>                    
-                    <li>hibernate-core, hibernate-entitymanager, ojdbc8, orai18n</li>                     
-                    
+                    <li>testNG</li>
+                    <li>rest-assured</li>
+                    <li>selenide, webdrivermanager</li>
+                    <li>
+                      hibernate-core, hibernate-entitymanager, ojdbc8, orai18n
+                    </li>
+
                     <li class="mt-3"></li>
                     <li></li>
                     <li></li>
