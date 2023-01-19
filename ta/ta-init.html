@@ -174,12 +174,14 @@
 
               <div class="row">
                 <div class="col-md-6 col-12">
-                  <p class="fs-5">Структура (<a
-                    href="https://github.com/page404info/ta_template"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >github</a
-                  >)</p>
+                  <p class="fs-5">
+                    Структура (<a
+                      href="https://github.com/page404info/ta_template"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >github</a
+                    >)
+                  </p>
                   <ul>
                     <li>
                       main/java
@@ -191,8 +193,8 @@
                             <li>
                               origin
                               <ul>
-                                <li>database</li>
                                 <li>api</li>
+                                <li>database</li>                                
                                 <li>files</li>
                               </ul>
                             </li>
@@ -200,30 +202,41 @@
                             <li>
                               system
                               <ul>
-                                <li>database
-                                  <ul>
-                                    <li>tables</li>
-                                    <li>views</li>
-                                  </ul>
-                                </li>
-                                <li>api
+                                <li>
+                                  api
                                   <ul>
                                     <li>portalapi</li>
                                     <li>privateapi</li>
                                     <li>publicapi</li>
                                   </ul>
                                 </li>
-                                <li>files</li>
-                                <li>gui
+                                <li>
+                                  database
                                   <ul>
-                                    <li>globalelements
+                                    <li>tables</li>
+                                    <li>views</li>
+                                  </ul>
+                                </li>
+                                
+                                <li>files</li>
+                                <li>
+                                  gui
+                                  <ul>
+                                    <li>
+                                      elements
                                       <ul>
-                                        <li>Header</li>
                                         <li>Footer</li>
+                                        <li>Header</li>                                        
                                         <li>Menu</li>
                                       </ul>
                                     </li>
-                                    <li>MainPage</li>
+                                    <li>
+                                      pages
+                                      <ul>
+                                        <li>MainPage</li>
+                                      </ul>
+                                    </li>
+                                    <li>BasePage</li>
                                   </ul>
                                 </li>
                               </ul>
@@ -235,11 +248,15 @@
                     <li>
                       test/java
                       <ul>
-                        <li><b>dataproviders</b></li>
-                        <li>
+                         <li>
                           <b>configuration</b>
                         </li>
-                        
+                        <li><b>dataproviders</b></li>                       
+                        <li><b>runners</b>
+                        <ul>
+                          <li>runTests.xml</li>
+                        </ul>
+                        </li>
                         <li>
                           <b>testcases</b>
                           <ul>
@@ -247,27 +264,29 @@
                             <li>
                               integration
                               <ul>
-                                <li>origindatabase-systemdatabase</li>
-                                <li>originapi-systemdatabase</li>
                                 <li>originapi-systemapi</li>
-                                <li>systemdatabase-systemapi</li>
+                                <li>originapi-systemdatabase</li>
+                                <li>origindatabase-systemdatabase</li>
                                 <li>systemapi-systemgui</li>                                
+                                <li>systemdatabase-systemapi</li>                                
                               </ul>
                             </li>
                             <li>
                               module
                               <ul>
-                                <li>origin
+                                <li>
+                                  origin
                                   <ul>
-                                    <li>database</li>
                                     <li>api</li>
+                                    <li>database</li>                                    
                                     <li>files</li>
                                   </ul>
                                 </li>
-                                <li>system
+                                <li>
+                                  system
                                   <ul>
-                                    <li>database</li>
                                     <li>api</li>
+                                    <li>database</li>                                    
                                     <li>files</li>
                                     <li>gui</li>
                                   </ul>
@@ -275,21 +294,21 @@
                               </ul>
                             </li>
                           </ul>
-                        </li>
-                        <li><b>runners</b></li>
+                        </li>                       
                       </ul>
                     </li>
                     <li>
                       test/<b>resources</b>
                       <ul>
-                        <ul>
-                          <li>webdrivers</li>
-                          <li>files
+                        <ul>                          
+                          <li>
+                            files
                             <ul>
                               <li>origin</li>
                               <li>system</li>
                             </ul>
                           </li>
+                          <li>webdrivers</li>
                           <li>log4j2.xml</li>
                         </ul>
                       </ul>
@@ -300,20 +319,21 @@
                 </div>
 
                 <div class="col-md-6 col-12 mt-2 mb-4">
-                  <p class="fs-5">Зависимости (<a href="../documents/ta-pom.xml" target="_blank"
-                    >pom.xml</a
-                  >)</p>
-                  <ul>                    
+                  <p class="fs-5">
+                    Зависимости (<a
+                      href="../documents/ta-pom.xml"
+                      target="_blank"
+                      >pom.xml</a
+                    >)
+                  </p>
+                  <ul>
                     <li>log4j-core, log4j-api</li>
                     <li>testNG</li>
                     <li>lombok</li>
                     <li>ojdbc8, orai18n</li>
-                    <li>
-                      hibernate-core, hibernate-entitymanager
-                    </li>
+                    <li>hibernate-core, hibernate-entitymanager</li>
                     <li>rest-assured, jackson-core, jackson-databind</li>
                     <li>webdrivermanager, selenide</li>
-                    
 
                     <li class="mt-3"></li>
                     <li></li>
