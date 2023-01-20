@@ -11,26 +11,12 @@
 
     <name>project name full</name>
     <description>
-		About project: 
-        Customer: name, site
-        Owner: name, site
-        Executor: name, site
-		Origin: system name, files
-		
-		Project modules: 
-		
-		origin api
-			|
-		database - portal api - gui
-						|
-					public api
-		
-		
-		Project function:
-		- GET
-		- search
-		- export: pdf, csv, xlsx
-		- data
+        CUSTOMER:name,site
+        OWNER:name,site
+        EXECUTOR:name,site
+		ORIGIN:name,files
+        FUNCTIONS:search,export(pdf,csv,xlsx),GET,data
+		MODULES:originApi>>[database-portalApi-gui]>>publicApi
     </description>
     <url>project site</url>
     <organization>
