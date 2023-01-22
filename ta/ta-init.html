@@ -89,7 +89,7 @@
                           ><b>Паттерны ТА</b></a
                         >
                       </li>
-                     
+
                       <li class="nav-item">
                         <a class="nav-link" href="ta-log.html">Логирование</a>
                       </li>
@@ -194,8 +194,20 @@
                             <li>
                               origin
                               <ul>
-                                <li>api</li>
-                                <li>database</li>                                
+                                <li>
+                                  api
+                                  <ul>
+                                    <li>dictionary</li>
+                                    <li>fact</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  database
+                                  <ul>
+                                    <li>dictionary</li>
+                                    <li>fact</li>
+                                  </ul>
+                                </li>
                                 <li>files</li>
                               </ul>
                             </li>
@@ -206,21 +218,41 @@
                                 <li>
                                   api
                                   <ul>
-                                    <li>portalapi</li>
-                                    <li>privateapi</li>
-                                    <li>publicapi</li>
+                                    <li>
+                                      portalapi
+                                      <ul>
+                                        <li>dictionary</li>
+                                        <li>fact</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      privateapi
+                                      <ul>
+                                        <li>dictionary</li>
+                                        <li>fact</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      publicapi
+                                      <ul>
+                                        <li>dictionary</li>
+                                        <li>fact</li>
+                                      </ul>
+                                    </li>
                                   </ul>
                                 </li>
                                 <li>
                                   database
                                   <ul>
-                                    <li>tables
+                                    <li>
+                                      tables
                                       <ul>
                                         <li>dictionary</li>
                                         <li>fact</li>
                                       </ul>
                                     </li>
-                                    <li>views
+                                    <li>
+                                      views
                                       <ul>
                                         <li>dictionary</li>
                                         <li>fact</li>
@@ -228,7 +260,7 @@
                                     </li>
                                   </ul>
                                 </li>
-                                
+
                                 <li>files</li>
                                 <li>
                                   gui
@@ -237,7 +269,7 @@
                                       elements
                                       <ul>
                                         <li>Footer</li>
-                                        <li>Header</li>                                        
+                                        <li>Header</li>
                                         <li>Menu</li>
                                       </ul>
                                     </li>
@@ -259,14 +291,39 @@
                     <li>
                       test/java
                       <ul>
-                         <li>
+                        <li>
                           <b>configuration</b>
+                          <ul>
+                            <li>environment
+                              <ul>
+                                <li>OriginApi</li>
+                                <li>OriginDatabase</li>
+                                <li>SystemDatabase</li>
+                                <li>SystemGui</li>
+                                <li>SystemPortalApi</li>
+                                <li>SystemPrivateApi</li>
+                                <li>SystemPublicApi</li>
+                              </ul>
+                            </li>
+                            <li>property
+                              <ul>
+                                <li>OriginApiProperty</li>
+                                <li>OriginDatabaseProperty</li>
+                                <li>SystemDatabaseProperty</li>
+                                <li>SystemGuiProperty</li>
+                                <li>SystemPortalApiProperty</li>
+                                <li>SystemPrivateApiProperty</li>
+                                <li>SystemPublicApiProperty</li>
+                              </ul>
+                            </li>
+                          </ul>
                         </li>
-                        <li><b>dataproviders</b></li>                       
-                        <li><b>runners</b>
-                        <ul>
-                          <li>runTests.xml</li>
-                        </ul>
+                        <li><b>dataproviders</b></li>
+                        <li>
+                          <b>runners</b>
+                          <ul>
+                            <li>runTests.xml</li>
+                          </ul>
                         </li>
                         <li>
                           <b>testcases</b>
@@ -275,11 +332,21 @@
                             <li>
                               integration
                               <ul>
-                                <li>originapi-systemapi</li>
-                                <li>originapi-systemdatabase</li>
-                                <li>origindatabase-systemdatabase</li>
-                                <li>systemapi-systemgui</li>                                
-                                <li>systemdatabase-systemapi</li>                                
+                                <li>
+                                  origin
+                                  <ul>
+                                    <li>originapi-systemapi</li>
+                                    <li>originapi-systemdatabase</li>
+                                    <li>origindatabase-systemdatabase</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  system
+                                  <ul>
+                                    <li>systemapi-systemgui</li>
+                                    <li>systemdatabase-systemapi</li>
+                                  </ul>
+                                </li>
                               </ul>
                             </li>
                             <li>
@@ -288,8 +355,20 @@
                                 <li>
                                   origin
                                   <ul>
-                                    <li>api</li>
-                                    <li>database</li>                                    
+                                    <li>
+                                      api
+                                      <ul>
+                                        <li>dictionary</li>
+                                        <li>fact</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      database
+                                      <ul>
+                                        <li>dictionary</li>
+                                        <li>fact</li>
+                                      </ul>
+                                    </li>
                                     <li>files</li>
                                   </ul>
                                 </li>
@@ -299,28 +378,48 @@
                                     <li>
                                       api
                                       <ul>
-                                        <li>portalapi</li>
-                                        <li>privateapi</li>
-                                        <li>publicapi</li>
+                                        <li>
+                                          portalapi
+                                          <ul>
+                                            <li>dictionary</li>
+                                            <li>fact</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          privateapi
+                                          <ul>
+                                            <li>dictionary</li>
+                                            <li>fact</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          publicapi
+                                          <ul>
+                                            <li>dictionary</li>
+                                            <li>fact</li>
+                                          </ul>
+                                        </li>
                                       </ul>
                                     </li>
                                     <li>
                                       database
                                       <ul>
-                                        <li>tables
+                                        <li>
+                                          tables
                                           <ul>
                                             <li>dictionary</li>
                                             <li>fact</li>
                                           </ul>
                                         </li>
-                                        <li>views
+                                        <li>
+                                          views
                                           <ul>
                                             <li>dictionary</li>
                                             <li>fact</li>
                                           </ul>
                                         </li>
                                       </ul>
-                                    </li>                                   
+                                    </li>
                                     <li>files</li>
                                     <li>gui</li>
                                   </ul>
@@ -329,13 +428,13 @@
                             </li>
                             <li>BaseTest</li>
                           </ul>
-                        </li>                       
+                        </li>
                       </ul>
                     </li>
                     <li>
                       test/<b>resources</b>
                       <ul>
-                        <ul>                          
+                        <ul>
                           <li>
                             files
                             <ul>
@@ -348,8 +447,8 @@
                         </ul>
                       </ul>
                     </li>
-                    <li><b>pom.xml</b></li>
                     <li><b>.gitignore</b></li>
+                    <li><b>pom.xml</b></li>                    
                   </ul>
                 </div>
 
