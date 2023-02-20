@@ -177,39 +177,26 @@
                 <div class="col-md-6 col-12">
                   <p class="fs-5">
                     Структура (<a
-                      href="https://github.com/page404info/ta_template"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >github</a
-                    >)
+                    href="https://github.com/page404info/ta_template"
+                    target="_blank"
+                    >github</a
+                  >)
                   </p>
                   <ul>
                     <li>
                       main/java
                       <ul>
-                        <li><b>utils</b></li>
                         <li>
-                          <b>objects</b>
+                          <b>logs</b> (логи работы)
+                        </li>
+                        <li>
+                          <b>utils</b> (вспомогательные классы)
+                        </li>
+                        <li>
+                          <b>model</b> (структура и методы тестируемой системы. Реагирует на тест-кейсы)
                           <ul>
                             <li>
-                              origin
-                              <ul>
-                                <li>
-                                  api
-                                  <ul>
-                                    <li>dictionary</li>
-                                    <li>fact</li>
-                                  </ul>
-                                </li>
-                                <li>
-                                  database
-                                  <ul>
-                                    <li>dictionary</li>
-                                    <li>fact</li>
-                                  </ul>
-                                </li>
-                                <li>files</li>
-                              </ul>
+                              origin (file, api, database / dict, fact)
                             </li>
 
                             <li>
@@ -219,25 +206,13 @@
                                   api
                                   <ul>
                                     <li>
-                                      portalapi
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      portalapi (dict, fact)
                                     </li>
                                     <li>
-                                      privateapi
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      privateapi (dict, fact)
                                     </li>
                                     <li>
-                                      publicapi
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      publicapi (dict, fact)
                                     </li>
                                   </ul>
                                 </li>
@@ -245,39 +220,24 @@
                                   database
                                   <ul>
                                     <li>
-                                      tables
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      tables (dict, fact)
                                     </li>
                                     <li>
-                                      views
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      views (dict, fact)
                                     </li>
                                   </ul>
                                 </li>
-
-                                <li>files</li>
+                                <li>
+                                  file (csv, xlsx, dbf)
+                                </li>
                                 <li>
                                   gui
                                   <ul>
                                     <li>
-                                      elements
-                                      <ul>
-                                        <li>Footer</li>
-                                        <li>Header</li>
-                                        <li>Menu</li>
-                                      </ul>
+                                      elements (Footer, Header, Menu)
                                     </li>
                                     <li>
-                                      pages
-                                      <ul>
-                                        <li>MainPage</li>
-                                      </ul>
+                                      pages (MainPage)
                                     </li>
                                     <li>BasePage</li>
                                   </ul>
@@ -292,41 +252,33 @@
                       test/java
                       <ul>
                         <li>
-                          <b>configuration</b>
+                          <b>conf</b> (конфигурация тестируемой системы)
                           <ul>
                             <li>environment
                               <ul>
-                                <li>OriginApi</li>
-                                <li>OriginDatabase</li>
-                                <li>SystemDatabase</li>
-                                <li>SystemGui</li>
-                                <li>SystemPortalApi</li>
-                                <li>SystemPrivateApi</li>
-                                <li>SystemPublicApi</li>
+                                <li>Origin (api, database)</li>
+                                <li>System (api, database, gui)</li>
                               </ul>
                             </li>
                             <li>property
                               <ul>
-                                <li>OriginApiProperty</li>
-                                <li>OriginDatabaseProperty</li>
-                                <li>SystemDatabaseProperty</li>
-                                <li>SystemGuiProperty</li>
-                                <li>SystemPortalApiProperty</li>
-                                <li>SystemPrivateApiProperty</li>
-                                <li>SystemPublicApiProperty</li>
+                                <li>Origin (api, database)</li>
+                                <li>System (api, database, gui)</li>
                               </ul>
                             </li>
                           </ul>
                         </li>
-                        <li><b>dataproviders</b></li>
                         <li>
-                          <b>runners</b>
+                          <b>dataproviders</b> (наборы тестовых данных)
+                        </li>
+                        <li>
+                          <b>runners</b> (запуск проверок)
                           <ul>
                             <li>runTests.xml</li>
                           </ul>
                         </li>
                         <li>
-                          <b>testcases</b>
+                          <b>testcases</b> (логика проверок)
                           <ul>
                             <li>e2e</li>
                             <li>
@@ -356,20 +308,12 @@
                                   origin
                                   <ul>
                                     <li>
-                                      api
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      api (dict, fact)
                                     </li>
                                     <li>
-                                      database
-                                      <ul>
-                                        <li>dictionary</li>
-                                        <li>fact</li>
-                                      </ul>
+                                      database (dict, fact)
                                     </li>
-                                    <li>files</li>
+                                    <li>file</li>
                                   </ul>
                                 </li>
                                 <li>
@@ -379,25 +323,13 @@
                                       api
                                       <ul>
                                         <li>
-                                          portalapi
-                                          <ul>
-                                            <li>dictionary</li>
-                                            <li>fact</li>
-                                          </ul>
+                                          portalapi (dict, fact)
                                         </li>
                                         <li>
-                                          privateapi
-                                          <ul>
-                                            <li>dictionary</li>
-                                            <li>fact</li>
-                                          </ul>
+                                          privateapi (dict, fact)
                                         </li>
                                         <li>
-                                          publicapi
-                                          <ul>
-                                            <li>dictionary</li>
-                                            <li>fact</li>
-                                          </ul>
+                                          publicapi (dict, fact)
                                         </li>
                                       </ul>
                                     </li>
@@ -405,22 +337,14 @@
                                       database
                                       <ul>
                                         <li>
-                                          tables
-                                          <ul>
-                                            <li>dictionary</li>
-                                            <li>fact</li>
-                                          </ul>
+                                          tables (dict, fact)
                                         </li>
                                         <li>
-                                          views
-                                          <ul>
-                                            <li>dictionary</li>
-                                            <li>fact</li>
-                                          </ul>
+                                          views (dict, fact)
                                         </li>
                                       </ul>
                                     </li>
-                                    <li>files</li>
+                                    <li>file</li>
                                     <li>gui</li>
                                   </ul>
                                 </li>
@@ -432,15 +356,11 @@
                       </ul>
                     </li>
                     <li>
-                      test/<b>resources</b>
+                      test/<b>resources</b> (внешние файлы)
                       <ul>
                         <ul>
                           <li>
-                            files
-                            <ul>
-                              <li>origin</li>
-                              <li>system</li>
-                            </ul>
+                            files (origin, system)
                           </li>
                           <li>webdrivers</li>
                           <li>log4j2.xml</li>
